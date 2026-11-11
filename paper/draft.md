@@ -85,22 +85,23 @@ Research relevant to this work covers garment classification on catalogue images
 attribute datasets, explanation methods for convolutional networks, and vision-language models
 that classify without task-specific training.
 
-Several studies classify products in the same Fashion Product Images dataset, typically
-predicting categories or article types with convolutional networks [3], [4] [needs check: confirm
-the exact titles, authors, heads predicted and reported settings of the PLOS ONE 2025 article and
-arXiv 2005.08170 before describing them in detail]. These works establish that catalogue images
-carry enough signal for category prediction. The present study differs in predicting four
-attributes jointly from one shared backbone and in attaching an explanation to each answer.
+Several studies classify products in the same Fashion Product Images dataset. Seo et al. used the
+full version of the dataset (44,416 items, 143 categories), kept the 37 categories with at least
+250 items, sampled 250 items per class with a 7:1:2 split, and combined a ResNet50 image encoder
+with a BERT text encoder over the product description; concatenation fusion gave their best
+result [3]. Li studied neural networks for fashion image classification and visual search on the
+same catalogue [4]. These works establish that catalogue images carry enough signal for category
+prediction. The present study differs in using the image alone, predicting four attributes
+jointly from one shared backbone, and attaching an explanation to each answer.
 
-Rajput and Aneja introduced IndoFashion, a dataset of Indian ethnic garments, and showed that
-ethnic wear such as kurtas, sarees and lehengas forms a distinct visual domain from Western
-clothing [5]. Our data include ethnic article types (kurtas, kurtis, sarees, dupattas) inside a
+Rajput and Aneja introduced IndoFashion, a dataset of about 106,000 images of Indian ethnic
+garments in 15 classes, with a best reported classification accuracy of 88.43 percent [5]. Our data include ethnic article types (kurtas, kurtis, sarees, dupattas) inside a
 general catalogue, and the usage head includes an Ethnic class.
 
 DeepFashion [6] and Fashionpedia [7] provide large collections of fashion images with fine-grained
 attribute and segmentation annotations, and have supported much of the work on clothing attribute
-recognition. Attribute extraction for an Indian e-commerce catalogue was also studied at CVPR
-workshops in 2021 [8] [needs check: confirm the Flipkart paper's title, authors and method]. These
+recognition. Parekh et al. studied fine-grained visual attribute extraction from fashion wear for
+an Indian e-commerce catalogue [8]. These
 resources focus on attribute vocabularies and annotation; our work focuses on a compact
 four-head model whose answers are explained and checked against the garment region.
 
@@ -111,9 +112,11 @@ mask from U²-Net [9], a salient-object segmentation network.
 
 CLIP [10] learns a joint embedding of images and text from image–caption pairs and can classify
 images zero-shot by comparing an image with text prompts. FashionCLIP [11] adapts CLIP to the
-fashion domain using product images and descriptions. Recent studies examine how well such models
-recognise fashion attributes without training [12] [needs check: identify the specific 2025–26
-zero-shot attribute study before citing]. We use FashionCLIP in two roles: for attributes with no
+fashion domain using product images and descriptions. Recent studies evaluate how well
+vision-language models label product and fashion attributes without task-specific training,
+including a three-tier evaluation framework for zero-shot product attribute labelling [12] and a
+zero-shot analysis of fine-grained fashion attributes with GPT-4o mini and Gemini 2.0 Flash [15].
+We use FashionCLIP in two roles: for attributes with no
 labels in our data (pattern, sleeve length, neckline), and as a zero-shot baseline against our
 trained heads for the attributes that do have labels.
 
@@ -121,8 +124,9 @@ trained heads for the attributes that do have labels.
 
 | Title | Technique | Gap relative to this study |
 |---|---|---|
-| Fashion Product Images classification studies [3], [4] | CNN classifiers on catalogue images | Usually single-task; explanation and real-photo evaluation not the focus [needs check] |
-| IndoFashion [5] | Dataset and classifiers for Indian ethnic wear | Ethnic wear only; no multi-attribute heads |
+| Seo et al. (2025), ResNet-BERT multi-modal classification [3] | ResNet50 image + BERT text, concatenation fusion; 37 categories | Needs product text; single category task; no explanation or real-photo test |
+| Li (2020), fashion classification and visual search [4] | Neural network classifiers and visual search on this catalogue | Explanation and real-photo evaluation not the focus [needs check] |
+| IndoFashion (2021) [5] | Dataset and classifiers for 15 Indian ethnic wear classes | Ethnic wear only; single task |
 | DeepFashion [6], Fashionpedia [7] | Large annotated attribute and segmentation datasets | Dataset resources; not a compact explained attribute model |
 | Grad-CAM [2] | Gradient-weighted class activation maps | General method; no garment-focus measure |
 | CLIP [10], FashionCLIP [11] | Zero-shot image–text matching | No task-specific training; used here as a baseline and for unlabelled attributes |
@@ -248,19 +252,22 @@ Grad-CAM per head with garment-focus score, (5) M7 colour palette, (6) M5 zero-s
 
 ## References
 
-[1] P. Aggarwal, "Fashion Product Images Dataset," Kaggle. [needs check: exact citation form and year]
+[1] P. Aggarwal, "Fashion Product Images Dataset," Kaggle, 2019. [Online]. Available: https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset
 [2] R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh, and D. Batra, "Grad-CAM: Visual explanations from deep networks via gradient-based localization," in Proc. IEEE ICCV, 2017.
-[3] [needs check: PLOS ONE 2025 article on this dataset]
-[4] [needs check: arXiv 2005.08170]
-[5] P. S. Rajput and S. Aneja, "IndoFashion: Apparel classification for Indian ethnic clothes," in Proc. IEEE/CVF CVPR Workshops, 2021.
+[3] I.-J. Seo, Y.-H. Lee, and B. Jang, "Classification of fashion e-commerce products using ResNet-BERT multi-modal deep learning and transfer learning optimization," PLoS ONE, vol. 20, no. 5, e0324621, May 2025, doi: 10.1371/journal.pone.0324621.
+[4] F. Li, "Neural networks for fashion image classification and visual search," arXiv:2005.08170, 2020.
+[5] P. S. Rajput and S. Aneja, "IndoFashion: Apparel classification for Indian ethnic clothes," in Proc. IEEE/CVF CVPR Workshops, 2021, pp. 3935–3939, arXiv:2104.02830.
 [6] Z. Liu, P. Luo, S. Qiu, X. Wang, and X. Tang, "DeepFashion: Powering robust clothes recognition and retrieval with rich annotations," in Proc. IEEE CVPR, 2016.
-[7] M. Jia et al., "Fashionpedia: Ontology, segmentation, and an attribute localization dataset," in Proc. ECCV, 2020.
-[8] [needs check: Flipkart CVPRW 2021 attribute extraction paper]
+[7] M. Jia et al., "Fashionpedia: Ontology, segmentation, and an attribute localization dataset," in Proc. ECCV, 2020, arXiv:2004.12276.
+[8] Parekh et al., "Fine-grained visual attribute extraction from fashion wear," in Proc. IEEE/CVF CVPR Workshops, 2021. [needs check: co-authors]
 [9] X. Qin, Z. Zhang, C. Huang, M. Dehghan, O. R. Zaiane, and M. Jagersand, "U2-Net: Going deeper with nested U-structure for salient object detection," Pattern Recognition, vol. 106, 2020.
 [10] A. Radford et al., "Learning transferable visual models from natural language supervision," in Proc. ICML, 2021.
 [11] P. J. Chia et al., "Contrastive language and vision learning of general fashion concepts," Scientific Reports, 2022.
-[12] [needs check: 2025–26 zero-shot fashion attribute study]
+[12] "Zero-shot product attribute labeling with vision-language models: A three-tier evaluation framework," in Proc. IEEE/CVF WACV Workshops, 2026, arXiv:2601.15711. [needs check: authors]
 [13] M. Tan and Q. V. Le, "EfficientNet: Rethinking model scaling for convolutional neural networks," in Proc. ICML, 2019.
 [14] L. McInnes, J. Healy, and J. Melville, "UMAP: Uniform manifold approximation and projection for dimension reduction," arXiv:1802.03426, 2018.
+[15] "Can GPT-4o mini and Gemini 2.0 Flash predict fine-grained fashion product attributes? A zero-shot analysis," arXiv:2507.09950, 2025. [needs check: authors]
+[16] K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image recognition," in Proc. IEEE CVPR, 2016.
+[17] T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollár, "Focal loss for dense object detection," in Proc. IEEE ICCV, 2017.
 
 DOIs to be added for every reference before submission [needs check].
