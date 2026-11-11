@@ -36,7 +36,13 @@ def download() -> Path:
     if zip_path.exists():
         print(f"zip already present: {zip_path}")
         return zip_path
-    cmd = ["kaggle", "datasets", "download", DATASET, "-p", str(DATA)]
+    # use the kaggle CLI installed next to this interpreter (works without activating the venv)
+    exe_dir = Path(sys.executable).parent
+    kaggle = next((str(p) for p in (exe_dir / "kaggle.exe", exe_dir / "kaggle") if p.exists()),
+                  shutil.which("kaggle"))
+    if not kaggle:
+        sys.exit("kaggle CLI not found; pip install kaggle in this environment")
+    cmd = [kaggle, "datasets", "download", DATASET, "-p", str(DATA)]
     print("running:", " ".join(cmd))
     subprocess.run(cmd, check=True)
     if not zip_path.exists():
