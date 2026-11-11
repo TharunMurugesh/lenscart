@@ -97,7 +97,10 @@ def main() -> None:
     ap.add_argument("--stage-b", type=int, default=15, help="max epochs with full fine-tuning")
     ap.add_argument("--patience", type=int, default=3)
     ap.add_argument("--batch", type=int, default=64)
-    ap.add_argument("--workers", type=int, default=8)
+    # Windows: every worker process loads torch's CUDA DLLs (~1.1 GB commit each); 8 train +
+    # 8 val workers exhausted the page file (WinError 1455) and hung. 6 + 2 stays well inside.
+    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--val-workers", type=int, default=2)
     ap.add_argument("--no-weights", action="store_true")
     ap.add_argument("--no-aug", action="store_true")
     ap.add_argument("--bg-dir", type=Path, default=None)
@@ -118,7 +121,7 @@ def main() -> None:
         import torchvision.transforms as T
         tf = T.Compose([BackgroundSwap(args.bg_dir), tf])
     train_loader = make_loader(train_df, tf, args.batch, shuffle=True, workers=args.workers)
-    val_loader = make_loader(val_df, eval_transform(), args.batch * 2, workers=args.workers)
+    val_loader = make_loader(val_df, eval_transform(), args.batch * 2, workers=args.val_workers)
 
     model = LensNet(args.backbone, sizes).to(device)
     weights = None if args.no_weights else class_weights(train_df, sizes)
