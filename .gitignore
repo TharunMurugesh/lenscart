@@ -19,8 +19,13 @@ venv/
 
 # node
 node_modules/
-
 # training outputs (large)
 runs/
 *.pt
 *.npy
+
+# real-world photos (never commit)
+real_world/images/
+real_world/*.jpg
+real_world/*.jpeg
+real_world/*.png
