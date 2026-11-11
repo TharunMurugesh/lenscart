@@ -89,19 +89,28 @@ def main() -> None:
         hashes = [h for h in hashes if h is not None]
     split["phash"] = np.array(hashes, dtype=np.uint64)
 
-    # near-duplicates: val/test images within MAX_DIST of any train image are dropped
-    train_h = split.loc[split["split"] == "train", "phash"].to_numpy(dtype=np.uint64)
-    train_ids = split.loc[split["split"] == "train", "id"].to_numpy()
+    # near-duplicates: a val/test image is dropped if a train image with the SAME articleType
+    # and baseColour is within MAX_DIST. pHash alone (grayscale, 64-bit) matched different
+    # products that share a silhouette on a white background (see results/notes.md).
+    key = split["articleType"].astype(str) + "|" + split["baseColour"].fillna("").astype(str)
+    split["key"] = key
+    tr = split[split["split"] == "train"]
+    by_key = {k: (g["phash"].to_numpy(dtype=np.uint64), g["id"].to_numpy())
+              for k, g in tr.groupby("key")}
     evals = split[split["split"] != "train"]
     dropped = []
-    for idx, row in tqdm(evals.iterrows(), total=len(evals), desc="dedup"):
+    for _, row in tqdm(evals.iterrows(), total=len(evals), desc="dedup"):
+        if row["key"] not in by_key:
+            continue
+        train_h, train_ids = by_key[row["key"]]
         d = popcount64(np.bitwise_xor(train_h, np.uint64(row["phash"])))
         j = int(d.argmin())
         if d[j] <= MAX_DIST:
             dropped.append({"id": int(row["id"]), "split": row["split"],
-                            "articleType": row["articleType"],
+                            "articleType": row["articleType"], "baseColour": row["baseColour"],
                             "nearest_train_id": int(train_ids[j]), "hamming": int(d[j])})
-    dropped_df = pd.DataFrame(dropped, columns=["id", "split", "articleType",
+    split = split.drop(columns=["key"])
+    dropped_df = pd.DataFrame(dropped, columns=["id", "split", "articleType", "baseColour",
                                                 "nearest_train_id", "hamming"])
     RESULTS.mkdir(exist_ok=True)
     dropped_df.to_csv(RESULTS / "dropped_duplicates.csv", index=False)
