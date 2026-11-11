@@ -1,0 +1,13 @@
+fastapi==0.162.4
+grad-cam==1.5.7
+numpy==2.4.6
+onnxruntime==1.31.1
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+python-multipart==0.0.33
+rembg==2.0.87
+scikit-learn==1.9.1
+timm==1.0.31
+torch==2.15.0+cpu
+torchvision==0.29.2+cpu
+uvicorn==0.54.0
