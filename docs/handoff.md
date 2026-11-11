@@ -47,7 +47,13 @@ This note is self-contained. Read it in full, then read `ideas.md` (the plan) an
 
 ## What's next, in order
 1. Write the Colab notebook (Drive mount, Kaggle download, resumable training).
-2. Locally, download the full dataset into `data/` and confirm `styles.csv` columns (expected: id, gender,
+   **Storage plan (the Kaggle download is 23 GB):** never download it to a laptop. Colab downloads
+   it via the Kaggle API, unzips, deletes the zip, then resizes every image once to ~256 px and
+   saves that copy to Google Drive (free Drive is 15 GB; resized copy estimated 2–3 GB, check).
+   Training reads the resized copy. The laptop later gets the resized images as one zip for the
+   demo catalogue.
+2. Locally, get **only `styles.csv`** (Kaggle page → Data tab → download that single file) into
+   `data/` and confirm its columns (expected: id, gender,
    masterCategory, subCategory, articleType, baseColour, season, year, usage, productDisplayName).
    Some rows of styles.csv are known to be malformed: parse defensively.
 3. **Data step (produces paper Tables I–II):** class distribution; drop article types below a
