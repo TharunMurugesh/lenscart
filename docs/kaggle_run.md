@@ -71,6 +71,12 @@ Run in this order; stop when time runs out.
 ```
 (If ResNet50 runs out of GPU memory, add `--batch 32` and note it in `results/notes.md`.)
 
+### Cell 6b: FashionCLIP linear probe (V-c) and zero-shot (V-d), val only
+```python
+!python scripts/clip_eval.py --batch 128 --workers 4
+```
+Writes `results/table5_clip.csv`. Downloads FashionCLIP (~600 MB) inside Kaggle, not on a laptop.
+
 ### Cell 7: pack the outputs for download
 ```python
 !cd /kaggle/working && zip -qr lenscart_outputs.zip LensCart/results LensCart/models LensCart/prepared/split_final.csv runs/*/run.json runs/*/history.csv
@@ -93,5 +99,4 @@ Open the finished version → **Output** tab → download:
 Large files (`models/best.pt`, `models/embeddings.npy`, zips) are never committed to git.
 
 ## Not covered yet
-- FashionCLIP linear probe (Table V-c) and zero-shot (V-d): no script exists yet.
 - M10 triplet and the robustness run: optional, after everything above.
