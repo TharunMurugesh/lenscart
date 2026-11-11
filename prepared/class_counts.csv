@@ -1,0 +1,79 @@
+head,class,train,val,test
+articleType,Accessory Gift Set,81,17,13
+articleType,Backpacks,504,110,108
+articleType,Belts,569,123,121
+articleType,Bra,335,72,70
+articleType,Briefs,594,129,126
+articleType,Capris,123,27,25
+articleType,Caps,198,43,42
+articleType,Casual Shoes,1993,427,426
+articleType,Clutches,202,44,43
+articleType,Cufflinks,67,21,18
+articleType,Dresses,325,70,69
+articleType,Dupatta,82,18,16
+articleType,Earrings,323,48,46
+articleType,Flats,350,75,75
+articleType,Flip Flops,642,138,136
+articleType,Formal Shoes,447,96,94
+articleType,Handbags,1231,264,262
+articleType,Heels,925,199,199
+articleType,Innerwear Vests,169,37,36
+articleType,Jackets,181,39,38
+articleType,Jeans,426,92,91
+articleType,Kurtas,1290,278,276
+articleType,Kurtis,165,36,33
+articleType,Leggings,125,27,25
+articleType,Necklace and Chains,111,25,24
+articleType,Night suits,98,23,20
+articleType,Nightdress,137,27,25
+articleType,Pendant,88,10,78
+articleType,Ring,57,5,56
+articleType,Sandals,629,135,133
+articleType,Sarees,304,63,60
+articleType,Scarves,83,18,17
+articleType,Shirts,2253,483,481
+articleType,Shorts,383,83,81
+articleType,Skirts,90,19,19
+articleType,Socks,479,105,102
+articleType,Sports Shoes,1426,306,304
+articleType,Sunglasses,751,162,160
+articleType,Sweaters,195,42,40
+articleType,Sweatshirts,199,44,42
+articleType,Ties,183,38,37
+articleType,Tops,1234,264,264
+articleType,Track Pants,212,47,45
+articleType,Trousers,371,81,78
+articleType,Trunk,100,21,19
+articleType,Tshirts,4948,1062,1060
+articleType,Tunics,160,35,34
+articleType,Wallets,655,141,139
+articleType,Watches,1779,382,381
+baseColour,(masked),1744,408,327
+baseColour,Beige,502,85,100
+baseColour,Black,6383,1351,1344
+baseColour,Blue,3186,679,674
+baseColour,Brown,2136,493,519
+baseColour,Cream,224,54,62
+baseColour,Gold,322,73,88
+baseColour,Green,1357,291,283
+baseColour,Grey,1871,382,359
+baseColour,Maroon,332,76,92
+baseColour,Navy Blue,1187,274,250
+baseColour,Olive,290,49,39
+baseColour,Orange,299,65,84
+baseColour,Pink,1043,233,243
+baseColour,Purple,1017,230,209
+baseColour,Red,1526,339,332
+baseColour,Silver,695,76,216
+baseColour,White,3644,781,771
+baseColour,Yellow,514,112,95
+gender,Boys,543,115,140
+gender,Girls,452,87,88
+gender,Men,14772,3240,3167
+gender,Unisex,1283,270,277
+gender,Women,11222,2339,2415
+usage,(masked),97,16,13
+usage,Casual,21771,4662,4708
+usage,Ethnic,2018,457,434
+usage,Formal,1630,324,351
+usage,Sports,2756,592,581

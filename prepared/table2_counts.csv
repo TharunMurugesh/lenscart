@@ -1,0 +1,9 @@
+step,images
+All records in styles.csv,44446
+With an image entry,44446
+Unique product ids,44446
+"Apparel, Footwear, Accessories only",41911
+Article types with >= 100 images,40410
+  train,28272
+  val,6051
+  test,6087

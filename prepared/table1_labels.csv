@@ -1,0 +1,10 @@
+column,distinct_values_raw,role,use_in_final_model
+articleType,143.0,Head,"108 types after category filter; 49 with >= 100 images kept, rarer rows dropped"
+baseColour,47.0,Head,"18 colours with >= 300 images, Multi excluded; 2479 labels masked"
+gender,5.0,Head,all 5 values; 0 labels masked
+usage,9.0,Head,"Casual, Sports, Ethnic, Formal; 126 labels masked"
+masterCategory,7.0,Filter,"kept Apparel, Footwear, Accessories"
+subCategory,45.0,Not used,kept for analysis only
+season,4.0,Excluded,not visible in an image
+year,13.0,Excluded,not visible in an image
+productDisplayName,,Grouping only,groups duplicate listings in the split; never a model input
