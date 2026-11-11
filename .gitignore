@@ -1,0 +1,21 @@
+# dataset and large artifacts
+data/
+*.zip
+models/*.pt
+models/*.pth
+*.ckpt
+embeddings/*.npy
+
+# secrets
+kaggle.json
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# node
+node_modules/
