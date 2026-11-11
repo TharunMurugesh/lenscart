@@ -1,0 +1,3 @@
+run,backbone,ms_per_image,images,batch,params_millions,cpu,torch_threads
+iv_b,efficientnet_b0,15.68,50,1,4.1,"Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",16
+v_b,resnet50,36.48,50,1,23.66,"Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",16

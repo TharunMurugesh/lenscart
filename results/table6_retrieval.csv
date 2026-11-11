@@ -1,0 +1,2 @@
+model,queries,gallery,p@1_type,p@1_type_colour,p@5_type,p@5_type_colour,p@10_type,p@10_type_colour
+EfficientNet-B0 best.pt (before triplet fine-tuning),4824,28270,0.8822553897180763,0.47139303482587064,0.8572139303482587,0.4432006633499171,0.8447346600331676,0.4246268656716418
