@@ -1,0 +1,18 @@
+{
+  "split_rows": 40410,
+  "missing_images": 4,
+  "unreadable_images": 0,
+  "unreadable_ids": [],
+  "dropped_duplicates": 2468,
+  "dropped_by_split": {
+    "test": 1262,
+    "val": 1206
+  },
+  "final_counts": {
+    "train": 28270,
+    "val": 4844,
+    "test": 4824
+  },
+  "final_rows": 37938,
+  "max_hamming": 4
+}

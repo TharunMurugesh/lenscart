@@ -1,0 +1,4765 @@
+id,split,articleType,nearest_train_id,hamming
+1533,val,Tshirts,2026,4
+1591,test,Shorts,5450,4
+1635,test,Casual Shoes,2894,2
+1728,test,Sports Shoes,24671,2
+1784,val,Sports Shoes,6673,2
+1786,test,Sports Shoes,4149,4
+1814,val,Tshirts,1811,4
+1832,val,Sports Shoes,12429,4
+1920,test,Casual Shoes,3795,2
+1929,val,Sports Shoes,1932,2
+1995,val,Tshirts,2159,4
+2015,val,Tshirts,6926,4
+2047,val,Tshirts,2054,4
+2052,val,Tshirts,2156,4
+2061,val,Tshirts,2158,4
+2069,val,Tshirts,2002,4
+2106,val,Shorts,2191,4
+2109,val,Track Pants,2223,4
+2197,val,Sports Shoes,5754,2
+2224,test,Sandals,4067,4
+2241,val,Tshirts,1996,4
+2250,val,Flip Flops,40697,0
+2252,val,Tshirts,2234,4
+2316,test,Tshirts,9969,4
+2331,test,Tshirts,16027,2
+2353,test,Sports Shoes,22850,2
+2368,val,Casual Shoes,9043,2
+2369,val,Casual Shoes,2390,4
+2378,test,Formal Shoes,2370,2
+2380,val,Casual Shoes,18871,2
+2381,test,Formal Shoes,2398,4
+2383,test,Casual Shoes,2367,4
+2387,test,Casual Shoes,3564,2
+2394,val,Casual Shoes,10266,4
+2396,val,Casual Shoes,2398,4
+2477,val,Sports Shoes,13076,4
+2480,val,Tshirts,2034,4
+2503,val,Casual Shoes,4438,0
+2548,val,Flip Flops,2549,2
+2552,test,Flip Flops,2543,2
+2553,val,Flip Flops,2550,4
+2601,val,Tshirts,1755,4
+2605,test,Tshirts,1561,4
+2611,test,Heels,2613,4
+2630,test,Flats,2628,2
+2631,test,Flats,10615,4
+2634,val,Sandals,22250,4
+2637,val,Formal Shoes,15266,2
+2638,test,Formal Shoes,2640,0
+2743,val,Tshirts,3714,4
+2805,val,Sandals,10147,2
+2814,test,Casual Shoes,39677,4
+2817,test,Casual Shoes,2800,2
+2821,val,Sandals,2803,2
+2823,test,Formal Shoes,5727,2
+2825,test,Formal Shoes,8238,0
+2831,test,Casual Shoes,17690,2
+2833,val,Casual Shoes,10128,2
+2874,test,Heels,19021,4
+2877,test,Heels,19018,2
+2882,val,Heels,3236,4
+2895,test,Heels,3237,4
+2903,val,Heels,6357,4
+2912,val,Heels,2897,2
+2938,test,Tops,5134,4
+2956,val,Tops,41377,4
+2967,test,Sports Shoes,7331,4
+2981,val,Tshirts,2607,4
+3016,val,Tshirts,25684,4
+3055,val,Tshirts,3123,4
+3062,val,Tshirts,9775,4
+3063,val,Tshirts,31588,4
+3096,test,Tshirts,6325,4
+3104,test,Tshirts,14924,4
+3139,val,Heels,46839,2
+3140,test,Heels,3583,4
+3151,test,Sports Shoes,13558,2
+3162,test,Sports Shoes,1827,4
+3175,val,Sports Shoes,11904,2
+3186,test,Sports Shoes,39642,4
+3187,test,Sports Shoes,3168,4
+3201,val,Tshirts,26280,2
+3214,test,Flip Flops,5480,2
+3218,val,Casual Shoes,17764,2
+3219,val,Sports Shoes,10274,2
+3223,test,Sports Shoes,5895,0
+3225,test,Casual Shoes,40302,4
+3239,val,Sports Shoes,4577,4
+3240,val,Sports Shoes,6802,4
+3242,val,Sports Shoes,7228,4
+3254,val,Casual Shoes,39589,2
+3256,val,Casual Shoes,22830,2
+3260,val,Tshirts,3262,4
+3267,test,Tshirts,5500,4
+3285,val,Tshirts,3261,4
+3289,val,Tshirts,3262,4
+3293,val,Sports Shoes,3294,2
+3311,val,Sports Shoes,15250,2
+3312,test,Sports Shoes,10149,4
+3411,test,Tshirts,7705,4
+3442,test,Tshirts,8354,4
+3452,test,Sports Shoes,36948,2
+3487,test,Flats,3504,4
+3491,val,Sandals,6646,4
+3493,test,Casual Shoes,3504,4
+3498,val,Casual Shoes,10149,4
+3506,test,Casual Shoes,2609,2
+3518,val,Tshirts,4036,4
+3547,test,Casual Shoes,3545,2
+3554,test,Casual Shoes,4545,4
+3556,test,Casual Shoes,5578,4
+3559,val,Casual Shoes,12473,2
+3566,val,Sports Shoes,34821,2
+3567,test,Sports Shoes,13199,4
+3572,test,Tshirts,19707,2
+3592,test,Casual Shoes,3585,2
+3594,test,Casual Shoes,8990,2
+3595,test,Casual Shoes,25404,0
+3604,val,Casual Shoes,3585,2
+3605,val,Casual Shoes,9097,4
+3607,test,Casual Shoes,11830,4
+3620,val,Flip Flops,39960,2
+3621,val,Flip Flops,3630,2
+3624,test,Sandals,6146,2
+3626,test,Flip Flops,18493,2
+3631,test,Flip Flops,16733,0
+3634,val,Sandals,16973,2
+3644,test,Casual Shoes,3255,2
+3645,val,Casual Shoes,6356,4
+3647,test,Casual Shoes,39630,4
+3655,test,Casual Shoes,3546,2
+3657,val,Casual Shoes,22095,0
+3663,val,Sports Shoes,3545,4
+3670,val,Casual Shoes,10152,0
+3680,val,Tshirts,11043,4
+3692,test,Sports Shoes,3668,4
+3696,test,Casual Shoes,4270,2
+3706,val,Tshirts,13602,4
+3709,val,Tshirts,6776,4
+3747,test,Tshirts,9309,4
+3805,test,Sandals,5341,4
+3824,test,Flip Flops,59767,4
+3826,val,Sandals,13482,4
+3827,test,Sandals,6352,4
+3829,test,Sandals,44464,4
+3833,test,Sandals,14376,2
+3836,val,Sandals,3837,2
+3839,val,Flats,7731,2
+3841,test,Flats,3842,2
+3843,val,Flats,3842,2
+3856,val,Tshirts,16006,2
+3857,test,Tshirts,5565,4
+3888,test,Tshirts,5500,4
+3889,test,Tshirts,7359,4
+3969,val,Tops,10510,4
+3998,test,Flip Flops,54130,4
+4001,test,Flip Flops,20951,2
+4039,val,Caps,9428,4
+4043,val,Sports Shoes,9497,2
+4064,test,Sandals,4065,2
+4066,test,Casual Shoes,4068,2
+4069,val,Casual Shoes,58820,2
+4070,test,Casual Shoes,5050,4
+4089,val,Tshirts,3859,4
+4107,val,Sandals,4108,4
+4111,val,Sandals,17830,2
+4118,test,Casual Shoes,11843,2
+4121,test,Casual Shoes,3643,4
+4122,val,Casual Shoes,15713,4
+4124,test,Tshirts,4316,4
+4130,test,Casual Shoes,6372,0
+4135,val,Casual Shoes,6126,4
+4137,test,Casual Shoes,4140,2
+4144,test,Sports Shoes,4516,4
+4148,test,Sports Shoes,15305,4
+4153,test,Sports Shoes,5578,2
+4154,test,Sports Shoes,4156,4
+4158,test,Sports Shoes,3178,4
+4164,test,Sports Shoes,1731,4
+4168,test,Sports Shoes,4046,4
+4169,test,Sports Shoes,2474,2
+4174,test,Sports Shoes,10097,0
+4175,test,Sports Shoes,5459,2
+4184,val,Casual Shoes,36227,2
+4188,val,Tshirts,36717,4
+4194,test,Tshirts,18625,4
+4195,test,Tshirts,30106,4
+4201,val,Tshirts,4729,2
+4202,val,Tshirts,4728,0
+4207,test,Tshirts,4191,4
+4215,test,Tshirts,4719,2
+4227,test,Tshirts,4197,4
+4266,val,Sports Shoes,17765,4
+4268,val,Sports Shoes,16150,2
+4272,val,Formal Shoes,35477,0
+4281,val,Formal Shoes,34539,0
+4283,test,Formal Shoes,3637,2
+4284,val,Formal Shoes,5290,2
+4312,val,Tshirts,12595,2
+4317,test,Tshirts,4302,4
+4318,test,Tshirts,4302,2
+4319,val,Tshirts,31100,4
+4322,test,Tshirts,8356,4
+4326,val,Tshirts,3799,4
+4343,val,Casual Shoes,3152,4
+4358,val,Tshirts,4354,4
+4359,val,Tshirts,5010,4
+4385,val,Tshirts,8736,2
+4407,val,Tshirts,9758,4
+4436,test,Casual Shoes,17748,2
+4440,test,Casual Shoes,4444,2
+4441,val,Casual Shoes,6742,2
+4447,test,Sandals,4105,4
+4473,val,Sports Shoes,5519,4
+4476,test,Sports Shoes,3459,4
+4477,val,Sports Shoes,4736,4
+4494,val,Sports Shoes,14396,4
+4498,val,Sports Shoes,4497,2
+4499,test,Sports Shoes,5682,0
+4503,test,Sports Shoes,32837,4
+4506,val,Casual Shoes,4021,2
+4512,test,Sports Shoes,9433,4
+4513,val,Sports Shoes,4485,4
+4519,test,Sports Shoes,3221,4
+4526,val,Sports Shoes,4640,2
+4532,val,Sports Shoes,21727,2
+4544,test,Sports Shoes,10171,4
+4549,test,Sports Shoes,5929,4
+4551,test,Sports Shoes,44405,2
+4556,test,Sports Shoes,6446,4
+4570,val,Sports Shoes,16160,2
+4578,test,Sports Shoes,5532,4
+4579,test,Sports Shoes,6664,2
+4580,val,Sports Shoes,31689,0
+4596,test,Backpacks,4597,4
+4627,test,Sports Shoes,8989,4
+4634,val,Sports Shoes,4632,4
+4635,val,Sports Shoes,5542,2
+4638,val,Sports Shoes,3297,2
+4641,val,Sports Shoes,4563,2
+4642,val,Sports Shoes,3375,2
+4644,test,Sports Shoes,3371,4
+4647,test,Sandals,7246,4
+4648,val,Sandals,16972,4
+4649,test,Sandals,10769,2
+4652,test,Sandals,4509,2
+4655,val,Sports Shoes,3668,2
+4686,val,Backpacks,5252,4
+4723,test,Tshirts,4217,0
+4724,test,Tshirts,4212,0
+4726,val,Tshirts,4204,0
+4730,test,Tshirts,4200,0
+4733,test,Casual Shoes,4181,2
+4735,test,Casual Shoes,11949,4
+4738,val,Casual Shoes,4737,4
+4741,test,Casual Shoes,31968,2
+4743,test,Casual Shoes,2894,0
+4770,test,Capris,4849,0
+4819,test,Shorts,4797,4
+4831,val,Track Pants,4832,4
+4854,test,Casual Shoes,4022,2
+4856,val,Casual Shoes,6357,4
+4877,val,Tshirts,4876,2
+4885,val,Tops,4884,0
+4892,test,Tshirts,52132,2
+4893,test,Tshirts,52132,2
+4899,test,Tshirts,4898,0
+4900,test,Tops,4901,0
+4913,test,Tops,4912,0
+4920,test,Tops,4919,0
+4925,val,Tops,4926,0
+4929,test,Skirts,4930,2
+4933,test,Dresses,4934,0
+4940,test,Jeans,4939,0
+4948,val,Tshirts,4947,0
+4963,test,Tshirts,4964,0
+4966,test,Tshirts,4954,4
+4967,val,Tshirts,4968,0
+4974,val,Shirts,4973,0
+4975,test,Tshirts,4976,0
+4993,val,Sports Shoes,28638,4
+4994,test,Sports Shoes,7713,2
+4998,val,Flip Flops,5631,2
+5040,test,Flip Flops,3996,2
+5104,test,Sandals,13643,2
+5131,test,Shirts,24972,4
+5180,test,Tshirts,26265,4
+5242,val,Sports Shoes,5735,2
+5272,test,Backpacks,9437,4
+5285,test,Tshirts,44634,4
+5296,val,Sandals,7239,4
+5316,test,Formal Shoes,57495,0
+5322,val,Sports Shoes,5037,2
+5339,test,Casual Shoes,3585,4
+5357,test,Sports Shoes,5356,0
+5386,test,Sports Shoes,10285,4
+5415,test,Tshirts,4982,4
+5460,val,Sports Shoes,10171,0
+5461,val,Sports Shoes,3561,2
+5464,val,Sports Shoes,6134,2
+5473,val,Sports Shoes,6649,2
+5475,val,Flip Flops,44933,0
+5476,test,Sports Shoes,4564,4
+5482,val,Sports Shoes,4474,4
+5492,val,Tshirts,8292,4
+5533,test,Sports Shoes,5243,4
+5534,val,Sports Shoes,1827,4
+5560,test,Jackets,5289,0
+5568,val,Sports Shoes,1731,2
+5569,test,Sports Shoes,5940,4
+5574,test,Sports Shoes,2504,4
+5579,val,Sports Shoes,4500,2
+5583,val,Sports Shoes,3228,2
+5584,test,Sports Shoes,18419,4
+5590,val,Sports Shoes,20843,4
+5602,test,Flip Flops,5605,2
+5606,test,Sandals,5616,2
+5611,val,Sandals,5697,4
+5620,test,Sports Shoes,4552,2
+5627,test,Flip Flops,6106,2
+5629,test,Flip Flops,22260,0
+5630,val,Flip Flops,44190,2
+5635,val,Flip Flops,5477,2
+5665,val,Flip Flops,3165,4
+5669,val,Tshirts,31270,4
+5673,val,Casual Shoes,2820,2
+5675,test,Formal Shoes,5677,4
+5685,test,Casual Shoes,3546,4
+5688,test,Casual Shoes,1653,4
+5692,test,Casual Shoes,10276,0
+5693,test,Casual Shoes,6445,2
+5694,val,Casual Shoes,5684,4
+5696,test,Casual Shoes,47194,4
+5698,test,Casual Shoes,4270,2
+5702,test,Casual Shoes,10149,0
+5705,test,Casual Shoes,12993,0
+5707,test,Casual Shoes,5542,2
+5709,val,Flip Flops,5273,2
+5710,test,Sports Shoes,4516,2
+5725,test,Sports Shoes,3301,4
+5747,val,Sports Shoes,9197,4
+5752,test,Sports Shoes,7603,4
+5766,test,Jeans,49877,4
+5781,test,Flip Flops,6288,2
+5827,val,Tshirts,20024,4
+5864,val,Casual Shoes,3255,2
+5866,val,Casual Shoes,3593,4
+5868,val,Casual Shoes,21034,0
+5871,test,Casual Shoes,53384,0
+5901,test,Casual Shoes,20447,2
+5903,test,Casual Shoes,22245,4
+5909,val,Casual Shoes,1594,4
+5915,val,Casual Shoes,1731,4
+5916,test,Casual Shoes,5930,2
+5917,val,Casual Shoes,5697,0
+5920,val,Casual Shoes,4140,2
+5922,val,Casual Shoes,5531,2
+5925,val,Casual Shoes,5483,4
+5927,test,Casual Shoes,9200,4
+5931,test,Casual Shoes,15231,2
+5939,test,Casual Shoes,8344,4
+5967,val,Shirts,18383,4
+5971,test,Shirts,10795,4
+5988,val,Shirts,4292,4
+6100,test,Flip Flops,4742,4
+6119,val,Backpacks,37689,4
+6120,val,Flip Flops,7723,2
+6122,test,Flip Flops,2248,4
+6130,test,Sandals,8094,2
+6131,val,Sports Shoes,41444,2
+6137,val,Casual Shoes,5726,4
+6138,test,Sandals,16246,2
+6139,test,Sandals,7247,4
+6142,test,Sandals,2610,4
+6153,test,Casual Shoes,5588,4
+6160,val,Tshirts,6214,4
+6165,val,Casual Shoes,3552,4
+6167,test,Flip Flops,15410,4
+6169,val,Flip Flops,44711,0
+6173,val,Flip Flops,17053,0
+6241,test,Tshirts,24558,4
+6310,test,Flip Flops,5621,0
+6323,val,Flip Flops,2894,2
+6328,test,Flip Flops,2636,2
+6338,test,Heels,31716,4
+6351,val,Sandals,6350,4
+6360,val,Casual Shoes,6359,2
+6361,test,Casual Shoes,4742,0
+6362,val,Casual Shoes,4742,2
+6371,test,Sports Shoes,42043,4
+6376,test,Casual Shoes,10615,2
+6377,test,Casual Shoes,10615,2
+6378,val,Sports Shoes,13991,2
+6380,val,Sports Shoes,32945,2
+6381,val,Sports Shoes,5043,4
+6383,test,Casual Shoes,2830,4
+6391,test,Flats,5329,0
+6394,test,Sandals,6393,0
+6395,val,Sandals,3488,2
+6396,val,Sandals,5616,4
+6401,test,Sandals,6400,2
+6404,test,Sandals,34512,2
+6412,test,Casual Shoes,3467,4
+6414,val,Flip Flops,2504,4
+6419,test,Flip Flops,34513,2
+6425,val,Casual Shoes,56884,4
+6432,test,Casual Shoes,6433,0
+6435,val,Casual Shoes,5870,2
+6456,val,Sports Shoes,31957,2
+6460,test,Casual Shoes,7365,2
+6462,test,Casual Shoes,3637,2
+6479,test,Tshirts,4230,4
+6483,test,Formal Shoes,3637,4
+6489,test,Tshirts,6492,0
+6491,val,Casual Shoes,9816,4
+6497,test,Casual Shoes,13355,2
+6505,val,Formal Shoes,6509,0
+6507,val,Formal Shoes,26655,0
+6562,val,Tshirts,6528,4
+6626,test,Sports Shoes,4120,4
+6634,val,Sports Shoes,5686,2
+6635,test,Sports Shoes,3650,4
+6638,val,Casual Shoes,10742,4
+6651,val,Flip Flops,6654,0
+6661,val,Casual Shoes,5531,4
+6665,test,Sports Shoes,6733,4
+6667,val,Sports Shoes,15732,4
+6672,test,Casual Shoes,47090,4
+6709,test,Casual Shoes,13194,4
+6712,val,Tshirts,6711,2
+6726,val,Flip Flops,7723,2
+6727,val,Flip Flops,7260,2
+6735,val,Casual Shoes,4025,4
+6746,val,Sports Shoes,15508,4
+6747,val,Sports Shoes,40693,4
+6754,test,Sports Shoes,5926,4
+6800,val,Casual Shoes,39579,4
+6803,test,Casual Shoes,15355,2
+6826,test,Sandals,1789,4
+6833,test,Sports Shoes,11957,4
+6853,val,Sports Shoes,26327,0
+6882,test,Jackets,10404,4
+6913,val,Sandals,4997,2
+6934,val,Tshirts,7031,4
+6961,val,Sports Shoes,39305,2
+6990,test,Tshirts,4197,4
+7004,test,Tshirts,7031,2
+7037,val,Casual Shoes,18415,0
+7045,val,Casual Shoes,2499,0
+7065,val,Backpacks,29318,4
+7171,val,Shirts,10046,4
+7173,test,Shirts,8796,0
+7175,test,Shirts,8805,0
+7178,test,Track Pants,7179,4
+7187,val,Jeans,7190,0
+7226,test,Formal Shoes,7238,2
+7231,test,Formal Shoes,7221,2
+7233,val,Formal Shoes,15270,2
+7234,val,Formal Shoes,6914,4
+7235,test,Formal Shoes,7250,2
+7236,test,Formal Shoes,7250,2
+7254,test,Formal Shoes,7240,2
+7257,val,Formal Shoes,7228,0
+7262,val,Casual Shoes,7240,2
+7291,val,Tshirts,6782,4
+7320,test,Flip Flops,30235,2
+7321,test,Casual Shoes,58141,4
+7326,val,Formal Shoes,17706,2
+7327,val,Casual Shoes,7319,2
+7332,val,Casual Shoes,59326,0
+7363,val,Formal Shoes,2370,2
+7368,val,Sandals,10265,2
+7375,val,Flip Flops,10083,4
+7378,test,Sandals,39281,2
+7379,val,Casual Shoes,3553,0
+7380,test,Formal Shoes,12421,4
+7389,test,Formal Shoes,45622,0
+7390,val,Formal Shoes,10265,2
+7398,val,Formal Shoes,4119,4
+7400,val,Formal Shoes,7372,2
+7403,test,Casual Shoes,7365,2
+7404,val,Sandals,3574,2
+7422,test,Tops,13935,4
+7439,test,Tshirts,7479,4
+7465,val,Tshirts,8195,4
+7581,test,Sports Shoes,9796,0
+7584,val,Sports Shoes,7366,4
+7589,test,Sports Shoes,4110,4
+7592,val,Sports Shoes,5470,2
+7593,test,Sports Shoes,4140,0
+7601,test,Sports Shoes,26702,4
+7605,test,Sports Shoes,8093,4
+7606,val,Sports Shoes,14479,2
+7615,val,Wallets,27832,4
+7674,test,Tshirts,27785,4
+7716,val,Casual Shoes,7267,2
+7717,test,Casual Shoes,53639,4
+7721,val,Sports Shoes,3303,4
+7726,test,Casual Shoes,56880,4
+7728,val,Casual Shoes,22114,4
+7729,val,Casual Shoes,43893,0
+7741,test,Sports Shoes,5908,4
+7748,val,Sports Shoes,3545,4
+7749,val,Tshirts,4413,4
+7754,test,Casual Shoes,5938,2
+7761,test,Tshirts,7755,4
+7773,test,Sandals,37050,2
+7776,val,Casual Shoes,8072,2
+7802,test,Casual Shoes,6670,4
+7804,val,Casual Shoes,26561,4
+7805,val,Casual Shoes,10080,4
+7807,val,Casual Shoes,3246,4
+7809,val,Casual Shoes,5539,4
+7830,val,Sports Shoes,3652,0
+7843,val,Sports Shoes,8907,4
+7844,val,Sports Shoes,17698,2
+7903,val,Tshirts,7938,2
+7951,test,Tshirts,22789,4
+7964,test,Tshirts,12728,4
+7980,val,Tshirts,7012,4
+8022,test,Track Pants,4830,4
+8076,val,Sports Shoes,18479,4
+8086,test,Sandals,6474,2
+8090,test,Sandals,5908,4
+8092,val,Sports Shoes,22542,4
+8103,test,Sports Shoes,18402,2
+8120,test,Belts,41248,4
+8161,test,Shirts,5981,4
+8175,test,Heels,36619,2
+8182,val,Shirts,8183,4
+8197,val,Shirts,8194,0
+8215,test,Sports Shoes,5942,4
+8218,test,Sports Shoes,14284,4
+8256,test,Sports Shoes,2489,4
+8269,val,Tshirts,8293,4
+8270,test,Tshirts,20317,4
+8280,val,Tshirts,39064,4
+8282,test,Tshirts,17240,4
+8299,test,Sports Shoes,22822,4
+8325,test,Tshirts,8273,0
+8327,val,Tshirts,8326,0
+8337,val,Tshirts,8336,0
+8338,val,Tshirts,8339,0
+8340,val,Tshirts,8341,4
+8346,test,Sports Shoes,7841,4
+8375,test,Tshirts,8372,0
+8380,val,Tops,31102,4
+8385,test,Tshirts,8384,0
+8388,val,Track Pants,8903,2
+8400,test,Tshirts,48434,4
+8413,test,Tshirts,15528,4
+8483,test,Dresses,8494,4
+8549,test,Tshirts,10878,4
+8551,val,Tshirts,8554,4
+8587,val,Shirts,8586,0
+8623,val,Sunglasses,8705,2
+8627,test,Sunglasses,30564,4
+8631,test,Sunglasses,8699,2
+8634,test,Sandals,7812,2
+8636,test,Sunglasses,29955,2
+8643,val,Sunglasses,17327,2
+8647,test,Sunglasses,28345,2
+8648,test,Sunglasses,8784,4
+8649,val,Sunglasses,16949,2
+8653,val,Sunglasses,23766,4
+8655,val,Sunglasses,8626,2
+8659,val,Sunglasses,30279,2
+8661,test,Sunglasses,21335,2
+8667,val,Sunglasses,21281,4
+8672,val,Sunglasses,8673,2
+8675,val,Sunglasses,29955,2
+8676,val,Sunglasses,8616,2
+8679,val,Sunglasses,28303,4
+8686,val,Sunglasses,8642,2
+8687,val,Sunglasses,51737,2
+8688,val,Sunglasses,8693,2
+8689,val,Sunglasses,8784,2
+8691,test,Sunglasses,8654,2
+8692,test,Sunglasses,8622,2
+8703,val,Sunglasses,8693,4
+8704,val,Sunglasses,8694,2
+8707,val,Sunglasses,9413,2
+8709,val,Sunglasses,40000,0
+8712,val,Sunglasses,8673,0
+8716,val,Tshirts,4015,4
+8727,test,Shirts,7820,4
+8729,test,Shirts,9621,0
+8730,val,Shirts,9622,0
+8743,test,Shirts,9651,0
+8754,val,Sandals,10747,2
+8768,test,Sunglasses,8683,2
+8774,test,Shirts,9614,0
+8780,val,Shirts,9650,0
+8786,test,Shirts,7158,0
+8798,val,Shirts,10046,4
+8801,val,Shirts,7169,0
+8809,test,Shirts,7156,0
+8815,val,Shirts,8590,4
+8862,test,Shirts,8851,4
+8867,test,Shirts,8857,2
+8897,val,Shirts,8898,4
+8901,val,Trousers,8834,2
+8918,test,Belts,8121,4
+8938,val,Sunglasses,8714,4
+8952,test,Trousers,8834,4
+8963,test,Sports Shoes,25457,4
+8964,test,Sports Shoes,4511,4
+8972,val,Sports Shoes,7238,4
+8974,test,Sports Shoes,1590,4
+8986,val,Casual Shoes,12956,2
+8991,val,Casual Shoes,24700,2
+8997,val,Casual Shoes,47184,0
+9000,val,Casual Shoes,8987,4
+9012,test,Sandals,10152,2
+9025,val,Casual Shoes,9087,2
+9026,val,Casual Shoes,6499,2
+9028,test,Casual Shoes,17822,0
+9029,test,Casual Shoes,6490,2
+9030,test,Casual Shoes,4853,2
+9033,test,Casual Shoes,11947,2
+9035,test,Casual Shoes,5287,4
+9040,test,Formal Shoes,11883,2
+9042,val,Formal Shoes,34532,2
+9045,val,Flip Flops,32810,4
+9047,test,Sports Shoes,2505,4
+9048,val,Sports Shoes,3488,2
+9055,test,Sports Shoes,3301,4
+9056,test,Sports Shoes,13556,4
+9060,val,Sports Shoes,3241,4
+9076,test,Track Pants,8763,4
+9077,test,Track Pants,27023,2
+9088,test,Casual Shoes,9089,2
+9092,test,Sports Shoes,12958,2
+9100,val,Flip Flops,20839,4
+9104,val,Casual Shoes,57467,2
+9109,val,Sports Shoes,9110,2
+9112,test,Sports Shoes,8907,4
+9174,test,Jeans,9175,4
+9205,val,Casual Shoes,11839,4
+9213,test,Casual Shoes,9211,4
+9215,test,Casual Shoes,32182,2
+9217,test,Casual Shoes,1789,4
+9218,test,Casual Shoes,20873,2
+9221,val,Flip Flops,12983,2
+9267,test,Shirts,15981,4
+9330,test,Sports Shoes,3372,4
+9386,test,Casual Shoes,26660,2
+9393,test,Sports Shoes,9129,2
+9394,val,Sports Shoes,4112,4
+9397,test,Sports Shoes,2826,2
+9398,test,Sports Shoes,8992,2
+9400,test,Sports Shoes,5483,4
+9412,test,Sunglasses,8626,2
+9416,test,Shirts,9417,0
+9421,test,Shirts,9420,0
+9423,val,Shirts,9422,0
+9449,test,Shirts,9450,0
+9453,val,Shirts,9454,0
+9455,test,Shirts,9456,0
+9463,val,Shirts,9464,0
+9466,test,Shirts,9465,0
+9469,val,Shirts,9470,0
+9471,test,Shirts,9472,0
+9473,test,Shirts,9474,0
+9498,val,Shirts,9500,4
+9507,test,Shirts,9506,0
+9520,test,Shirts,9519,0
+9551,val,Tshirts,38559,4
+9552,val,Tshirts,38581,2
+9570,test,Shirts,9569,0
+9594,val,Shirts,9708,4
+9616,test,Shirts,8725,0
+9619,test,Shirts,7820,4
+9627,test,Shirts,8748,0
+9638,val,Shirts,8750,0
+9641,val,Shirts,8737,0
+9649,val,Shirts,8779,0
+9654,test,Shirts,8898,4
+9656,test,Shirts,8781,0
+9671,test,Tshirts,9862,4
+9692,val,Tshirts,9761,4
+9697,test,Formal Shoes,5724,2
+9698,test,Formal Shoes,9701,0
+9703,test,Formal Shoes,12489,2
+9706,val,Sandals,5680,0
+9719,val,Sandals,11932,2
+9766,test,Tshirts,10043,4
+9774,test,Tshirts,22908,4
+9797,val,Sandals,4109,2
+9808,test,Shirts,9809,0
+9814,val,Formal Shoes,7267,2
+9817,val,Casual Shoes,21034,0
+9875,test,Shirts,9876,0
+9904,val,Sports Shoes,3310,4
+9935,val,Tshirts,5160,4
+9937,test,Tshirts,9942,4
+9940,val,Tshirts,28701,4
+10012,test,Track Pants,8903,2
+10031,val,Tshirts,2617,4
+10044,test,Tshirts,10043,4
+10058,val,Tshirts,19532,4
+10081,test,Sports Shoes,24456,2
+10092,val,Sports Shoes,14555,2
+10096,val,Sports Shoes,15262,2
+10102,val,Sports Shoes,24218,2
+10104,test,Sports Shoes,4340,4
+10142,val,Casual Shoes,5479,4
+10144,test,Casual Shoes,4179,2
+10148,val,Casual Shoes,12725,2
+10153,test,Formal Shoes,11870,0
+10154,test,Casual Shoes,10152,0
+10155,test,Casual Shoes,10152,0
+10156,val,Casual Shoes,2807,2
+10157,val,Flip Flops,11875,0
+10161,val,Sports Shoes,20700,2
+10170,val,Casual Shoes,10169,2
+10172,test,Casual Shoes,9696,2
+10179,test,Flip Flops,6163,2
+10182,val,Casual Shoes,2827,2
+10185,test,Shirts,10184,0
+10188,test,Shirts,10189,0
+10256,val,Shirts,11678,4
+10258,test,Trousers,9083,4
+10263,val,Formal Shoes,10129,0
+10264,test,Formal Shoes,12428,2
+10269,test,Flats,14340,4
+10272,val,Heels,24120,2
+10287,test,Flats,35661,2
+10288,val,Flats,22260,0
+10292,val,Heels,13044,2
+10298,val,Heels,39563,2
+10299,test,Heels,5625,2
+10300,val,Sandals,10265,2
+10302,val,Formal Shoes,10277,2
+10306,val,Casual Shoes,10632,0
+10317,test,Watches,58935,4
+10319,test,Watches,11230,4
+10330,test,Belts,5002,2
+10341,test,Tshirts,11433,4
+10357,val,Tshirts,10854,4
+10358,val,Tshirts,14069,4
+10376,test,Tshirts,10442,4
+10409,val,Tshirts,10344,4
+10412,test,Tshirts,26295,2
+10431,val,Shirts,10434,4
+10456,test,Tshirts,10470,2
+10457,val,Tshirts,10829,4
+10476,val,Shirts,10802,2
+10501,val,Tshirts,1861,4
+10604,val,Caps,7622,4
+10612,val,Shirts,5179,4
+10619,val,Flats,44214,0
+10620,test,Flip Flops,39571,2
+10621,test,Flats,41674,2
+10626,test,Casual Shoes,9715,2
+10627,test,Casual Shoes,12515,2
+10628,val,Casual Shoes,24418,0
+10637,val,Formal Shoes,2370,2
+10640,test,Casual Shoes,10629,2
+10650,test,Shirts,12598,4
+10665,val,Tshirts,41753,4
+10670,val,Tshirts,13253,4
+10682,test,Tshirts,11433,4
+10743,test,Flip Flops,7723,2
+10748,test,Flip Flops,10740,0
+10753,test,Flip Flops,10754,0
+10756,test,Casual Shoes,10747,4
+10757,val,Flip Flops,13925,0
+10765,test,Flip Flops,7723,2
+10784,val,Caps,10785,4
+10791,val,Shirts,20179,4
+10796,val,Shirts,10434,4
+10803,test,Shirts,26488,4
+10810,val,Shirts,7823,4
+10822,test,Tshirts,10805,4
+10833,val,Tshirts,17932,4
+10839,val,Tshirts,10805,4
+10845,val,Tshirts,16010,2
+10859,val,Tshirts,8472,4
+10866,test,Tshirts,10872,4
+10876,test,Tshirts,10344,2
+10879,val,Tshirts,10452,4
+10987,test,Tshirts,18849,4
+10995,val,Tshirts,10793,4
+11024,test,Tshirts,19612,4
+11025,test,Tshirts,12017,4
+11037,test,Tops,32926,4
+11091,val,Shirts,11092,0
+11113,test,Shirts,11112,0
+11147,test,Shirts,11053,2
+11148,test,Shirts,11053,2
+11165,test,Shirts,11166,0
+11239,test,Jeans,11236,4
+11389,val,Tshirts,31791,4
+11414,test,Shirts,11363,4
+11436,test,Tshirts,12653,4
+11447,val,Sweaters,25396,4
+11496,val,Heels,14375,2
+11497,val,Heels,33108,4
+11508,val,Heels,11519,2
+11510,val,Heels,17746,2
+11514,val,Heels,13555,4
+11515,val,Heels,13561,0
+11516,val,Heels,17758,2
+11520,test,Jeans,11236,4
+11549,val,Kurtas,28716,4
+11577,test,Kurtas,11649,2
+11584,test,Kurtis,3080,4
+11597,test,Kurtas,11620,4
+11600,val,Kurtas,12143,4
+11624,val,Kurtas,11615,4
+11684,val,Shirts,11733,2
+11735,val,Tshirts,11733,4
+11738,val,Tshirts,6220,2
+11740,test,Tshirts,18618,4
+11773,test,Tshirts,11733,2
+11815,val,Casual Shoes,5679,2
+11818,val,Casual Shoes,11820,2
+11821,val,Casual Shoes,11822,4
+11831,val,Casual Shoes,3795,2
+11840,val,Casual Shoes,11836,2
+11841,val,Casual Shoes,26671,0
+11842,val,Casual Shoes,11839,2
+11849,test,Flip Flops,5625,2
+11850,test,Flip Flops,11848,2
+11853,val,Flip Flops,6438,2
+11855,val,Flip Flops,25111,4
+11857,test,Flip Flops,10271,2
+11858,val,Flip Flops,5631,2
+11859,test,Flip Flops,10180,2
+11860,val,Flip Flops,10180,2
+11862,test,Flip Flops,15252,2
+11863,test,Flip Flops,42998,2
+11864,val,Flip Flops,11503,2
+11888,val,Formal Shoes,12481,0
+11889,val,Formal Shoes,10129,2
+11891,val,Formal Shoes,3297,4
+11912,test,Sandals,16150,2
+11921,val,Formal Shoes,44417,2
+11933,val,Sports Shoes,10080,4
+11948,test,Casual Shoes,29239,2
+11951,val,Casual Shoes,7319,4
+11954,test,Casual Shoes,26651,2
+11958,test,Casual Shoes,9043,0
+11960,test,Casual Shoes,3371,2
+11965,test,Sandals,6163,2
+11967,val,Casual Shoes,10285,4
+11968,val,Sports Shoes,6502,2
+11976,val,Casual Shoes,6134,2
+11979,val,Casual Shoes,2499,2
+11981,test,Sports Shoes,11929,4
+11994,val,Tshirts,32918,4
+12003,test,Shirts,9066,4
+12005,test,Shirts,12318,4
+12006,test,Shirts,9066,4
+12008,test,Shirts,9065,4
+12028,test,Shirts,12018,4
+12029,test,Shirts,12023,2
+12032,test,Shirts,9070,4
+12076,test,Kurtas,30836,4
+12090,test,Kurtas,22063,4
+12099,test,Kurtas,8484,4
+12107,test,Kurtis,11583,2
+12157,val,Leggings,12163,4
+12159,test,Leggings,12163,4
+12172,val,Shirts,11040,4
+12187,val,Shirts,3098,4
+12193,test,Shirts,12469,0
+12199,val,Tshirts,12198,4
+12203,val,Tshirts,12195,4
+12253,test,Shirts,12010,4
+12274,val,Shirts,12303,4
+12275,test,Shirts,12247,4
+12277,test,Shirts,12260,2
+12288,val,Trousers,12214,4
+12298,test,Shirts,9504,4
+12319,test,Shirts,9422,4
+12326,val,Shirts,9422,4
+12327,test,Shirts,12038,2
+12329,test,Shirts,12273,4
+12340,test,Shirts,12012,2
+12346,test,Tshirts,12345,0
+12395,val,Socks,12396,4
+12397,val,Socks,12399,2
+12400,test,Socks,12399,2
+12403,val,Socks,12399,4
+12405,val,Socks,17296,4
+12406,test,Socks,49304,4
+12408,test,Socks,18953,4
+12412,test,Wallets,14847,4
+12414,test,Wallets,12417,4
+12419,test,Wallets,21805,4
+12453,val,Belts,7638,2
+12455,val,Belts,12454,2
+12456,val,Belts,12454,2
+12467,val,Ties,12390,2
+12474,val,Sandals,10265,0
+12476,val,Sandals,2809,2
+12477,val,Formal Shoes,2809,4
+12484,test,Sandals,5290,2
+12487,val,Formal Shoes,10128,0
+12506,val,Casual Shoes,10281,2
+12507,test,Casual Shoes,47245,2
+12510,test,Casual Shoes,12508,4
+12513,val,Casual Shoes,15508,0
+12522,val,Casual Shoes,4181,2
+12569,val,Tshirts,12912,4
+12582,test,Tshirts,24986,2
+12597,test,Tshirts,24986,4
+12626,val,Tshirts,7696,4
+12639,test,Tshirts,32477,4
+12656,val,Shirts,4416,4
+12657,val,Shirts,12663,4
+12658,val,Shirts,12668,4
+12662,val,Shirts,12668,4
+12669,val,Shirts,13771,2
+12675,val,Trousers,12677,4
+12692,test,Sports Shoes,9108,2
+12695,test,Sports Shoes,11953,4
+12697,val,Sports Shoes,5049,2
+12699,val,Sports Shoes,14562,2
+12708,test,Sports Shoes,1594,4
+12709,test,Sports Shoes,5379,2
+12717,test,Casual Shoes,35472,4
+12723,test,Sports Shoes,1842,4
+12813,val,Casual Shoes,4140,2
+12820,test,Flip Flops,6443,4
+12852,val,Shirts,4971,4
+12863,val,Formal Shoes,6649,2
+12873,test,Formal Shoes,11870,2
+12875,test,Formal Shoes,5291,2
+12876,test,Formal Shoes,11892,2
+12877,test,Formal Shoes,21571,2
+12878,test,Formal Shoes,10149,2
+12879,test,Formal Shoes,3637,4
+12892,test,Casual Shoes,13969,2
+12895,test,Sports Shoes,3840,2
+12897,test,Casual Shoes,4113,4
+12907,test,Tshirts,58577,4
+12917,test,Sweaters,12663,4
+12948,val,Shirts,4351,4
+12952,test,Shirts,13398,4
+12957,val,Sports Shoes,8074,4
+12960,val,Sports Shoes,10274,4
+12968,val,Sports Shoes,3371,4
+12972,val,Sports Shoes,3577,4
+12974,val,Sports Shoes,43235,2
+12975,test,Sports Shoes,4516,4
+12977,val,Sports Shoes,8078,2
+12978,val,Sports Shoes,13547,0
+12994,test,Sports Shoes,5470,2
+12997,val,Casual Shoes,5326,2
+13000,val,Heels,5616,4
+13002,test,Heels,11893,2
+13003,test,Heels,11914,2
+13014,val,Heels,17007,2
+13019,test,Heels,22259,0
+13026,val,Heels,22276,2
+13028,val,Heels,11502,2
+13033,val,Heels,14415,2
+13035,val,Heels,13031,0
+13040,test,Heels,15895,0
+13047,val,Heels,12421,4
+13069,val,Casual Shoes,13137,4
+13075,val,Casual Shoes,14562,0
+13083,test,Casual Shoes,49608,2
+13093,test,Sweaters,14995,2
+13116,val,Casual Shoes,10149,2
+13117,val,Casual Shoes,10267,4
+13129,test,Sandals,7840,2
+13130,test,Casual Shoes,3467,2
+13131,test,Formal Shoes,8959,0
+13132,test,Casual Shoes,6502,2
+13133,test,Formal Shoes,39255,2
+13134,val,Sandals,10152,2
+13139,test,Casual Shoes,3488,2
+13143,test,Heels,53729,2
+13144,val,Heels,49815,2
+13171,val,Sports Shoes,44464,4
+13172,test,Sandals,7253,4
+13182,val,Sports Shoes,24457,2
+13186,test,Casual Shoes,10149,0
+13189,val,Sports Shoes,11977,2
+13191,val,Casual Shoes,6490,2
+13192,test,Casual Shoes,7881,2
+13195,test,Casual Shoes,13194,2
+13204,test,Sports Shoes,23925,0
+13266,test,Tops,8372,4
+13271,val,Heels,29231,2
+13273,val,Heels,33134,0
+13275,val,Heels,3141,4
+13294,test,Tops,13295,0
+13296,val,Tshirts,46045,4
+13297,val,Tshirts,46045,4
+13299,val,Shorts,38991,2
+13301,val,Shorts,13300,0
+13306,test,Trousers,13248,2
+13307,test,Trousers,13248,2
+13311,val,Shirts,13323,4
+13312,val,Shirts,13323,4
+13313,val,Shirts,12595,2
+13314,val,Shirts,12595,2
+13318,val,Shirts,24874,4
+13319,val,Shirts,24874,4
+13322,test,Shirts,13323,0
+13331,val,Shirts,13332,0
+13339,val,Skirts,12441,2
+13340,val,Skirts,12441,4
+13342,test,Capris,35896,2
+13351,val,Jeans,29178,2
+13358,test,Casual Shoes,4021,2
+13360,val,Casual Shoes,15487,2
+13362,test,Casual Shoes,4139,2
+13366,test,Casual Shoes,15735,2
+13367,test,Casual Shoes,3213,4
+13370,val,Casual Shoes,16805,4
+13375,val,Sandals,9385,4
+13376,test,Casual Shoes,11890,2
+13378,val,Casual Shoes,36910,2
+13381,val,Casual Shoes,28633,0
+13382,test,Casual Shoes,13388,0
+13383,test,Casual Shoes,7223,2
+13389,test,Shirts,13396,4
+13393,test,Shirts,13413,4
+13395,val,Shirts,6042,4
+13397,val,Shirts,13459,4
+13423,test,Tshirts,11363,4
+13464,test,Shirts,12944,4
+13483,test,Flats,22262,2
+13514,test,Skirts,13515,0
+13521,val,Tops,9253,4
+13539,test,Heels,14349,4
+13541,test,Flats,32520,2
+13544,test,Flats,8072,0
+13546,val,Flats,11506,2
+13548,test,Heels,56924,0
+13549,test,Casual Shoes,12425,2
+13550,test,Flats,32815,2
+13551,test,Heels,13547,2
+13554,val,Flats,6117,2
+13562,test,Heels,5621,2
+13565,val,Innerwear Vests,11043,4
+13640,val,Flats,35055,0
+13641,test,Heels,14414,2
+13644,val,Heels,11506,4
+13676,test,Sports Shoes,6622,4
+13679,val,Sports Shoes,48135,4
+13680,test,Sports Shoes,24749,2
+13686,val,Flip Flops,5601,4
+13687,val,Flip Flops,6313,2
+13689,val,Sports Shoes,25457,2
+13691,val,Sports Shoes,23500,2
+13699,val,Sports Shoes,8528,2
+13703,test,Casual Shoes,7987,2
+13726,val,Casual Shoes,50739,2
+13727,val,Sports Shoes,4516,2
+13737,val,Shirts,12941,2
+13739,val,Shirts,12939,4
+13741,test,Shirts,13730,4
+13745,val,Shirts,13728,4
+13754,val,Shirts,26792,4
+13758,test,Shirts,22575,4
+13759,test,Shirts,13748,4
+13765,val,Shirts,13769,4
+13796,val,Tshirts,13799,4
+13812,test,Sweaters,12259,4
+13844,val,Sports Shoes,3565,4
+13845,test,Shirts,11250,2
+13847,test,Tops,19099,4
+13855,test,Trousers,15119,4
+13896,val,Sports Shoes,17416,4
+13900,test,Sports Shoes,9399,4
+13903,test,Casual Shoes,13150,4
+13905,test,Sports Shoes,2826,2
+13907,val,Casual Shoes,8529,4
+13909,test,Sandals,4446,2
+13953,test,Tshirts,10855,4
+13954,test,Tshirts,3879,4
+13968,test,Casual Shoes,13969,2
+13970,test,Sports Shoes,13981,0
+13983,val,Flip Flops,8977,4
+13987,val,Casual Shoes,26561,2
+13993,val,Casual Shoes,22145,4
+14012,test,Tshirts,14001,4
+14033,val,Shirts,15996,4
+14038,test,Shirts,14053,4
+14054,test,Shirts,14050,2
+14057,test,Tshirts,5158,4
+14061,test,Tshirts,24015,2
+14089,test,Sweaters,10364,4
+14094,test,Tshirts,14069,4
+14103,test,Tshirts,36832,4
+14138,val,Cufflinks,14137,0
+14139,val,Cufflinks,58863,0
+14140,val,Cufflinks,39058,0
+14145,val,Cufflinks,14137,0
+14147,val,Cufflinks,24642,4
+14151,val,Cufflinks,39043,2
+14152,val,Cufflinks,14137,2
+14156,val,Cufflinks,14137,0
+14157,val,Cufflinks,14137,0
+14158,test,Cufflinks,29096,4
+14159,val,Cufflinks,39041,2
+14162,val,Cufflinks,14137,2
+14163,val,Cufflinks,58863,0
+14313,test,Tshirts,26265,4
+14319,val,Shorts,27626,4
+14335,val,Casual Shoes,20807,4
+14336,test,Casual Shoes,2505,4
+14338,val,Sports Shoes,13920,2
+14342,test,Sports Shoes,3246,4
+14352,val,Flats,32728,0
+14354,test,Heels,13146,4
+14356,val,Heels,32851,2
+14357,test,Heels,14349,2
+14360,test,Heels,23889,4
+14361,val,Heels,22492,2
+14367,test,Heels,14372,2
+14373,test,Heels,5317,4
+14374,val,Heels,46825,4
+14377,val,Heels,10618,4
+14383,val,Heels,11941,2
+14385,val,Heels,21734,4
+14386,test,Heels,17011,4
+14391,val,Heels,7381,2
+14395,val,Heels,7248,4
+14398,val,Casual Shoes,14454,2
+14401,test,Heels,14454,2
+14417,test,Heels,9225,2
+14431,test,Heels,15521,2
+14433,val,Heels,6510,4
+14440,val,Heels,47219,4
+14447,val,Casual Shoes,25017,0
+14449,val,Casual Shoes,11495,4
+14450,test,Casual Shoes,3154,4
+14452,test,Heels,14396,4
+14453,test,Heels,14448,2
+14462,test,Heels,10280,2
+14476,test,Heels,17764,2
+14481,test,Casual Shoes,11877,4
+14484,val,Casual Shoes,15051,4
+14490,test,Casual Shoes,11871,0
+14492,test,Casual Shoes,10629,4
+14496,test,Casual Shoes,53384,2
+14501,test,Casual Shoes,10301,2
+14502,val,Casual Shoes,5690,4
+14518,val,Shirts,14512,4
+14528,test,Shirts,14522,2
+14556,val,Casual Shoes,14570,4
+14557,test,Casual Shoes,28637,2
+14558,val,Casual Shoes,13080,2
+14564,val,Casual Shoes,6670,4
+14566,test,Casual Shoes,5588,4
+14662,test,Shirts,32394,4
+14727,test,Tshirts,29345,4
+14755,val,Shirts,14749,2
+14758,test,Shirts,26804,0
+14759,test,Shirts,14735,4
+14775,test,Shirts,33250,4
+14779,test,Shirts,14732,2
+14823,test,Belts,14832,4
+14833,test,Belts,42960,2
+14852,test,Wallets,14854,4
+14910,test,Tshirts,14911,4
+14914,test,Tshirts,10450,4
+14922,test,Tshirts,14927,4
+14945,test,Tshirts,10878,2
+14946,val,Tshirts,15528,0
+14953,test,Tshirts,10450,4
+14965,test,Wallets,25437,4
+14968,val,Wallets,14840,4
+14982,test,Belts,42910,4
+14990,val,Sweaters,14995,0
+15001,test,Tshirts,18938,4
+15010,test,Tshirts,14998,4
+15011,test,Track Pants,12538,2
+15067,test,Sandals,6511,2
+15069,test,Sandals,9051,4
+15070,test,Sandals,6753,4
+15074,test,Sandals,15738,2
+15076,val,Kurtas,29581,2
+15077,val,Kurtas,15986,2
+15109,test,Trousers,15119,4
+15110,test,Trousers,15117,2
+15113,test,Trousers,15121,2
+15118,val,Trousers,15119,2
+15125,val,Trousers,26822,4
+15184,val,Sweaters,15182,4
+15185,val,Sweaters,15182,4
+15207,val,Sweaters,19641,4
+15226,val,Casual Shoes,9129,4
+15228,val,Casual Shoes,4853,2
+15235,val,Casual Shoes,6810,4
+15236,val,Casual Shoes,8967,4
+15247,test,Casual Shoes,3795,4
+15255,val,Casual Shoes,4568,4
+15258,test,Casual Shoes,57303,2
+15260,val,Casual Shoes,3651,4
+15263,val,Casual Shoes,11830,2
+15265,test,Casual Shoes,4443,4
+15273,test,Backpacks,4606,4
+15284,val,Sports Shoes,4448,2
+15288,test,Casual Shoes,7370,0
+15289,val,Sports Shoes,9050,2
+15308,test,Sports Shoes,23937,2
+15311,test,Sandals,3581,4
+15352,val,Casual Shoes,9139,4
+15354,test,Casual Shoes,37248,0
+15359,test,Formal Shoes,9044,2
+15365,test,Casual Shoes,13555,0
+15375,val,Casual Shoes,12429,2
+15376,val,Sports Shoes,24419,4
+15382,val,Flip Flops,7260,4
+15385,test,Flip Flops,16113,0
+15388,val,Sandals,32177,2
+15397,val,Casual Shoes,12872,4
+15407,test,Casual Shoes,15377,2
+15412,test,Sports Shoes,14448,2
+15418,val,Sports Shoes,14448,2
+15468,val,Tshirts,19175,4
+15472,val,Tshirts,10490,4
+15474,test,Tshirts,10462,4
+15475,val,Tshirts,4230,4
+15486,val,Flats,15487,4
+15493,test,Heels,17670,4
+15494,val,Casual Shoes,11879,4
+15506,val,Formal Shoes,18400,4
+15510,test,Casual Shoes,22723,2
+15516,test,Flip Flops,17968,2
+15526,val,Heels,11503,2
+15532,val,Socks,17390,4
+15544,val,Heels,6655,4
+15567,val,Heels,15700,2
+15572,test,Tshirts,17800,2
+15577,test,Tshirts,50713,2
+15608,val,Track Pants,7782,0
+15612,val,Track Pants,7782,2
+15622,val,Track Pants,7782,2
+15686,val,Trousers,15688,4
+15709,val,Sports Shoes,42039,0
+15710,test,Flip Flops,16734,2
+15715,test,Casual Shoes,17842,2
+15731,test,Casual Shoes,15732,4
+15733,test,Sports Shoes,13920,2
+15744,test,Sports Shoes,1594,2
+15766,val,Innerwear Vests,29486,4
+15773,test,Briefs,15774,2
+15783,test,Briefs,25344,4
+15788,val,Briefs,15774,2
+15802,test,Briefs,28892,2
+15841,test,Kurtas,28947,4
+15848,val,Sandals,15847,4
+15854,val,Sandals,20445,2
+15863,val,Sandals,7373,2
+15868,test,Sandals,10760,2
+15872,test,Casual Shoes,15898,4
+15875,test,Flip Flops,15876,2
+15879,val,Sandals,20866,2
+15881,val,Casual Shoes,15884,2
+15888,val,Sandals,15847,4
+15889,test,Sandals,20445,4
+15894,test,Sandals,10284,2
+15896,val,Sandals,15895,0
+15900,test,Sandals,15874,2
+15915,test,Shirts,15914,4
+15931,test,Tshirts,20256,4
+15941,val,Belts,20526,2
+15952,val,Ties,15954,2
+15961,test,Ties,15946,4
+15971,val,Shirts,14050,4
+15985,val,Shirts,46398,4
+15987,val,Tshirts,10490,2
+16000,test,Sweaters,16002,4
+16016,val,Scarves,23479,4
+16034,test,Shirts,4197,4
+16035,test,Shirts,15974,4
+16046,test,Shirts,16031,4
+16047,val,Shirts,3486,4
+16052,test,Shirts,4197,4
+16057,val,Trousers,11346,4
+16062,val,Trousers,16055,0
+16069,val,Trousers,11310,4
+16079,test,Sunglasses,16081,2
+16085,test,Sunglasses,16080,0
+16087,test,Sunglasses,16858,2
+16088,test,Sunglasses,8662,2
+16089,test,Sunglasses,8662,2
+16091,test,Sunglasses,8708,2
+16093,test,Sunglasses,14907,2
+16096,test,Sunglasses,14907,2
+16098,val,Sunglasses,8622,2
+16100,test,Sunglasses,8641,2
+16105,val,Sunglasses,8698,2
+16107,val,Sunglasses,16083,2
+16112,test,Sandals,12982,0
+16114,test,Sandals,20956,2
+16115,val,Sandals,20956,2
+16116,val,Sandals,5530,2
+16117,test,Sandals,3622,4
+16119,val,Sandals,9216,4
+16133,val,Tops,12545,4
+16135,val,Tops,1651,4
+16163,val,Formal Shoes,9044,0
+16164,val,Sandals,17969,0
+16165,val,Casual Shoes,10146,2
+16170,val,Formal Shoes,16166,2
+16174,val,Sandals,9138,2
+16182,val,Formal Shoes,7220,2
+16187,val,Casual Shoes,16173,2
+16191,test,Tshirts,18844,2
+16210,test,Tshirts,18625,2
+16221,test,Track Pants,12538,4
+16222,test,Track Pants,13528,4
+16234,test,Tshirts,6958,4
+16236,val,Flip Flops,3630,0
+16248,val,Flip Flops,9138,2
+16319,val,Tshirts,9864,4
+16321,val,Tshirts,16316,4
+16325,val,Tshirts,31270,4
+16350,test,Shirts,16334,4
+16351,test,Shirts,16354,4
+16373,val,Trousers,16370,4
+16385,val,Shirts,16334,4
+16399,val,Shirts,14916,2
+16405,test,Shirts,16007,4
+16411,test,Shirts,6930,4
+16413,val,Tshirts,16423,4
+16421,test,Tshirts,22326,4
+16449,val,Shirts,16299,2
+16457,val,Shirts,16472,2
+16465,test,Shirts,16468,4
+16484,val,Shirts,20166,4
+16488,val,Tshirts,15193,4
+16494,test,Tshirts,14533,4
+16501,test,Tshirts,18631,2
+16537,val,Caps,3658,4
+16538,val,Shirts,15755,4
+16548,val,Shirts,17876,4
+16611,val,Trousers,12676,2
+16614,test,Trousers,15122,4
+16632,val,Tshirts,23162,4
+16648,test,Tshirts,3103,4
+16704,test,Tshirts,16631,4
+16735,val,Flip Flops,23867,0
+16737,val,Flip Flops,43298,0
+16741,val,Clutches,33373,2
+16752,test,Clutches,16753,4
+16755,val,Clutches,57846,4
+16797,val,Shirts,16802,4
+16822,val,Tshirts,16826,4
+16833,test,Tshirts,16832,4
+16835,val,Sunglasses,16106,0
+16836,test,Sunglasses,8654,2
+16839,test,Sunglasses,16109,2
+16840,test,Sunglasses,8682,2
+16842,val,Sunglasses,16101,4
+16844,test,Sunglasses,16956,2
+16846,test,Sunglasses,8622,2
+16847,test,Sunglasses,8681,0
+16849,test,Sunglasses,8666,2
+16850,val,Sunglasses,8682,2
+16851,val,Sunglasses,16106,0
+16852,test,Sunglasses,29128,2
+16856,val,Sunglasses,16080,0
+16857,val,Sunglasses,16872,0
+16859,val,Sunglasses,38188,0
+16860,test,Sunglasses,23743,0
+16861,test,Sunglasses,16080,0
+16863,val,Sunglasses,16872,0
+16865,val,Sunglasses,16080,0
+16866,val,Sunglasses,21274,2
+16868,test,Sunglasses,8664,2
+16869,test,Sunglasses,8641,2
+16870,test,Sunglasses,48222,0
+16871,val,Sunglasses,16872,0
+16873,test,Sunglasses,16109,0
+16874,test,Sunglasses,8666,2
+16875,val,Sunglasses,16081,2
+16876,test,Sunglasses,8666,2
+16877,test,Sunglasses,8666,2
+16882,test,Sunglasses,17318,0
+16883,val,Sunglasses,16080,0
+16885,test,Sunglasses,38207,0
+16887,val,Sunglasses,21330,0
+16888,val,Sunglasses,38233,0
+16889,val,Sunglasses,8664,0
+16891,val,Sunglasses,8666,2
+16894,test,Sunglasses,28309,0
+16896,test,Sunglasses,16940,0
+16898,test,Sunglasses,8682,2
+16933,test,Tshirts,3764,4
+16945,val,Sunglasses,38188,0
+16951,test,Sunglasses,8614,2
+16952,test,Sunglasses,16878,4
+16953,test,Sunglasses,40009,0
+16954,test,Sunglasses,16939,2
+16960,test,Sunglasses,8616,2
+16974,val,Sandals,16970,2
+16976,test,Casual Shoes,11830,4
+16988,test,Flip Flops,16986,2
+16996,val,Flats,17674,0
+17015,test,Flats,45356,2
+17017,test,Flats,22311,2
+17019,test,Flats,34840,0
+17020,val,Flats,6458,4
+17021,test,Flats,5621,2
+17022,test,Flats,9216,4
+17023,test,Flats,17674,0
+17027,test,Flip Flops,5631,2
+17030,test,Flip Flops,5631,2
+17031,val,Flip Flops,5631,2
+17049,val,Sandals,8220,4
+17068,test,Belts,59461,4
+17071,val,Belts,14978,4
+17074,val,Belts,25112,2
+17087,val,Wallets,17096,4
+17097,val,Wallets,17077,4
+17102,test,Wallets,17077,2
+17105,test,Wallets,17107,4
+17112,test,Clutches,33366,2
+17193,val,Shirts,17191,4
+17204,val,Sunglasses,28178,0
+17205,val,Sunglasses,16083,2
+17206,val,Sunglasses,28280,4
+17210,val,Sunglasses,8682,2
+17211,val,Sunglasses,8622,0
+17212,val,Sunglasses,30667,0
+17217,val,Sunglasses,23751,2
+17218,val,Sunglasses,38238,0
+17220,val,Sunglasses,16845,2
+17230,val,Sunglasses,38185,0
+17231,val,Sunglasses,8654,2
+17255,test,Tshirts,20203,4
+17288,test,Tshirts,17240,4
+17306,test,Sunglasses,8641,0
+17307,test,Sunglasses,16094,2
+17308,test,Sunglasses,17227,0
+17309,test,Sunglasses,29091,0
+17310,test,Sunglasses,17227,0
+17311,test,Sunglasses,8622,0
+17314,test,Sunglasses,7625,4
+17316,test,Sunglasses,16881,0
+17317,test,Sunglasses,8664,2
+17320,test,Sunglasses,8682,4
+17322,test,Sunglasses,8682,2
+17323,test,Sunglasses,28161,0
+17326,test,Sunglasses,30667,0
+17331,test,Sunglasses,17227,0
+17332,test,Sunglasses,38170,4
+17333,test,Sunglasses,8622,2
+17335,test,Sunglasses,17227,0
+17356,val,Flip Flops,5530,2
+17360,val,Accessory Gift Set,17363,2
+17364,val,Accessory Gift Set,17363,4
+17365,test,Accessory Gift Set,17375,0
+17366,test,Accessory Gift Set,17368,2
+17371,val,Accessory Gift Set,17363,2
+17376,val,Accessory Gift Set,17367,2
+17379,test,Accessory Gift Set,19931,4
+17393,test,Socks,17401,4
+17394,val,Socks,17390,2
+17395,val,Socks,17403,2
+17397,test,Socks,17792,2
+17399,test,Socks,17392,4
+17400,test,Socks,17392,4
+17406,val,Socks,17402,2
+17407,test,Socks,36383,2
+17408,val,Socks,36383,2
+17412,test,Sports Shoes,9209,2
+17414,test,Sports Shoes,11971,4
+17415,test,Sports Shoes,12706,2
+17481,test,Formal Shoes,10274,2
+17491,val,Flip Flops,11893,0
+17496,val,Tshirts,14927,4
+17499,val,Tshirts,17498,4
+17500,val,Tshirts,17497,4
+17503,test,Tshirts,29785,4
+17506,val,Tshirts,17498,4
+17507,test,Tshirts,17498,2
+17532,val,Caps,49793,4
+17537,val,Shirts,17535,4
+17541,test,Shirts,17552,2
+17546,val,Shirts,17536,2
+17556,test,Shirts,17535,2
+17557,val,Shirts,17551,2
+17560,val,Shirts,17558,0
+17563,val,Shirts,17553,4
+17570,test,Shirts,17540,2
+17575,test,Shirts,17536,2
+17576,test,Shirts,17553,4
+17586,test,Sunglasses,28362,0
+17596,val,Sunglasses,16949,0
+17601,val,Sunglasses,38199,0
+17602,val,Sunglasses,21349,2
+17605,test,Sunglasses,8622,2
+17606,val,Sunglasses,38220,0
+17611,test,Tshirts,31102,4
+17614,val,Tshirts,5419,4
+17648,val,Flip Flops,17646,0
+17650,val,Flip Flops,44520,2
+17653,val,Flip Flops,6423,2
+17654,test,Heels,14366,2
+17659,test,Casual Shoes,7371,4
+17660,test,Casual Shoes,14448,4
+17661,val,Heels,17056,4
+17662,val,Heels,17655,4
+17672,val,Heels,17670,2
+17688,test,Flats,14415,2
+17694,val,Casual Shoes,59941,2
+17700,val,Casual Shoes,17009,2
+17705,val,Casual Shoes,17695,2
+17707,val,Casual Shoes,7779,4
+17731,val,Sports Shoes,22702,4
+17735,test,Flip Flops,6423,2
+17754,test,Shirts,25684,4
+17756,test,Casual Shoes,6393,0
+17757,val,Casual Shoes,17758,2
+17762,val,Formal Shoes,28317,2
+17763,val,Formal Shoes,47201,2
+17769,test,Casual Shoes,17683,2
+17771,test,Belts,51765,2
+17774,test,Belts,21804,4
+17775,test,Belts,38376,0
+17777,test,Belts,47161,2
+17778,test,Belts,14978,4
+17785,val,Socks,17786,0
+17788,test,Socks,17390,4
+17793,val,Socks,17786,0
+17794,val,Socks,17390,2
+17801,val,Tshirts,24946,4
+17802,val,Tshirts,8418,4
+17805,test,Tshirts,4874,4
+17816,val,Sandals,7370,0
+17820,val,Sandals,12865,2
+17823,test,Casual Shoes,17826,2
+17824,val,Sandals,22694,2
+17825,val,Sandals,7250,2
+17831,val,Casual Shoes,26596,4
+17835,val,Flip Flops,20762,2
+17837,test,Flip Flops,19876,2
+17840,test,Sports Shoes,17656,4
+17846,test,Sports Shoes,7238,4
+17863,val,Briefs,50510,2
+17869,test,Briefs,17870,4
+17875,test,Innerwear Vests,19148,4
+17888,test,Innerwear Vests,29161,2
+17924,test,Track Pants,15643,4
+17936,test,Tshirts,10043,4
+17954,test,Caps,15340,4
+17955,val,Caps,49794,2
+17961,test,Sandals,3583,2
+17962,val,Sandals,12982,0
+17963,test,Casual Shoes,14376,0
+17966,test,Casual Shoes,35799,0
+17972,val,Sports Shoes,13194,4
+17982,val,Sports Shoes,13978,4
+18006,val,Track Pants,11295,4
+18010,val,Belts,42910,4
+18011,val,Belts,19210,4
+18015,val,Belts,20514,2
+18019,val,Belts,16992,2
+18048,val,Wallets,18050,4
+18053,test,Wallets,18052,2
+18054,val,Wallets,18055,2
+18181,val,Jeans,43692,4
+18196,val,Trousers,11294,4
+18207,val,Caps,25022,4
+18267,val,Kurtas,24528,4
+18302,val,Kurtis,19728,4
+18303,test,Kurtis,19557,4
+18305,val,Shirts,11045,4
+18356,val,Socks,17305,2
+18364,test,Briefs,4316,4
+18385,test,Briefs,27951,4
+18393,test,Briefs,27941,4
+18395,test,Briefs,25342,4
+18407,test,Casual Shoes,12693,4
+18409,val,Sports Shoes,3577,2
+18474,val,Casual Shoes,9223,2
+18477,test,Casual Shoes,19042,2
+18478,test,Casual Shoes,13558,4
+18480,val,Casual Shoes,6823,2
+18483,val,Casual Shoes,7042,2
+18484,test,Casual Shoes,1919,4
+18488,test,Jeans,21583,2
+18492,test,Flip Flops,19872,4
+18494,val,Sports Shoes,26611,4
+18496,test,Sandals,6655,2
+18497,test,Sandals,2248,2
+18500,val,Tshirts,31242,2
+18537,test,Casual Shoes,8214,2
+18538,test,Casual Shoes,23885,4
+18539,test,Casual Shoes,4071,2
+18540,test,Heels,18546,4
+18548,val,Casual Shoes,20823,4
+18551,val,Flats,13843,2
+18553,test,Heels,7723,2
+18554,test,Heels,5631,4
+18555,test,Heels,13643,0
+18556,test,Heels,17968,2
+18557,val,Heels,26637,4
+18559,test,Heels,21059,2
+18579,val,Socks,18353,4
+18585,test,Socks,32160,2
+18594,test,Wallets,15943,2
+18604,test,Belts,17066,4
+18607,test,Wallets,12413,4
+18609,test,Tshirts,33285,4
+18620,test,Tshirts,10846,4
+18632,val,Tshirts,3199,4
+18651,val,Sandals,6421,2
+18656,val,Sports Shoes,4466,2
+18673,val,Casual Shoes,39262,0
+18680,val,Trunk,18681,4
+18697,val,Briefs,15811,4
+18702,test,Briefs,28060,4
+18703,val,Briefs,18701,4
+18724,test,Sweaters,18731,4
+18746,test,Tops,19639,4
+18757,val,Shirts,18850,4
+18765,test,Heels,17689,2
+18769,val,Ties,18767,0
+18770,val,Ties,18767,2
+18780,val,Ties,18767,2
+18781,test,Ties,11153,2
+18783,test,Ties,18767,0
+18785,val,Ties,18767,2
+18801,val,Belts,18832,4
+18805,val,Belts,24788,4
+18808,test,Belts,17060,4
+18813,test,Belts,18603,4
+18821,val,Wallets,18786,4
+18833,test,Belts,18835,2
+18839,test,Belts,20526,2
+18854,test,Tshirts,26722,0
+18856,val,Tshirts,7823,4
+18865,test,Sweatshirts,16223,4
+18872,test,Formal Shoes,18871,0
+18874,test,Formal Shoes,18871,2
+18876,test,Formal Shoes,6733,2
+18880,val,Shirts,18877,4
+18887,val,Shirts,18886,2
+18906,test,Sports Shoes,5037,2
+18909,val,Flip Flops,17053,2
+18916,test,Shirts,18920,2
+18927,val,Tshirts,14060,2
+18931,test,Tshirts,2853,4
+18939,test,Tshirts,10867,4
+18955,test,Socks,49306,4
+18956,val,Socks,49303,4
+18980,test,Tshirts,18615,4
+18983,test,Tshirts,8472,4
+19001,val,Tshirts,16827,4
+19025,test,Heels,51761,4
+19028,val,Casual Shoes,14281,2
+19030,val,Flats,26556,2
+19032,val,Flats,3236,4
+19037,test,Heels,19036,0
+19043,val,Heels,3583,2
+19047,val,Heels,47576,2
+19052,test,Heels,15545,2
+19061,test,Kurtis,28752,4
+19071,test,Kurtas,30851,2
+19078,val,Kurtas,19074,4
+19079,val,Kurtas,11649,4
+19085,val,Kurtas,39152,4
+19087,val,Kurtas,7314,4
+19109,test,Tshirts,37152,0
+19118,test,Flip Flops,19132,0
+19119,test,Flip Flops,3996,0
+19125,test,Flip Flops,13655,4
+19126,test,Flip Flops,19117,2
+19127,val,Flip Flops,6184,2
+19128,val,Flip Flops,24178,2
+19135,test,Sandals,6914,4
+19136,val,Sandals,41715,2
+19142,val,Sandals,6912,2
+19143,val,Sandals,5684,2
+19153,test,Tshirts,17933,4
+19157,val,Tshirts,5496,4
+19158,val,Tshirts,23154,4
+19163,test,Tshirts,19145,4
+19170,test,Tshirts,16009,4
+19172,test,Tshirts,19515,4
+19183,val,Shirts,20024,2
+19186,val,Shirts,58765,4
+19192,val,Shirts,16327,4
+19217,val,Ties,19232,4
+19220,val,Ties,18772,2
+19221,val,Ties,18767,2
+19223,test,Ties,11153,2
+19230,test,Ties,18767,2
+19302,val,Sports Shoes,9122,4
+19303,test,Sports Shoes,15513,2
+19328,val,Sweatshirts,19162,4
+19349,val,Sports Shoes,6822,2
+19351,test,Casual Shoes,46115,0
+19353,test,Casual Shoes,8342,2
+19356,test,Briefs,28055,2
+19359,test,Briefs,24446,2
+19363,val,Sandals,7840,2
+19369,test,Casual Shoes,35688,0
+19370,val,Formal Shoes,16166,2
+19393,test,Sweaters,18310,4
+19410,val,Tshirts,10059,4
+19427,val,Shirts,31247,4
+19465,val,Shirts,24283,4
+19490,test,Briefs,28903,2
+19516,val,Sweaters,48327,4
+19582,test,Tshirts,20149,2
+19589,val,Tops,24022,4
+19604,test,Tops,13456,4
+19606,test,Tops,19617,4
+19616,val,Tops,19619,4
+19622,test,Tops,47008,4
+19624,test,Tops,18726,4
+19635,val,Tops,19621,4
+19637,val,Tops,4789,4
+19665,val,Tshirts,34419,4
+19671,test,Tshirts,19608,4
+19692,test,Shirts,9761,4
+19727,test,Shirts,19667,4
+19750,test,Tshirts,19753,2
+19770,val,Sandals,5684,0
+19772,test,Casual Shoes,4027,4
+19805,val,Tshirts,26462,2
+19845,test,Shirts,19840,4
+19846,test,Shirts,27154,4
+19864,val,Sports Shoes,3150,4
+19865,test,Flip Flops,17647,2
+19866,test,Flip Flops,5603,4
+19867,test,Flip Flops,19882,0
+19868,test,Flip Flops,5603,4
+19871,val,Flip Flops,10740,2
+19897,val,Wallets,34138,2
+19900,test,Sandals,24695,0
+19902,val,Casual Shoes,3255,0
+19903,test,Casual Shoes,5875,4
+19904,val,Flats,1789,4
+19934,val,Accessory Gift Set,17363,4
+19979,val,Tshirts,7162,4
+19982,val,Tshirts,13489,2
+20004,test,Tshirts,4051,4
+20008,val,Tshirts,15988,4
+20015,test,Tshirts,10508,4
+20033,val,Shirts,10492,4
+20045,val,Wallets,14847,4
+20065,test,Belts,2965,4
+20069,test,Belts,17117,4
+20130,val,Shirts,21446,4
+20133,val,Tops,20132,4
+20134,test,Shirts,20139,4
+20150,val,Shirts,10802,2
+20156,test,Tshirts,20170,4
+20159,test,Shirts,44926,4
+20169,test,Shirts,20174,4
+20177,test,Shirts,20354,4
+20178,val,Shirts,16213,4
+20181,val,Shirts,15981,4
+20189,val,Shirts,16006,4
+20207,val,Sweatshirts,27871,4
+20217,val,Sweaters,16001,4
+20218,test,Sweaters,19958,4
+20225,test,Sweaters,20228,4
+20229,val,Sweaters,20231,4
+20234,val,Tshirts,13748,4
+20249,val,Tshirts,20132,2
+20250,test,Tshirts,30302,4
+20255,val,Tshirts,16434,4
+20265,test,Heels,20280,4
+20267,val,Heels,27520,2
+20283,test,Shirts,24006,2
+20313,test,Shirts,8775,4
+20322,test,Shirts,18248,4
+20328,test,Kurtas,5945,4
+20332,val,Tshirts,10874,2
+20382,val,Kurtas,30867,4
+20423,val,Belts,51256,2
+20434,val,Wallets,14858,4
+20454,test,Belts,20067,2
+20473,test,Belts,25721,4
+20496,test,Wallets,20477,4
+20510,val,Wallets,14858,4
+20542,test,Belts,58855,4
+20549,test,Belts,24621,4
+20562,test,Wallets,6317,4
+20584,test,Wallets,20495,4
+20585,val,Wallets,23692,4
+20590,test,Wallets,14853,4
+20591,val,Wallets,6631,4
+20597,val,Wallets,20464,4
+20630,val,Belts,10169,2
+20671,test,Tshirts,18852,4
+20672,test,Tshirts,4798,4
+20677,val,Casual Shoes,7386,2
+20679,test,Casual Shoes,10167,2
+20680,test,Casual Shoes,17655,2
+20689,val,Casual Shoes,12426,4
+20704,val,Casual Shoes,17822,0
+20705,test,Casual Shoes,15243,2
+20706,val,Casual Shoes,15357,2
+20707,val,Casual Shoes,23679,2
+20709,test,Casual Shoes,2827,0
+20710,val,Casual Shoes,20685,2
+20714,test,Casual Shoes,50730,0
+20733,val,Heels,12423,2
+20735,val,Flats,21034,2
+20756,val,Heels,20757,2
+20760,val,Heels,3220,4
+20772,val,Flats,20773,2
+20776,val,Flats,21030,2
+20781,val,Flats,20775,4
+20789,val,Sweaters,11076,4
+20802,test,Sports Shoes,41232,4
+20813,test,Casual Shoes,7365,2
+20815,test,Casual Shoes,7221,4
+20842,val,Casual Shoes,2812,4
+20856,val,Casual Shoes,13545,2
+20858,val,Sunglasses,17330,2
+20864,val,Sandals,47095,2
+20875,val,Sports Shoes,2988,4
+20907,val,Heels,33338,2
+20935,val,Backpacks,37694,4
+20940,val,Flip Flops,19882,0
+20941,test,Flip Flops,30257,2
+20943,test,Flip Flops,34119,2
+20946,val,Flip Flops,20901,0
+20953,test,Flip Flops,44720,0
+20955,test,Flip Flops,13974,2
+20969,test,Belts,18836,2
+20972,val,Belts,28343,4
+20975,val,Belts,25753,4
+20980,test,Belts,20526,2
+20983,test,Belts,19889,4
+20984,test,Belts,18606,4
+21008,val,Belts,33733,4
+21042,val,Heels,13561,2
+21091,test,Casual Shoes,7816,4
+21103,val,Formal Shoes,11953,2
+21107,val,Formal Shoes,10146,2
+21117,test,Shirts,15984,4
+21122,val,Shirts,19185,4
+21150,val,Shirts,4745,4
+21162,test,Sweaters,21170,4
+21177,val,Flip Flops,50167,2
+21180,test,Flip Flops,5530,4
+21181,test,Flip Flops,6184,2
+21182,val,Flip Flops,17644,2
+21184,test,Flip Flops,6184,2
+21190,test,Backpacks,44284,4
+21202,val,Flip Flops,6163,2
+21224,test,Tshirts,34227,2
+21236,val,Shirts,22360,4
+21273,test,Sunglasses,16082,4
+21276,test,Sunglasses,8641,2
+21282,val,Sunglasses,8666,2
+21288,val,Sunglasses,21290,0
+21289,val,Sunglasses,51732,0
+21291,val,Sunglasses,38210,0
+21292,val,Sunglasses,21314,2
+21293,test,Sunglasses,8626,2
+21295,val,Sunglasses,21343,2
+21296,val,Sunglasses,28172,2
+21297,val,Sunglasses,21351,2
+21299,test,Sunglasses,16959,0
+21300,val,Sunglasses,16080,0
+21307,val,Sunglasses,8626,2
+21308,val,Sunglasses,28361,2
+21309,test,Sunglasses,21278,2
+21311,test,Sunglasses,21279,2
+21313,test,Sunglasses,14907,2
+21315,test,Sunglasses,48222,0
+21320,test,Sunglasses,23735,2
+21322,test,Sunglasses,21321,0
+21324,test,Sunglasses,21338,0
+21326,test,Sunglasses,28182,0
+21331,test,Sunglasses,28184,0
+21334,test,Sunglasses,28304,0
+21341,test,Sunglasses,21327,2
+21348,test,Sunglasses,28184,0
+21352,val,Sunglasses,16109,2
+21353,test,Sunglasses,21351,0
+21356,val,Sunglasses,21290,0
+21375,val,Tshirts,16316,4
+21391,val,Tshirts,34245,2
+21401,val,Tshirts,34247,4
+21441,val,Belts,29078,4
+21468,test,Casual Shoes,3220,2
+21472,val,Casual Shoes,2894,2
+21476,test,Sweatshirts,19017,4
+21567,test,Casual Shoes,2800,4
+21598,test,Trousers,26169,4
+21647,val,Bra,57316,2
+21715,val,Casual Shoes,57303,0
+21720,val,Heels,49601,0
+21729,test,Flip Flops,13975,2
+21732,test,Heels,11893,2
+21733,test,Heels,15523,2
+21735,val,Casual Shoes,34745,2
+21740,val,Casual Shoes,14563,2
+21743,val,Casual Shoes,14376,0
+21754,test,Belts,14978,2
+21762,val,Belts,19891,2
+21774,test,Belts,18009,4
+21782,val,Belts,24678,4
+21787,test,Belts,18014,4
+21791,test,Belts,24678,4
+21810,test,Wallets,13654,2
+21822,val,Wallets,21821,0
+21883,val,Kurtas,21930,4
+21904,test,Kurtas,18714,4
+21918,val,Kurtas,18282,4
+21932,val,Kurtas,14544,4
+21945,test,Handbags,52633,4
+22016,test,Kurtas,18254,4
+22024,val,Kurtas,22027,4
+22034,val,Kurtas,22770,4
+22074,val,Kurtas,22071,4
+22076,val,Kurtas,43302,4
+22094,test,Casual Shoes,4562,4
+22097,test,Casual Shoes,6151,4
+22098,test,Casual Shoes,4545,2
+22101,test,Casual Shoes,2830,4
+22102,test,Casual Shoes,5896,2
+22103,val,Casual Shoes,44492,0
+22105,val,Casual Shoes,4181,0
+22110,val,Sports Shoes,24257,2
+22113,val,Sports Shoes,3301,4
+22119,val,Formal Shoes,13018,2
+22121,val,Formal Shoes,13146,2
+22122,val,Formal Shoes,2391,2
+22124,test,Formal Shoes,13561,0
+22125,val,Formal Shoes,7869,2
+22126,test,Formal Shoes,7385,2
+22127,test,Formal Shoes,7385,2
+22128,val,Formal Shoes,24418,0
+22129,test,Formal Shoes,13972,2
+22130,val,Formal Shoes,7385,2
+22131,val,Formal Shoes,7381,2
+22132,val,Formal Shoes,12868,0
+22133,test,Formal Shoes,24418,0
+22134,val,Formal Shoes,7869,2
+22135,val,Formal Shoes,9039,2
+22136,val,Formal Shoes,8959,2
+22137,test,Formal Shoes,12871,2
+22139,val,Formal Shoes,24418,0
+22140,val,Formal Shoes,16161,2
+22141,val,Formal Shoes,11923,0
+22142,test,Formal Shoes,24418,0
+22143,val,Formal Shoes,2391,2
+22146,val,Formal Shoes,7385,2
+22147,val,Formal Shoes,7385,0
+22154,val,Formal Shoes,13561,0
+22156,val,Formal Shoes,16156,2
+22163,val,Casual Shoes,15262,2
+22171,val,Sandals,44447,2
+22174,val,Casual Shoes,15285,4
+22177,val,Casual Shoes,44936,4
+22182,test,Casual Shoes,2809,2
+22184,val,Casual Shoes,31330,2
+22190,val,Casual Shoes,22186,4
+22191,val,Casual Shoes,38785,0
+22193,val,Casual Shoes,26561,2
+22226,test,Tshirts,21591,4
+22229,test,Formal Shoes,10275,0
+22231,val,Formal Shoes,2391,2
+22235,test,Casual Shoes,22236,4
+22240,test,Casual Shoes,22241,2
+22242,test,Casual Shoes,25457,2
+22248,val,Sandals,3996,4
+22251,test,Casual Shoes,18560,0
+22258,val,Heels,41683,0
+22263,val,Heels,22310,0
+22265,test,Heels,25450,2
+22274,test,Heels,11941,2
+22277,test,Heels,22276,2
+22294,test,Heels,44188,2
+22307,test,Heels,44214,0
+22308,val,Heels,53143,2
+22332,test,Tshirts,18848,4
+22347,val,Tshirts,30340,2
+22349,test,Shirts,19398,4
+22352,test,Shirts,22350,4
+22354,val,Shirts,18573,4
+22358,test,Shirts,19717,4
+22374,val,Shirts,15579,4
+22375,test,Shirts,8279,4
+22462,val,Leggings,22458,4
+22464,test,Leggings,22456,4
+22491,val,Sports Shoes,12694,4
+22495,test,Sports Shoes,6664,4
+22500,val,Casual Shoes,39828,4
+22504,val,Casual Shoes,2887,2
+22505,val,Casual Shoes,15492,2
+22533,test,Flip Flops,6180,0
+22537,test,Sandals,17046,2
+22539,val,Heels,49819,0
+22545,test,Heels,21388,0
+22567,val,Shirts,10800,4
+22571,test,Shirts,10364,4
+22635,test,Caps,1789,4
+22638,test,Tshirts,24941,4
+22697,test,Sports Shoes,22977,4
+22700,val,Sandals,6146,4
+22701,test,Sports Shoes,13212,4
+22704,test,Casual Shoes,13917,4
+22711,val,Sports Shoes,22169,4
+22712,val,Sports Shoes,4105,4
+22726,test,Sports Shoes,7250,2
+22728,test,Sports Shoes,22717,4
+22731,val,Sports Shoes,47184,0
+22732,val,Sports Shoes,22838,0
+22735,val,Sports Shoes,35462,2
+22799,val,Tshirts,21124,4
+22803,test,Tshirts,10874,4
+22818,val,Casual Shoes,9137,4
+22821,val,Casual Shoes,9431,4
+22828,val,Casual Shoes,5723,2
+22860,val,Casual Shoes,29266,2
+22874,val,Casual Shoes,7250,2
+22883,test,Sandals,9395,4
+22884,val,Sandals,3243,4
+22886,test,Sandals,10265,2
+22889,val,Sandals,4105,4
+22891,val,Sandals,24714,2
+22892,val,Sandals,8094,2
+22893,test,Sandals,3583,4
+22896,val,Formal Shoes,13538,2
+22900,test,Shirts,22385,4
+22915,val,Sunglasses,17330,2
+22953,val,Sports Shoes,18419,4
+22978,val,Sports Shoes,8529,4
+22980,test,Casual Shoes,22979,0
+22990,val,Socks,32008,4
+23036,val,Shirts,9260,4
+23040,val,Trousers,26805,4
+23047,test,Sweaters,54036,4
+23055,test,Tshirts,18224,4
+23058,test,Tshirts,19397,4
+23094,val,Casual Shoes,3255,2
+23095,val,Flip Flops,5621,2
+23097,val,Flip Flops,5601,2
+23102,val,Accessory Gift Set,23105,4
+23103,val,Accessory Gift Set,23111,2
+23114,val,Accessory Gift Set,23100,4
+23123,val,Flip Flops,17646,2
+23124,test,Flip Flops,6313,2
+23153,test,Tshirts,9681,4
+23157,val,Tshirts,10344,4
+23158,test,Tshirts,24022,4
+23164,test,Tshirts,4296,4
+23168,val,Tshirts,23155,4
+23170,val,Tshirts,9864,4
+23172,test,Tshirts,23179,4
+23174,test,Tshirts,4417,4
+23177,test,Tshirts,19402,4
+23194,val,Shirts,7823,4
+23197,val,Shirts,3018,4
+23198,val,Shirts,6042,4
+23206,val,Shirts,23193,0
+23207,val,Shirts,11040,4
+23233,test,Kurtas,23213,4
+23236,val,Kurtas,2851,4
+23242,test,Formal Shoes,6149,2
+23243,val,Formal Shoes,6149,2
+23244,test,Formal Shoes,25577,0
+23248,val,Formal Shoes,6503,2
+23249,test,Formal Shoes,33342,0
+23250,test,Formal Shoes,14372,2
+23252,test,Formal Shoes,16171,2
+23254,test,Formal Shoes,4546,4
+23255,test,Formal Shoes,19371,0
+23256,test,Formal Shoes,16179,2
+23297,val,Sandals,6474,2
+23299,test,Sandals,19329,2
+23335,test,Tunics,12152,4
+23339,test,Sports Shoes,13917,4
+23489,val,Sports Shoes,25488,4
+23505,test,Sports Shoes,9223,4
+23635,test,Tshirts,46239,4
+23647,test,Tshirts,22209,4
+23649,val,Tshirts,3859,4
+23667,test,Shirts,18861,4
+23670,val,Tshirts,40388,4
+23672,test,Flip Flops,6313,2
+23675,test,Sandals,4486,4
+23682,val,Casual Shoes,26452,4
+23718,val,Sunglasses,17585,2
+23721,val,Sunglasses,16890,0
+23727,val,Sunglasses,28377,0
+23728,val,Sunglasses,28377,0
+23729,val,Sunglasses,28377,2
+23730,val,Sunglasses,28287,2
+23731,val,Sunglasses,16090,4
+23752,val,Sunglasses,23750,2
+23756,test,Sunglasses,17223,0
+23760,test,Sunglasses,23736,2
+23768,val,Sunglasses,14907,0
+23775,test,Sunglasses,28277,0
+23777,test,Sunglasses,8674,2
+23778,val,Sunglasses,21349,2
+23780,val,Sunglasses,8663,2
+23783,val,Sunglasses,14908,2
+23785,val,Sunglasses,14907,2
+23788,val,Sunglasses,16081,2
+23794,test,Flip Flops,16734,2
+23795,test,Flats,2375,4
+23798,val,Heels,45358,4
+23800,test,Casual Shoes,19329,0
+23804,val,Casual Shoes,6149,4
+23806,val,Sports Shoes,6806,4
+23807,val,Casual Shoes,35542,4
+23808,test,Casual Shoes,11919,2
+23809,val,Casual Shoes,17818,2
+23810,val,Casual Shoes,13654,2
+23815,test,Casual Shoes,9032,2
+23817,test,Flip Flops,6180,0
+23823,val,Flip Flops,23127,2
+23828,val,Flip Flops,11874,2
+23831,test,Flip Flops,3630,0
+23833,test,Flats,16159,2
+23835,val,Sports Shoes,12428,4
+23836,test,Sports Shoes,1789,2
+23840,val,Casual Shoes,1789,2
+23844,val,Sports Shoes,43362,4
+23846,val,Sports Shoes,22192,4
+23858,test,Sports Shoes,1828,4
+23863,val,Sports Shoes,23942,4
+23864,test,Sports Shoes,5037,4
+23871,test,Tshirts,19398,4
+23875,test,Tshirts,3018,2
+23911,test,Casual Shoes,23913,0
+23914,val,Casual Shoes,13972,4
+23917,val,Casual Shoes,10280,2
+23926,test,Sports Shoes,22817,2
+23927,val,Sports Shoes,54739,4
+23930,test,Casual Shoes,19239,2
+23931,test,Sports Shoes,13988,4
+23934,val,Casual Shoes,15416,2
+23936,val,Casual Shoes,10128,0
+23967,test,Tshirts,23160,4
+24047,test,Tshirts,28929,4
+24049,val,Tshirts,18248,4
+24050,test,Tshirts,3525,4
+24055,val,Tshirts,16423,4
+24067,val,Shirts,17178,2
+24070,test,Heels,7824,4
+24073,val,Flats,3255,0
+24074,test,Flats,14376,0
+24076,test,Flats,26632,0
+24078,test,Heels,6914,4
+24081,test,Casual Shoes,46885,0
+24100,test,Sandals,4270,4
+24101,val,Casual Shoes,6677,2
+24105,test,Flip Flops,17649,4
+24108,test,Flip Flops,16729,0
+24110,val,Flip Flops,11936,2
+24111,val,Flip Flops,39545,4
+24113,test,Flip Flops,19874,4
+24115,test,Flip Flops,11908,4
+24118,test,Flip Flops,24119,0
+24150,test,Tshirts,24146,4
+24182,val,Casual Shoes,24185,0
+24183,test,Casual Shoes,4548,2
+24186,test,Casual Shoes,3837,4
+24187,val,Casual Shoes,2397,4
+24191,val,Casual Shoes,5873,4
+24256,val,Casual Shoes,2803,4
+24259,test,Casual Shoes,3563,2
+24284,val,Shirts,6042,4
+24298,val,Socks,19479,4
+24344,val,Tshirts,10800,2
+24365,val,Kurtas,24370,4
+24366,test,Kurtas,42664,4
+24385,test,Kurtas,42664,2
+24398,test,Kurtas,12145,4
+24401,test,Kurtas,19707,4
+24408,test,Sports Shoes,4340,4
+24415,test,Flip Flops,18677,4
+24416,test,Sports Shoes,35826,4
+24422,val,Casual Shoes,4574,4
+24426,test,Sports Shoes,4486,2
+24428,val,Sports Shoes,7835,4
+24452,test,Sports Shoes,22959,2
+24453,val,Sports Shoes,25410,2
+24455,test,Sports Shoes,4510,0
+24459,val,Sports Shoes,24447,4
+24466,test,Sports Shoes,4338,2
+24470,test,Flip Flops,32185,0
+24482,val,Casual Shoes,10265,2
+24511,test,Kurtas,32235,4
+24589,test,Kurtas,27286,4
+24594,val,Tshirts,24597,0
+24627,val,Casual Shoes,4444,2
+24631,val,Flip Flops,10083,4
+24638,test,Sports Shoes,6673,4
+24639,test,Casual Shoes,14376,2
+24646,test,Cufflinks,24645,2
+24657,val,Socks,12433,4
+24665,val,Casual Shoes,3593,4
+24670,test,Casual Shoes,47649,0
+24701,val,Casual Shoes,4342,4
+24718,val,Casual Shoes,20836,0
+24719,val,Casual Shoes,10265,2
+24726,test,Casual Shoes,24254,4
+24727,test,Casual Shoes,13137,0
+24740,test,Handbags,24739,0
+24743,test,Casual Shoes,25577,0
+24786,val,Belts,13161,4
+24805,test,Sports Shoes,4180,2
+24819,val,Casual Shoes,2897,4
+24849,val,Tshirts,20235,2
+24850,val,Belts,42947,2
+24867,val,Belts,28590,2
+24909,test,Tshirts,37221,4
+24942,val,Tops,31176,2
+24952,test,Tshirts,24924,4
+24976,test,Tops,3098,2
+25016,val,Flats,11903,2
+25026,val,Tshirts,25044,4
+25050,val,Accessory Gift Set,25082,2
+25053,val,Accessory Gift Set,25082,2
+25055,val,Accessory Gift Set,25048,4
+25062,val,Accessory Gift Set,25082,0
+25064,val,Accessory Gift Set,25081,0
+25068,test,Accessory Gift Set,25054,0
+25071,val,Accessory Gift Set,25049,2
+25072,test,Accessory Gift Set,25048,2
+25073,test,Accessory Gift Set,25081,0
+25075,test,Accessory Gift Set,25054,0
+25079,test,Accessory Gift Set,25054,0
+25083,test,Accessory Gift Set,25082,0
+25089,val,Wallets,14858,4
+25090,val,Wallets,14858,4
+25097,val,Wallets,32607,4
+25098,val,Wallets,37233,4
+25103,test,Belts,20606,4
+25106,val,Belts,1932,4
+25107,test,Belts,21006,4
+25108,test,Belts,2498,4
+25110,val,Belts,35074,2
+25119,val,Clutches,20044,4
+25141,test,Clutches,16739,0
+25161,test,Handbags,25244,2
+25179,val,Handbags,35908,4
+25189,val,Handbags,25207,4
+25208,val,Handbags,25244,0
+25214,val,Handbags,33737,4
+25219,val,Handbags,25201,0
+25246,val,Handbags,25193,0
+25289,test,Handbags,25286,4
+25297,val,Handbags,25296,0
+25303,val,Wallets,25301,4
+25345,test,Briefs,25344,4
+25349,val,Briefs,27941,4
+25376,test,Innerwear Vests,24065,4
+25418,val,Sports Shoes,4552,4
+25419,val,Sports Shoes,3160,2
+25429,val,Belts,24678,2
+25441,test,Casual Shoes,7365,2
+25442,val,Sports Shoes,25443,2
+25446,test,Casual Shoes,44750,2
+25453,test,Casual Shoes,15287,0
+25456,val,Casual Shoes,35694,2
+25460,test,Sports Shoes,36231,2
+25474,test,Casual Shoes,25475,4
+25476,test,Casual Shoes,5479,4
+25480,test,Sports Shoes,4140,2
+25481,test,Flip Flops,6106,0
+25482,test,Flip Flops,6106,0
+25483,val,Flip Flops,6106,0
+25485,val,Flip Flops,42691,0
+25489,test,Casual Shoes,32937,2
+25498,test,Flip Flops,20956,0
+25523,val,Shirts,19067,4
+25524,test,Shirts,19069,4
+25543,val,Tops,30939,4
+25571,test,Sports Shoes,19026,2
+25584,val,Sports Shoes,15518,2
+25612,test,Watches,29409,4
+25697,val,Kurtis,28722,4
+25710,val,Caps,25709,2
+25711,val,Caps,25709,2
+25722,val,Belts,5329,4
+25730,test,Belts,46070,4
+25734,val,Belts,3545,2
+25736,test,Wallets,19344,2
+25740,test,Wallets,36909,4
+25754,test,Belts,27802,2
+25897,test,Leggings,25899,4
+25907,test,Dresses,25962,4
+25929,val,Leggings,25906,4
+25972,test,Dresses,25971,4
+26041,val,Shirts,26077,4
+26044,test,Shirts,26053,2
+26046,val,Shirts,26043,4
+26047,val,Shirts,20173,4
+26101,test,Shirts,26043,4
+26128,test,Shirts,26124,4
+26149,val,Trousers,26148,4
+26151,test,Trousers,7190,4
+26182,val,Handbags,10297,0
+26224,test,Wallets,36909,4
+26236,test,Tshirts,19397,4
+26259,val,Track Pants,16378,2
+26286,test,Tshirts,26238,2
+26292,val,Tshirts,16407,4
+26297,val,Tshirts,3199,4
+26325,val,Sports Shoes,34829,2
+26326,test,Sports Shoes,3695,4
+26330,val,Watches,46475,4
+26342,val,Watches,28879,4
+26375,val,Flip Flops,10309,4
+26446,val,Clutches,33366,2
+26449,test,Sports Shoes,8072,0
+26450,test,Sports Shoes,26448,2
+26453,test,Casual Shoes,6677,2
+26456,test,Casual Shoes,4071,2
+26458,test,Casual Shoes,2894,2
+26459,val,Casual Shoes,45795,2
+26460,test,Casual Shoes,14376,0
+26475,test,Tshirts,39773,4
+26480,val,Tshirts,13466,4
+26502,val,Tshirts,13774,4
+26518,val,Shirts,6615,2
+26522,test,Casual Shoes,12422,2
+26523,test,Casual Shoes,28313,2
+26524,test,Casual Shoes,4077,2
+26531,val,Casual Shoes,40455,2
+26535,test,Casual Shoes,39820,0
+26536,test,Casual Shoes,6647,0
+26537,test,Casual Shoes,40320,0
+26542,test,Casual Shoes,29255,4
+26545,test,Sandals,4104,4
+26547,test,Casual Shoes,3545,2
+26548,test,Casual Shoes,53638,0
+26550,test,Casual Shoes,4181,2
+26553,test,Casual Shoes,20807,2
+26554,test,Casual Shoes,11919,4
+26587,test,Casual Shoes,9137,4
+26589,val,Sports Shoes,15249,2
+26592,test,Sports Shoes,12886,2
+26593,test,Sports Shoes,53639,2
+26629,val,Casual Shoes,26628,2
+26633,val,Casual Shoes,4342,4
+26635,test,Casual Shoes,6804,2
+26646,val,Casual Shoes,25582,2
+26650,test,Sports Shoes,2803,2
+26654,val,Sports Shoes,4159,2
+26657,val,Casual Shoes,4183,4
+26661,val,Casual Shoes,4022,4
+26663,test,Casual Shoes,32751,4
+26669,val,Casual Shoes,38543,4
+26670,test,Casual Shoes,13914,4
+26674,test,Flip Flops,3630,2
+26675,test,Flip Flops,6106,2
+26677,test,Flip Flops,5605,2
+26679,val,Flip Flops,11915,2
+26680,val,Flats,17012,2
+26682,test,Sports Shoes,44433,2
+26686,test,Flip Flops,17737,2
+26689,val,Sandals,24709,0
+26706,test,Sandals,5601,4
+26710,val,Tshirts,6784,4
+26714,test,Tshirts,40256,2
+26719,test,Tshirts,33589,4
+26726,test,Tshirts,40103,4
+26729,val,Tshirts,10884,4
+26789,test,Shirts,38979,4
+26791,test,Shirts,26800,2
+26796,test,Shirts,14782,2
+26797,test,Shirts,14732,4
+26798,test,Shirts,26056,4
+26807,val,Trousers,13784,4
+26813,test,Shirts,14763,4
+26814,test,Shirts,14740,2
+26815,test,Shirts,8722,4
+26820,val,Trousers,15132,4
+26823,val,Trousers,15121,4
+26831,test,Trousers,26138,2
+26844,test,Trousers,26156,2
+26891,test,Tops,24924,4
+26910,test,Tops,10789,4
+26922,test,Tops,19016,4
+26935,test,Dresses,14718,4
+26942,test,Tshirts,26945,4
+27022,test,Jeans,13349,4
+27035,test,Flats,2610,2
+27036,val,Shirts,14761,2
+27074,val,Flats,22295,4
+27082,val,Heels,21055,0
+27083,test,Heels,3141,4
+27084,val,Heels,3135,4
+27085,val,Heels,25484,2
+27098,test,Kurtis,15836,4
+27101,test,Kurtas,12771,4
+27106,val,Kurtas,37212,4
+27109,test,Kurtas,33313,4
+27149,val,Shirts,27169,4
+27158,val,Shirts,22385,4
+27181,val,Trousers,26140,2
+27186,val,Trousers,26156,0
+27193,val,Heels,13031,2
+27258,test,Casual Shoes,10128,2
+27268,val,Kurtas,40187,4
+27273,val,Tunics,34423,4
+27285,test,Kurtas,42671,2
+27359,test,Tshirts,7938,4
+27374,test,Tshirts,8209,2
+27452,test,Bra,27449,2
+27454,test,Bra,21660,4
+27467,val,Briefs,28784,2
+27484,test,Briefs,27485,2
+27486,test,Briefs,27487,0
+27488,val,Briefs,27468,4
+27503,val,Bra,27399,4
+27511,val,Briefs,28784,2
+27522,test,Heels,33103,4
+27557,val,Shirts,11040,2
+27558,val,Shirts,43955,0
+27560,val,Shirts,19014,2
+27572,test,Shirts,10490,4
+27584,test,Tshirts,19787,2
+27589,val,Tshirts,33950,4
+27595,test,Tshirts,5945,4
+27623,val,Shorts,26256,4
+27640,test,Sports Shoes,5691,4
+27657,test,Tshirts,23671,2
+27671,test,Handbags,27669,4
+27740,test,Handbags,27742,2
+27750,val,Wallets,27752,0
+27751,test,Wallets,29083,2
+27753,val,Wallets,14842,2
+27765,val,Wallets,27759,0
+27769,test,Wallets,38300,2
+27806,val,Belts,36025,4
+27813,val,Belts,58467,4
+27814,val,Belts,27810,4
+27822,val,Belts,25756,4
+27838,val,Belts,20971,2
+27840,test,Belts,17987,4
+27856,val,Shirts,27855,4
+27865,val,Shirts,27867,2
+27866,val,Shirts,20131,4
+27873,val,Shirts,19342,4
+27874,val,Shirts,19342,4
+27931,val,Shirts,33181,2
+27942,val,Briefs,18700,4
+27954,val,Briefs,49983,4
+27978,test,Briefs,18394,4
+27989,test,Briefs,28130,2
+27995,val,Briefs,17865,4
+28009,val,Trunk,28010,4
+28017,test,Briefs,28121,2
+28018,test,Briefs,28122,2
+28022,test,Briefs,28020,4
+28039,val,Briefs,27463,4
+28051,val,Briefs,28054,4
+28053,test,Briefs,28055,2
+28058,val,Briefs,28063,4
+28076,val,Trunk,28075,0
+28120,val,Briefs,28023,2
+28123,test,Briefs,25350,4
+28128,val,Briefs,27984,4
+28129,val,Briefs,27985,4
+28131,test,Briefs,18394,4
+28137,test,Briefs,25342,4
+28151,val,Innerwear Vests,28148,2
+28160,test,Sunglasses,28184,0
+28174,test,Sunglasses,28182,0
+28180,test,Sunglasses,23712,2
+28186,val,Sunglasses,28167,0
+28197,test,Sunglasses,17585,0
+28202,val,Sunglasses,8660,2
+28209,val,Sunglasses,28199,0
+28212,test,Sunglasses,28193,0
+28278,val,Sunglasses,8695,0
+28290,val,Sunglasses,28381,2
+28293,val,Sunglasses,38206,0
+28295,val,Sunglasses,16081,4
+28296,val,Sunglasses,28292,4
+28298,val,Sunglasses,23699,2
+28301,val,Sunglasses,38188,0
+28302,val,Sunglasses,23774,0
+28306,val,Sunglasses,21338,2
+28307,val,Sunglasses,28309,0
+28308,val,Sunglasses,14861,2
+28310,test,Sunglasses,28304,0
+28314,val,Formal Shoes,7397,2
+28318,val,Casual Shoes,20684,2
+28325,test,Sandals,34727,0
+28326,test,Sandals,34525,4
+28337,val,Sunglasses,49664,0
+28344,test,Sunglasses,28210,2
+28351,val,Sunglasses,23709,0
+28356,val,Sunglasses,21338,0
+28359,val,Sunglasses,28161,0
+28376,val,Sunglasses,23699,2
+28379,val,Sunglasses,28281,0
+28410,val,Sunglasses,8666,2
+28419,val,Sunglasses,21337,0
+28478,test,Tunics,30855,2
+28489,val,Kurtas,28579,4
+28517,test,Tshirts,22640,4
+28519,val,Track Pants,25034,2
+28526,val,Tshirts,31456,4
+28546,val,Tshirts,22596,4
+28609,test,Caps,17957,4
+28614,test,Sports Shoes,14500,4
+28632,val,Capris,10719,4
+28649,val,Sports Shoes,22858,4
+28653,test,Sports Shoes,2388,2
+28655,val,Sports Shoes,12703,4
+28702,test,Kurtas,30870,4
+28704,test,Kurtas,35042,4
+28727,val,Kurtas,28725,4
+28729,val,Kurtas,28690,4
+28731,val,Kurtas,15836,4
+28738,val,Kurtas,28737,4
+28772,test,Kurtis,7314,4
+28773,val,Kurtis,13947,4
+28780,val,Briefs,24446,4
+28781,test,Briefs,18689,4
+28782,test,Briefs,49983,2
+28785,test,Briefs,24446,4
+28827,val,Briefs,28062,2
+28828,val,Briefs,49983,4
+28830,val,Briefs,25353,4
+28847,val,Tshirts,17279,4
+28887,val,Briefs,28891,0
+28893,test,Briefs,28892,0
+28924,val,Tshirts,34436,4
+28926,test,Tshirts,19632,4
+28952,val,Kurtis,48367,4
+29046,val,Tshirts,16206,4
+29079,test,Belts,16121,4
+29081,val,Wallets,12413,4
+29082,val,Wallets,29084,0
+29095,test,Sunglasses,16094,2
+29109,test,Socks,49250,4
+29112,val,Socks,17300,4
+29113,val,Socks,58300,4
+29120,val,Flip Flops,14353,2
+29124,test,Sports Shoes,35931,2
+29127,val,Sunglasses,23786,2
+29131,val,Sunglasses,21321,0
+29132,val,Sunglasses,16083,2
+29133,test,Sunglasses,29130,0
+29134,val,Sunglasses,16940,2
+29135,test,Sunglasses,16940,0
+29136,test,Sunglasses,14908,2
+29137,test,Sunglasses,14908,2
+29139,val,Sunglasses,38220,0
+29142,test,Sunglasses,29130,0
+29147,test,Tshirts,29156,4
+29157,val,Tshirts,8357,4
+29200,val,Socks,17305,2
+29223,val,Socks,17299,4
+29226,test,Flip Flops,5631,2
+29227,val,Sports Shoes,59329,0
+29233,test,Casual Shoes,43925,2
+29235,test,Flats,39203,2
+29237,test,Flats,45811,0
+29242,val,Sandals,4640,2
+29248,val,Sports Shoes,3650,4
+29250,val,Sports Shoes,31966,2
+29256,val,Sports Shoes,22815,0
+29260,val,Casual Shoes,12922,4
+29265,test,Sports Shoes,12472,4
+29272,test,Shirts,20186,4
+29278,val,Shirts,29289,4
+29291,val,Shirts,29289,2
+29402,val,Trousers,15116,4
+29447,test,Watches,45120,4
+29548,val,Tshirts,30106,4
+29556,val,Casual Shoes,49469,2
+29564,val,Casual Shoes,9390,2
+29565,test,Casual Shoes,7797,4
+29568,test,Casual Shoes,5330,4
+29572,val,Casual Shoes,4852,4
+29580,test,Tshirts,30312,0
+29653,val,Shirts,29308,4
+29657,test,Shirts,37744,4
+29665,val,Shirts,33328,4
+29672,test,Shirts,31662,0
+29692,val,Shirts,26077,4
+29773,val,Shirts,29290,2
+29774,val,Shirts,25383,4
+29784,val,Tshirts,10490,4
+29820,test,Shirts,15756,2
+29864,val,Sunglasses,21279,2
+29872,test,Sunglasses,29871,0
+29879,val,Sunglasses,21312,0
+29884,test,Sunglasses,29866,0
+29887,test,Sunglasses,29890,0
+29891,test,Sunglasses,8678,2
+29892,val,Sunglasses,29890,0
+29897,test,Sunglasses,16094,2
+29947,test,Watches,29946,0
+29956,test,Sunglasses,29967,0
+29957,test,Sunglasses,29955,0
+29959,test,Sunglasses,29968,0
+29960,test,Sunglasses,29963,0
+30107,val,Shirts,29339,2
+30118,test,Tshirts,30124,4
+30121,val,Tshirts,53761,4
+30122,test,Tshirts,31358,2
+30150,val,Belts,20526,0
+30154,val,Belts,20576,4
+30212,val,Shirts,20173,4
+30222,test,Shirts,26043,4
+30237,val,Casual Shoes,11876,2
+30242,val,Flip Flops,5601,2
+30244,val,Flip Flops,46111,2
+30247,val,Flip Flops,3622,2
+30248,val,Casual Shoes,12714,2
+30249,test,Flip Flops,6295,2
+30251,test,Flip Flops,6180,2
+30252,val,Casual Shoes,8980,2
+30253,test,Casual Shoes,4109,4
+30256,val,Formal Shoes,35231,0
+30258,val,Casual Shoes,4734,4
+30261,val,Formal Shoes,9041,2
+30262,val,Casual Shoes,7381,2
+30298,test,Tshirts,29547,4
+30303,test,Tshirts,4051,2
+30308,val,Tshirts,30299,2
+30324,test,Tshirts,30300,2
+30332,val,Tshirts,30325,2
+30333,test,Tshirts,30328,4
+30336,val,Tshirts,29308,4
+30346,test,Tshirts,29664,4
+30350,val,Tshirts,29309,4
+30352,val,Tshirts,30302,4
+30461,val,Shirts,37131,4
+30496,test,Bra,30514,4
+30501,test,Bra,30508,4
+30509,test,Bra,30508,2
+30528,val,Bra,59070,2
+30533,val,Bra,59070,2
+30561,test,Sunglasses,21337,0
+30562,test,Sunglasses,8620,0
+30565,val,Sunglasses,17223,4
+30568,val,Sunglasses,28304,0
+30569,val,Sunglasses,8620,2
+30571,val,Sunglasses,48193,0
+30572,val,Sunglasses,16109,0
+30589,test,Tshirts,32639,4
+30607,test,Track Pants,17902,4
+30651,test,Track Pants,28520,4
+30661,test,Sunglasses,28309,0
+30662,test,Sunglasses,28309,0
+30663,test,Sunglasses,49665,2
+30664,val,Sunglasses,8660,2
+30665,test,Sunglasses,23740,2
+30666,test,Sunglasses,16109,2
+30668,test,Sunglasses,16080,2
+30669,val,Sunglasses,16109,4
+30670,test,Sunglasses,16109,0
+30672,test,Sunglasses,28181,2
+30673,val,Sunglasses,16884,2
+30674,test,Sunglasses,8620,2
+30675,val,Sunglasses,16109,2
+30676,test,Sunglasses,21321,2
+30677,val,Sunglasses,8620,2
+30678,val,Sunglasses,16956,2
+30679,val,Sunglasses,17207,2
+30680,test,Sunglasses,30564,0
+30681,test,Sunglasses,28288,0
+30682,val,Sunglasses,28288,0
+30683,test,Sunglasses,16099,2
+30684,val,Sunglasses,16858,2
+30690,val,Heels,36219,2
+30694,test,Heels,11498,4
+30783,test,Kurtas,8736,4
+30799,val,Shirts,15756,2
+30802,val,Shirts,23956,4
+30848,test,Kurtas,22781,4
+30878,val,Kurtas,30877,2
+30933,val,Kurtas,30912,2
+30942,test,Kurtis,31697,2
+30948,val,Tops,27848,2
+30953,val,Tops,31697,2
+30961,test,Kurtis,30911,4
+31017,val,Shirts,26730,4
+31027,val,Shirts,11118,4
+31028,val,Shirts,2325,4
+31035,test,Tshirts,10862,4
+31040,test,Shirts,18913,4
+31092,val,Shirts,34051,0
+31094,val,Shirts,34042,0
+31096,test,Shirts,31097,4
+31098,val,Shirts,4331,4
+31101,val,Shirts,34029,0
+31106,test,Tshirts,34026,0
+31119,test,Tops,34005,0
+31121,val,Tops,36319,4
+31126,test,Dresses,34066,0
+31150,val,Tshirts,15574,4
+31151,test,Tshirts,36726,4
+31156,val,Tshirts,17807,4
+31158,test,Tshirts,46831,4
+31175,test,Tops,31174,0
+31188,val,Wallets,27795,4
+31194,test,Wallets,36106,2
+31195,test,Wallets,27796,4
+31196,test,Wallets,42931,2
+31201,test,Accessory Gift Set,31184,2
+31208,val,Sports Shoes,17483,2
+31209,val,Sports Shoes,12429,4
+31213,test,Casual Shoes,6639,4
+31214,val,Sports Shoes,11905,2
+31217,test,Casual Shoes,24249,4
+31218,test,Casual Shoes,7401,2
+31245,val,Tshirts,15751,4
+31246,val,Tshirts,34207,2
+31248,test,Tshirts,18630,4
+31269,val,Tshirts,31278,4
+31279,test,Tshirts,31278,4
+31318,val,Kurtas,32270,4
+31541,test,Tshirts,30312,2
+31543,test,Tshirts,20258,2
+31545,val,Tshirts,9758,2
+31552,val,Casual Shoes,7816,4
+31578,val,Tshirts,18630,4
+31593,test,Tshirts,3486,2
+31597,test,Tshirts,19401,4
+31601,test,Tshirts,16434,4
+31649,val,Shirts,29308,4
+31655,test,Shirts,14106,4
+31690,val,Sports Shoes,34745,4
+31706,test,Earrings,35311,4
+31720,test,Earrings,35311,2
+31724,val,Pendant,35338,2
+31727,val,Pendant,35338,2
+31728,val,Pendant,35337,2
+31908,val,Briefs,31900,4
+31920,test,Clutches,31916,4
+31921,test,Clutches,35145,4
+31937,test,Tunics,30852,4
+31946,val,Casual Shoes,5873,4
+31951,val,Sports Shoes,15737,4
+31954,val,Sports Shoes,35827,4
+31969,test,Casual Shoes,44237,0
+31974,val,Sports Shoes,38650,0
+31978,val,Sports Shoes,5379,2
+31979,val,Sports Shoes,2541,4
+31980,val,Sandals,12688,2
+31986,val,Socks,17405,2
+31988,test,Socks,17401,2
+31989,test,Socks,51158,0
+31990,test,Socks,32471,2
+31991,val,Socks,51173,2
+31992,val,Socks,51173,2
+31994,test,Socks,31993,2
+31995,val,Socks,40237,4
+31996,val,Socks,37655,4
+31997,test,Socks,18219,4
+32001,test,Socks,32011,2
+32007,val,Socks,32009,4
+32010,val,Socks,18581,4
+32045,val,Socks,32042,2
+32157,val,Socks,17297,4
+32158,val,Socks,15535,4
+32159,val,Socks,18581,4
+32181,test,Sports Shoes,35462,0
+32203,test,Kurtas,32200,4
+32220,val,Kurtas,43320,4
+32267,val,Kurtas,11590,4
+32271,val,Kurtas,32272,2
+32324,val,Watches,36766,4
+32333,val,Watches,49867,4
+32345,val,Watches,37305,4
+32367,val,Watches,45044,4
+32371,test,Watches,36785,4
+32393,val,Shirts,32390,4
+32416,val,Tshirts,32964,4
+32467,test,Tshirts,44636,4
+32480,val,Tshirts,40097,4
+32490,test,Tshirts,8190,2
+32492,val,Tshirts,28929,4
+32497,val,Casual Shoes,11844,4
+32505,test,Shirts,10490,4
+32556,test,Casual Shoes,5700,2
+32557,val,Casual Shoes,28313,0
+32558,test,Casual Shoes,57487,2
+32563,val,Trousers,42348,4
+32590,test,Shorts,48110,4
+32593,val,Tops,7284,4
+32595,test,Tops,33740,4
+32601,test,Tops,10070,4
+32610,test,Belts,33482,2
+32611,test,Belts,20976,4
+32612,test,Belts,38368,2
+32613,test,Belts,19210,4
+32614,test,Belts,28595,4
+32616,test,Belts,36614,4
+32624,val,Tshirts,22614,4
+32646,val,Tshirts,27951,4
+32723,test,Clutches,32722,2
+32741,val,Casual Shoes,3228,2
+32743,val,Casual Shoes,14572,4
+32746,val,Sports Shoes,7394,2
+32759,val,Shirts,33328,4
+32766,test,Shirts,26124,4
+32767,test,Shirts,26124,4
+32770,test,Tshirts,15751,4
+32802,test,Flip Flops,32803,2
+32806,test,Heels,6117,4
+32818,val,Flip Flops,13543,2
+32833,test,Heels,26175,2
+32834,val,Flats,32837,2
+32836,test,Flats,47557,0
+32839,val,Heels,10618,2
+32845,test,Flats,6350,4
+32846,val,Heels,59437,2
+32847,test,Heels,32815,4
+32848,val,Flats,32853,2
+32855,test,Heels,32837,4
+32856,test,Heels,56983,2
+32857,test,Heels,58325,4
+32859,val,Heels,32858,2
+32939,val,Casual Shoes,6415,4
+32946,test,Casual Shoes,47181,2
+32947,val,Casual Shoes,4183,0
+32979,test,Tshirts,34395,2
+32981,test,Tshirts,10059,4
+33071,test,Tshirts,37723,4
+33084,val,Tshirts,36304,4
+33087,val,Heels,16999,2
+33093,val,Casual Shoes,13555,2
+33096,test,Heels,17001,4
+33099,val,Heels,10280,4
+33100,val,Heels,44199,0
+33102,val,Heels,32843,2
+33104,val,Heels,17746,2
+33106,val,Heels,20271,4
+33107,val,Heels,10616,4
+33113,test,Heels,26603,4
+33116,test,Heels,35563,4
+33118,test,Heels,13555,4
+33119,test,Heels,32195,0
+33131,test,Heels,42697,2
+33133,test,Heels,20904,2
+33135,val,Heels,14376,0
+33137,test,Heels,32494,4
+33166,test,Tops,30851,4
+33171,val,Tops,24973,4
+33172,val,Tops,32270,4
+33210,test,Tops,22031,4
+33232,val,Shirts,14782,2
+33237,test,Shirts,14732,4
+33241,test,Shirts,14737,4
+33251,test,Formal Shoes,15384,4
+33257,test,Tops,13494,4
+33260,test,Shirts,37221,4
+33298,val,Shirts,43543,2
+33302,test,Tshirts,31104,0
+33312,test,Tshirts,10812,4
+33343,val,Formal Shoes,11844,2
+33353,test,Formal Shoes,35558,4
+33355,val,Formal Shoes,6302,4
+33367,test,Clutches,25117,4
+33377,test,Wallets,54404,2
+33393,test,Handbags,33441,0
+33401,test,Wallets,36975,4
+33440,test,Clutches,51880,4
+33459,test,Belts,38376,2
+33466,test,Belts,18050,4
+33469,test,Belts,33465,4
+33475,test,Belts,33463,2
+33476,val,Belts,28596,2
+33479,val,Belts,24788,4
+33510,val,Casual Shoes,7816,4
+33511,val,Casual Shoes,45829,2
+33524,test,Casual Shoes,3628,4
+33531,val,Casual Shoes,40757,2
+33542,test,Tops,34434,4
+33554,test,Shirts,10806,4
+33580,val,Tshirts,19395,4
+33602,val,Wallets,33605,0
+33619,val,Wallets,33405,4
+33622,val,Wallets,37650,2
+33625,val,Wallets,33628,2
+33638,test,Flip Flops,14353,2
+33643,val,Flip Flops,16113,0
+33653,test,Flip Flops,3622,4
+33654,val,Flip Flops,11846,2
+33656,test,Sandals,33655,0
+33657,val,Sandals,23919,0
+33660,val,Sandals,9389,2
+33685,val,Formal Shoes,4853,2
+33688,test,Sandals,2494,4
+33689,val,Casual Shoes,2633,4
+33696,val,Sandals,10622,4
+33699,test,Formal Shoes,2824,4
+33700,val,Formal Shoes,6503,2
+33701,test,Formal Shoes,11872,2
+33702,val,Formal Shoes,17010,2
+33704,val,Formal Shoes,8236,4
+33705,val,Formal Shoes,33691,2
+33708,test,Formal Shoes,23246,2
+33709,val,Formal Shoes,9044,2
+33714,val,Casual Shoes,15509,2
+33747,test,Tops,59371,2
+33754,val,Tops,24377,4
+33762,test,Tops,42657,4
+33767,test,Casual Shoes,12429,2
+33768,test,Casual Shoes,5470,4
+33769,val,Casual Shoes,7259,4
+33781,val,Socks,40015,4
+33828,test,Sports Shoes,13981,2
+33850,test,Casual Shoes,18561,4
+33854,val,Casual Shoes,43877,2
+33855,val,Casual Shoes,6387,2
+33873,test,Watches,45141,4
+33884,test,Watches,33908,4
+33886,val,Watches,25614,2
+33891,test,Watches,39027,4
+33963,test,Tunics,21172,4
+33998,val,Leggings,33959,4
+34006,test,Tops,34005,0
+34007,test,Tops,31120,0
+34008,test,Tops,31120,0
+34009,val,Tops,36319,4
+34010,val,Tops,36319,4
+34018,test,Tshirts,31103,0
+34027,test,Tshirts,34026,0
+34028,val,Shirts,34029,0
+34032,test,Shirts,31097,4
+34033,test,Shirts,31097,4
+34038,val,Shirts,4331,4
+34039,test,Shirts,4331,4
+34040,val,Shirts,34104,4
+34041,val,Shirts,34104,4
+34043,test,Shirts,34042,0
+34050,val,Shirts,34051,0
+34078,test,Casual Shoes,4139,2
+34084,test,Casual Shoes,44756,2
+34103,val,Tshirts,46585,4
+34108,test,Tops,35446,0
+34114,val,Dresses,23621,4
+34120,val,Sandals,7330,2
+34147,val,Shorts,31166,0
+34155,test,Tops,36319,4
+34166,test,Tops,31174,0
+34168,val,Tshirts,15574,4
+34170,test,Tshirts,36726,4
+34171,test,Tshirts,36726,4
+34180,val,Tshirts,17807,4
+34181,val,Tshirts,17807,4
+34184,test,Tshirts,46831,4
+34195,val,Tshirts,34192,2
+34206,test,Tshirts,33293,2
+34218,val,Tshirts,26903,4
+34223,test,Tshirts,34248,0
+34233,test,Tshirts,34235,4
+34234,val,Tshirts,34217,4
+34237,test,Tshirts,31270,2
+34242,test,Tshirts,17943,4
+34246,test,Tshirts,34247,2
+34270,val,Dupatta,31059,4
+34278,val,Dupatta,34276,0
+34283,test,Dupatta,34920,4
+34333,val,Tshirts,34340,4
+34335,val,Tshirts,12653,4
+34341,test,Tshirts,12622,4
+34344,val,Tshirts,34340,2
+34354,val,Tshirts,15018,4
+34360,val,Tshirts,37272,2
+34391,test,Tshirts,34385,4
+34398,val,Tshirts,34364,4
+34399,test,Tshirts,34362,4
+34427,val,Tshirts,39465,4
+34432,test,Tshirts,19787,4
+34435,test,Tshirts,43500,2
+34448,val,Flats,17764,2
+34449,val,Flats,45826,2
+34456,test,Heels,20904,0
+34457,val,Heels,13484,4
+34496,val,Shirts,32930,4
+34511,test,Flip Flops,6117,2
+34516,test,Flip Flops,33645,0
+34518,val,Casual Shoes,29559,2
+34522,test,Sandals,7328,2
+34524,test,Sandals,13123,0
+34526,test,Sandals,28320,0
+34527,test,Sandals,38243,2
+34529,val,Casual Shoes,15053,4
+34534,val,Formal Shoes,7586,2
+34535,val,Formal Shoes,8959,2
+34536,val,Formal Shoes,34539,0
+34538,val,Formal Shoes,9696,2
+34540,val,Casual Shoes,36434,0
+34543,val,Formal Shoes,10128,0
+34545,test,Belts,18024,0
+34547,test,Belts,33458,2
+34614,test,Briefs,49933,2
+34615,test,Briefs,18688,4
+34618,test,Briefs,18707,4
+34629,test,Sports Shoes,31955,4
+34631,val,Sports Shoes,1827,4
+34632,val,Sports Shoes,4542,4
+34635,val,Casual Shoes,47109,0
+34637,val,Sports Shoes,3297,4
+34640,val,Casual Shoes,20447,2
+34644,val,Sports Shoes,35755,2
+34650,test,Sports Shoes,6814,2
+34651,test,Sports Shoes,13918,0
+34653,val,Sports Shoes,13563,2
+34732,test,Sports Shoes,4140,4
+34733,val,Sports Shoes,3574,2
+34743,test,Casual Shoes,39255,2
+34750,val,Casual Shoes,22723,2
+34751,val,Casual Shoes,22723,2
+34755,val,Casual Shoes,3574,2
+34757,test,Casual Shoes,3236,4
+34762,test,Handbags,34764,2
+34769,val,Handbags,34768,4
+34790,val,Casual Shoes,6503,2
+34806,val,Belts,41246,4
+34825,val,Sports Shoes,6646,4
+34826,val,Sports Shoes,2812,4
+34828,test,Casual Shoes,10097,0
+34832,val,Sports Shoes,34841,4
+34835,val,Sports Shoes,5483,2
+34846,test,Sports Shoes,19309,2
+34848,val,Sports Shoes,5641,4
+34849,test,Sports Shoes,12701,4
+34850,test,Sports Shoes,3160,4
+34851,test,Casual Shoes,22188,2
+34852,val,Casual Shoes,24249,4
+34855,val,Casual Shoes,34815,4
+34857,val,Casual Shoes,47681,0
+34858,val,Casual Shoes,34859,4
+34910,test,Dupatta,34905,4
+34923,val,Dupatta,36492,4
+34963,val,Sarees,34987,4
+35062,val,Belts,37995,4
+35068,test,Belts,17117,4
+35069,test,Belts,15218,0
+35077,val,Belts,37995,4
+35114,test,Wallets,14841,4
+35211,val,Backpacks,32869,4
+35219,test,Casual Shoes,17978,4
+35234,val,Formal Shoes,11918,4
+35269,val,Tshirts,26888,4
+35304,test,Earrings,43242,4
+35305,val,Earrings,43242,4
+35306,test,Earrings,31721,2
+35307,test,Earrings,17098,4
+35336,val,Pendant,31725,2
+35341,val,Heels,14478,4
+35358,val,Heels,42731,0
+35378,test,Heels,15892,2
+35383,val,Casual Shoes,4170,2
+35386,val,Casual Shoes,11506,4
+35399,test,Formal Shoes,2370,2
+35407,test,Formal Shoes,9696,2
+35409,test,Formal Shoes,2640,2
+35410,test,Formal Shoes,35229,2
+35411,test,Formal Shoes,1729,4
+35412,val,Casual Shoes,25440,2
+35414,test,Formal Shoes,2370,2
+35416,test,Formal Shoes,6503,2
+35418,test,Formal Shoes,59435,2
+35419,test,Formal Shoes,9044,2
+35420,test,Sports Shoes,15304,4
+35424,test,Sports Shoes,43929,4
+35430,test,Sports Shoes,26614,4
+35433,val,Dresses,23621,4
+35470,test,Heels,10280,4
+35471,val,Heels,18564,2
+35474,test,Heels,33766,4
+35478,test,Formal Shoes,5676,2
+35484,test,Formal Shoes,3241,2
+35504,test,Sandals,4528,4
+35506,test,Sandals,20429,4
+35511,val,Flip Flops,33652,0
+35531,test,Casual Shoes,13547,2
+35532,test,Casual Shoes,14387,4
+35538,test,Sandals,56875,0
+35543,test,Sandals,30695,2
+35545,val,Sandals,12825,2
+35546,val,Sandals,17967,2
+35552,val,Sandals,10280,4
+35554,test,Sandals,41725,4
+35555,val,Sandals,47118,2
+35561,test,Sandals,19035,2
+35564,val,Casual Shoes,35568,0
+35567,test,Formal Shoes,22157,2
+35570,val,Casual Shoes,17766,2
+35582,test,Sandals,9043,2
+35587,val,Sandals,9701,2
+35588,test,Sandals,3564,2
+35591,test,Sandals,23841,2
+35592,test,Sandals,5053,4
+35625,test,Sandals,59177,2
+35626,val,Sandals,7858,2
+35667,test,Flip Flops,20762,0
+35668,test,Flip Flops,6421,0
+35671,test,Casual Shoes,13977,2
+35687,test,Casual Shoes,2803,2
+35704,test,Sports Shoes,12896,2
+35706,test,Casual Shoes,4510,2
+35710,test,Sports Shoes,1654,4
+35714,val,Sports Shoes,36837,0
+35720,val,Sandals,17040,4
+35783,test,Heels,35782,0
+35787,val,Flats,43239,2
+35792,val,Casual Shoes,35784,0
+35796,val,Heels,6117,2
+35809,val,Heels,20687,2
+35813,test,Heels,45411,0
+35814,test,Heels,7595,2
+35818,val,Casual Shoes,8077,2
+35819,test,Heels,11504,2
+35821,test,Heels,2626,4
+35878,test,Tshirts,36206,4
+35884,test,Tshirts,4890,4
+35889,test,Tshirts,8124,4
+35894,val,Tshirts,4329,4
+35907,val,Handbags,35909,0
+35930,val,Sports Shoes,7836,4
+35932,val,Sports Shoes,13212,2
+35933,val,Sports Shoes,8306,4
+35936,test,Sports Shoes,4997,2
+35937,test,Sports Shoes,7578,2
+35947,val,Shirts,33546,2
+35985,test,Tshirts,11022,4
+35990,test,Dresses,36475,4
+35995,test,Tshirts,4302,4
+36015,test,Belts,50836,0
+36016,test,Belts,25749,4
+36018,test,Belts,41536,2
+36019,test,Belts,27830,4
+36021,test,Belts,20576,2
+36022,test,Belts,18018,2
+36023,test,Belts,25100,4
+36024,test,Belts,50836,2
+36070,test,Handbags,36067,0
+36087,test,Caps,18212,4
+36097,test,Wallets,36910,2
+36111,test,Wallets,38364,4
+36113,test,Wallets,38364,4
+36130,test,Casual Shoes,8970,4
+36131,val,Casual Shoes,38548,4
+36148,test,Casual Shoes,14554,4
+36185,test,Tshirts,34364,4
+36209,test,Jackets,25619,4
+36228,val,Casual Shoes,3462,4
+36232,val,Sports Shoes,3661,4
+36234,test,Kurtas,12074,4
+36265,test,Night suits,36282,4
+36274,test,Night suits,51180,4
+36287,test,Night suits,51157,2
+36288,val,Night suits,32038,4
+36289,test,Night suits,36380,4
+36294,test,Flats,36295,2
+36307,val,Flip Flops,22295,4
+36343,val,Ties,36368,0
+36345,test,Ties,36347,4
+36355,test,Ties,49716,0
+36372,test,Socks,36387,0
+36374,val,Socks,17789,2
+36378,test,Socks,36373,2
+36379,val,Socks,17401,2
+36384,val,Socks,51345,0
+36385,val,Socks,51163,2
+36386,val,Socks,17401,2
+36390,test,Socks,17401,0
+36393,test,Socks,36389,0
+36394,test,Socks,17401,2
+36395,test,Socks,17401,2
+36397,test,Socks,51167,0
+36399,val,Socks,36373,2
+36403,test,Socks,51140,0
+36404,test,Socks,29210,0
+36405,test,Socks,17401,2
+36406,test,Socks,36383,2
+36407,val,Socks,36413,2
+36410,val,Socks,51348,0
+36414,test,Casual Shoes,12825,4
+36415,test,Casual Shoes,12825,4
+36416,test,Casual Shoes,12825,4
+36423,test,Sports Shoes,12691,0
+36424,test,Sports Shoes,12691,0
+36441,test,Casual Shoes,9273,2
+36442,test,Casual Shoes,10152,0
+36443,val,Casual Shoes,12819,4
+36471,test,Kurtas,12070,4
+36478,val,Casual Shoes,15713,4
+36481,val,Casual Shoes,35053,2
+36485,test,Casual Shoes,6433,2
+36486,test,Casual Shoes,5469,2
+36501,val,Kurtas,42662,4
+36502,val,Kurtas,33746,2
+36617,val,Heels,47495,2
+36677,test,Handbags,36673,2
+36736,val,Tshirts,26888,4
+36762,val,Watches,36771,0
+36819,val,Kurtas,36815,4
+36883,test,Belts,18024,2
+36884,test,Belts,38382,2
+36889,test,Belts,38404,2
+36918,test,Wallets,38364,4
+36954,val,Sports Shoes,11934,2
+36976,test,Clutches,36975,0
+36984,test,Clutches,36987,0
+36990,test,Clutches,54411,4
+37048,val,Belts,20606,2
+37049,val,Belts,20401,2
+37052,val,Belts,20067,4
+37055,val,Belts,37054,4
+37056,test,Belts,59037,4
+37057,val,Belts,2809,4
+37058,test,Belts,16966,4
+37062,test,Belts,33482,2
+37089,val,Handbags,37088,2
+37144,val,Shirts,37748,4
+37165,test,Tops,7701,4
+37172,test,Shorts,31166,4
+37189,val,Tops,4054,4
+37230,test,Belts,27812,2
+37238,val,Flats,35384,2
+37241,test,Casual Shoes,9038,2
+37242,test,Casual Shoes,37243,0
+37245,val,Casual Shoes,7381,2
+37247,test,Casual Shoes,2987,2
+37252,val,Casual Shoes,13044,0
+37253,val,Casual Shoes,16246,4
+37254,val,Casual Shoes,5055,2
+37255,test,Casual Shoes,11950,2
+37256,test,Casual Shoes,33703,0
+37313,test,Watches,37314,4
+37594,test,Tshirts,5023,2
+37613,test,Tshirts,4324,2
+37636,val,Tshirts,8321,4
+37637,val,Tshirts,31716,4
+37656,test,Socks,32009,0
+37658,val,Socks,30541,4
+37715,val,Tshirts,18637,4
+37717,val,Tshirts,34372,4
+37719,test,Tshirts,33287,4
+37722,val,Shirts,11040,2
+37724,val,Shirts,6042,4
+37743,val,Shirts,26712,4
+37761,test,Shirts,11047,2
+37772,test,Shirts,11040,2
+37774,test,Shirts,37139,2
+37777,test,Shirts,37767,2
+37787,val,Shirts,37767,4
+37788,val,Shirts,34356,4
+37805,val,Shirts,6042,4
+37864,val,Wallets,27764,4
+37867,val,Wallets,27768,2
+37870,val,Wallets,48165,4
+37871,val,Wallets,36907,4
+37873,val,Wallets,38295,0
+37876,test,Wallets,38293,4
+37913,val,Tops,37926,4
+37933,test,Tops,19676,4
+37938,test,Dresses,37912,4
+37946,val,Tunics,32580,2
+37950,test,Socks,32042,2
+37957,test,Casual Shoes,9138,4
+37959,test,Sandals,37958,2
+37961,val,Heels,4510,4
+37965,test,Heels,15257,2
+37966,val,Heels,1731,2
+37967,val,Heels,4510,2
+37971,val,Heels,19040,2
+37972,test,Flats,14376,0
+37992,test,Belts,51265,2
+37998,test,Flip Flops,16113,0
+38008,val,Watches,38007,4
+38013,val,Watches,38014,0
+38015,val,Watches,38014,0
+38021,val,Watches,38022,2
+38029,val,Watches,38030,4
+38046,val,Watches,45044,4
+38051,val,Watches,38052,2
+38121,test,Trousers,46906,4
+38128,val,Wallets,51899,4
+38163,val,Sunglasses,21285,2
+38164,val,Sunglasses,16081,2
+38177,val,Sunglasses,8654,2
+38242,test,Flip Flops,11915,2
+38246,val,Tshirts,36319,2
+38284,test,Tshirts,12595,4
+38313,test,Sunglasses,16854,2
+38358,test,Wallets,36103,2
+38360,test,Wallets,36102,4
+38399,val,Caps,43759,2
+38407,val,Belts,37059,4
+38412,val,Belts,19895,4
+38415,test,Belts,20998,4
+38418,val,Belts,50836,2
+38467,val,Wallets,38689,2
+38479,val,Tshirts,31176,2
+38481,val,Tops,40990,0
+38482,val,Tops,40991,0
+38484,test,Belts,18014,2
+38486,test,Belts,15938,4
+38487,val,Belts,28595,4
+38491,test,Tshirts,35339,2
+38522,test,Casual Shoes,9223,4
+38525,test,Casual Shoes,10129,0
+38529,val,Sports Shoes,35664,2
+38531,test,Sports Shoes,33105,4
+38534,val,Casual Shoes,35688,0
+38539,val,Casual Shoes,38538,0
+38546,test,Casual Shoes,6802,4
+38547,val,Casual Shoes,6421,2
+38557,test,Tshirts,38634,2
+38558,test,Tshirts,38559,2
+38561,test,Caps,45923,2
+38571,test,Capris,15338,4
+38596,test,Tshirts,28524,4
+38640,val,Tshirts,38624,2
+38644,test,Tshirts,38598,4
+38651,test,Sports Shoes,26623,4
+38652,test,Casual Shoes,7395,0
+38654,val,Sports Shoes,13910,4
+38657,val,Sports Shoes,7401,2
+38665,test,Sports Shoes,18547,2
+38668,test,Flip Flops,20956,0
+38670,test,Flip Flops,5480,2
+38671,test,Sports Shoes,12705,4
+38676,test,Flip Flops,44933,0
+38717,test,Tunics,39150,4
+38794,test,Tshirts,7347,4
+38832,test,Dresses,58658,4
+38940,val,Shorts,33144,0
+38942,test,Shirts,33138,0
+38943,test,Shirts,33138,0
+38970,val,Tshirts,8775,4
+38980,val,Shirts,14778,2
+38981,test,Shirts,37131,4
+38986,val,Tshirts,36722,4
+38987,val,Tshirts,31176,4
+39023,val,Watches,39022,2
+39039,test,Cufflinks,14148,2
+39040,val,Cufflinks,14164,4
+39056,test,Cufflinks,39058,2
+39067,val,Tshirts,27561,2
+39108,test,Caps,39107,0
+39129,val,Leggings,39120,2
+39190,test,Flats,56979,4
+39195,test,Heels,14366,2
+39196,test,Heels,19021,2
+39200,test,Heels,2901,4
+39233,val,Dresses,14029,4
+39245,val,Casual Shoes,1789,2
+39247,val,Casual Shoes,5290,2
+39249,val,Casual Shoes,17813,4
+39251,val,Casual Shoes,39303,2
+39253,test,Casual Shoes,50737,2
+39254,val,Casual Shoes,50737,0
+39274,val,Casual Shoes,4555,2
+39276,val,Casual Shoes,5682,2
+39277,test,Casual Shoes,39267,0
+39278,val,Casual Shoes,6810,4
+39282,test,Sandals,44739,2
+39283,val,Sandals,44520,2
+39284,val,Sandals,59329,2
+39286,test,Sandals,2803,2
+39288,test,Sandals,34082,0
+39289,val,Casual Shoes,25447,2
+39290,val,Casual Shoes,22837,2
+39296,test,Sandals,39295,0
+39300,val,Casual Shoes,4853,2
+39301,val,Casual Shoes,5678,2
+39302,val,Casual Shoes,5690,2
+39304,test,Casual Shoes,7600,0
+39307,val,Casual Shoes,18420,0
+39309,val,Casual Shoes,2803,4
+39310,val,Casual Shoes,5049,2
+39325,test,Tops,13494,4
+39341,test,Casual Shoes,5577,4
+39385,val,Jeans,27903,2
+39399,test,Tshirts,30106,4
+39470,test,Kurtis,59371,2
+39544,val,Flip Flops,9428,4
+39547,val,Flip Flops,40781,2
+39560,val,Heels,33097,4
+39562,val,Heels,3367,4
+39565,val,Heels,15523,4
+39566,val,Heels,6733,2
+39567,val,Heels,4170,2
+39570,test,Heels,20901,2
+39577,val,Heels,37963,2
+39578,val,Heels,2910,0
+39582,val,Heels,45811,0
+39584,test,Heels,2910,2
+39587,val,Heels,33858,2
+39590,test,Heels,2910,0
+39596,test,Heels,13146,2
+39603,test,Heels,22710,2
+39605,test,Heels,11519,2
+39611,test,Heels,2238,4
+39614,test,Heels,6180,2
+39619,test,Heels,13013,2
+39628,test,Sports Shoes,13704,2
+39635,val,Sports Shoes,18403,4
+39636,test,Sports Shoes,5938,4
+39637,test,Sports Shoes,41443,4
+39638,test,Sports Shoes,41443,4
+39639,test,Casual Shoes,15243,4
+39640,test,Casual Shoes,26557,2
+39645,test,Casual Shoes,7242,4
+39646,val,Casual Shoes,15720,2
+39651,test,Sports Shoes,39652,2
+39653,test,Sports Shoes,36454,4
+39654,test,Sports Shoes,39652,4
+39655,test,Sports Shoes,39652,2
+39656,test,Casual Shoes,41470,2
+39658,test,Casual Shoes,25522,2
+39659,test,Casual Shoes,19939,2
+39660,test,Sports Shoes,19940,2
+39661,test,Sports Shoes,23943,4
+39662,test,Sports Shoes,36449,4
+39666,test,Sports Shoes,4133,4
+39667,test,Sports Shoes,39652,2
+39668,test,Sports Shoes,4133,4
+39669,val,Sports Shoes,24411,2
+39670,test,Sports Shoes,41443,4
+39671,test,Sports Shoes,43234,4
+39672,test,Sports Shoes,3661,2
+39673,test,Sports Shoes,3661,2
+39674,test,Sports Shoes,3661,2
+39678,test,Casual Shoes,7218,4
+39682,test,Sports Shoes,1654,4
+39684,test,Sports Shoes,39683,2
+39685,test,Casual Shoes,6804,4
+39698,val,Shirts,33553,4
+39735,test,Casual Shoes,23919,0
+39737,val,Sandals,5684,4
+39739,val,Sandals,11838,2
+39741,test,Casual Shoes,26601,4
+39752,test,Trousers,25036,2
+39753,test,Trousers,25036,2
+39813,test,Sandals,12475,2
+39814,test,Sandals,28320,0
+39816,test,Sandals,9273,2
+39817,test,Sandals,5697,2
+39819,test,Sandals,15364,2
+39822,test,Sandals,11875,2
+39823,test,Sandals,11932,2
+39825,test,Sandals,15364,2
+39827,test,Sandals,39281,4
+39829,test,Sandals,7222,2
+39868,val,Heels,41742,0
+39871,val,Heels,39203,2
+39892,val,Casual Shoes,12520,0
+39904,val,Sports Shoes,35464,2
+39939,val,Casual Shoes,2827,2
+39940,test,Casual Shoes,7365,2
+39944,test,Casual Shoes,8980,2
+39945,test,Casual Shoes,13555,2
+39950,val,Flip Flops,38000,2
+39951,val,Flip Flops,5477,2
+39952,test,Flip Flops,16734,0
+39956,val,Flip Flops,5631,4
+39958,test,Sandals,44577,2
+39959,test,Sandals,4571,2
+39963,test,Sandals,10618,2
+39964,val,Casual Shoes,8083,4
+39970,val,Casual Shoes,15379,2
+39972,test,Casual Shoes,10275,2
+39975,val,Casual Shoes,47188,0
+39980,val,Casual Shoes,9700,2
+39985,val,Casual Shoes,5469,4
+39991,test,Casual Shoes,4274,2
+39999,test,Sunglasses,38203,0
+40002,test,Sunglasses,29883,0
+40033,val,Tshirts,10344,4
+40100,val,Tshirts,14034,4
+40118,test,Tshirts,40680,2
+40124,val,Tshirts,8349,2
+40134,val,Shirts,8354,4
+40140,test,Tshirts,12603,2
+40142,val,Tshirts,36726,4
+40146,val,Capris,33148,2
+40147,val,Capris,4880,0
+40148,val,Dresses,40990,4
+40160,test,Jeans,41962,0
+40163,test,Sunglasses,23754,2
+40172,test,Sunglasses,51735,2
+40174,test,Sunglasses,29964,4
+40176,test,Sunglasses,51704,2
+40177,test,Sunglasses,23698,2
+40178,val,Sunglasses,28286,2
+40179,test,Sunglasses,28345,2
+40180,test,Sunglasses,8677,4
+40220,val,Wallets,27795,4
+40224,val,Belts,3545,4
+40230,test,Belts,8121,4
+40232,test,Belts,50837,4
+40238,test,Socks,51348,2
+40239,test,Socks,24293,4
+40265,test,Tshirts,40270,2
+40276,test,Trousers,27913,4
+40285,val,Sandals,40300,2
+40287,test,Sandals,40309,2
+40291,val,Flip Flops,40306,2
+40293,val,Flip Flops,42695,2
+40294,val,Flip Flops,33108,2
+40303,test,Sandals,40309,0
+40312,val,Sandals,5616,4
+40313,val,Sandals,26705,2
+40314,test,Sandals,3574,4
+40317,val,Sandals,7970,4
+40322,test,Sports Shoes,5754,2
+40447,val,Formal Shoes,7388,2
+40448,val,Casual Shoes,7386,0
+40449,val,Formal Shoes,3574,4
+40450,val,Casual Shoes,8638,2
+40452,val,Formal Shoes,35820,0
+40456,val,Casual Shoes,4163,4
+40480,test,Sports Shoes,26532,4
+40483,test,Sports Shoes,35523,4
+40569,test,Kurtas,28947,2
+40610,val,Kurtas,27298,2
+40648,val,Kurtas,40650,4
+40674,test,Tops,41376,4
+40689,test,Formal Shoes,28317,0
+40691,val,Formal Shoes,13018,2
+40692,test,Casual Shoes,12715,0
+40694,val,Casual Shoes,29122,2
+40739,test,Flip Flops,12980,4
+40742,val,Flip Flops,14353,2
+40744,test,Caps,22606,2
+40745,test,Caps,30592,4
+40748,val,Flip Flops,40750,0
+40749,test,Flip Flops,11908,2
+40751,test,Flip Flops,44214,0
+40753,test,Flip Flops,45795,4
+40754,test,Flip Flops,11502,4
+40755,test,Flip Flops,40750,0
+40758,val,Flip Flops,5621,2
+40759,test,Flip Flops,44214,0
+40772,val,Caps,40773,2
+40777,val,Flip Flops,6163,2
+40780,val,Flip Flops,24120,2
+40785,val,Flip Flops,32195,2
+40789,test,Casual Shoes,17674,0
+40791,val,Casual Shoes,4072,4
+40792,val,Casual Shoes,2499,4
+40793,val,Casual Shoes,6415,4
+40934,test,Shirts,38999,0
+40957,val,Tshirts,36722,4
+40977,val,Tshirts,31176,2
+40982,test,Tshirts,35339,2
+40989,val,Tops,40990,0
+40992,val,Tops,40991,0
+41001,test,Shorts,38503,0
+41004,val,Skirts,38504,0
+41005,val,Skirts,38504,0
+41043,val,Watches,29923,4
+41078,test,Sandals,41077,0
+41163,val,Trousers,8760,4
+41211,val,Casual Shoes,35401,2
+41219,val,Flip Flops,11915,2
+41221,val,Flip Flops,6106,0
+41245,test,Belts,3545,2
+41251,test,Belts,27810,2
+41253,test,Belts,27811,0
+41258,test,Wallets,41276,0
+41267,test,Wallets,41269,4
+41268,test,Wallets,38293,2
+41279,test,Wallets,52801,4
+41300,val,Tshirts,40132,4
+41307,val,Tops,37596,4
+41316,val,Leggings,41315,0
+41380,val,Tops,6881,4
+41445,test,Casual Shoes,10162,2
+41456,val,Sandals,6126,4
+41460,test,Sandals,5234,4
+41467,val,Flats,5910,2
+41472,test,Heels,15864,4
+41473,test,Heels,56883,4
+41477,test,Casual Shoes,4180,2
+41486,test,Tshirts,18989,4
+41518,val,Sunglasses,8682,2
+41519,val,Sunglasses,28178,2
+41520,val,Sunglasses,28340,0
+41532,val,Belts,15938,4
+41551,test,Casual Shoes,13064,2
+41587,test,Shirts,27353,4
+41592,test,Shirts,10806,4
+41671,test,Heels,2897,2
+41673,test,Heels,15492,2
+41676,test,Heels,46607,2
+41678,test,Heels,45826,2
+41680,val,Heels,11519,2
+41682,test,Heels,39610,0
+41684,test,Heels,55638,4
+41688,test,Heels,27080,2
+41692,test,Heels,30695,2
+41703,val,Heels,41702,2
+41707,test,Heels,7240,4
+41712,val,Heels,41715,2
+41718,val,Heels,35676,4
+41720,test,Heels,22158,0
+41728,test,Heels,19039,2
+41741,val,Flats,35793,2
+41743,val,Heels,57304,0
+41821,val,Sports Shoes,13704,4
+41831,val,Casual Shoes,3255,2
+41832,test,Casual Shoes,25582,4
+41850,val,Socks,51147,2
+41851,val,Socks,17790,2
+41858,val,Sandals,1649,2
+41862,val,Sandals,2370,2
+41864,val,Sandals,44937,2
+41871,val,Sandals,41870,2
+41873,val,Sandals,18670,2
+41874,val,Sandals,3134,4
+41875,val,Sandals,51214,2
+41876,val,Sandals,34843,0
+41877,val,Sandals,34843,2
+41880,val,Sandals,12983,2
+41912,val,Flip Flops,22260,0
+41944,val,Flip Flops,49815,0
+41945,val,Flip Flops,44208,0
+41961,test,Jeans,41962,0
+41985,test,Tshirts,40138,0
+41990,val,Shirts,8354,4
+41991,val,Shirts,8354,4
+41995,val,Capris,4880,0
+42003,val,Capris,33148,2
+42004,val,Capris,33148,2
+42010,val,Sandals,12983,2
+42019,val,Casual Shoes,3577,2
+42025,val,Sports Shoes,32190,2
+42034,test,Sports Shoes,7238,2
+42036,val,Flip Flops,6421,4
+42042,val,Sports Shoes,4509,2
+42056,val,Wallets,42922,4
+42067,val,Wallets,27785,4
+42077,test,Wallets,27773,2
+42078,test,Wallets,36101,4
+42079,val,Wallets,27775,4
+42081,test,Wallets,36908,2
+42090,val,Sports Shoes,6117,4
+42094,test,Sports Shoes,42992,2
+42104,val,Shorts,28143,4
+42124,test,Casual Shoes,24825,4
+42129,val,Sports Shoes,7714,2
+42130,val,Sports Shoes,4500,4
+42132,val,Casual Shoes,54736,2
+42133,test,Casual Shoes,1836,4
+42138,val,Sports Shoes,3165,4
+42144,val,Sports Shoes,12971,2
+42173,val,Tshirts,13438,4
+42174,val,Tshirts,7789,4
+42197,val,Tunics,40389,4
+42222,val,Tunics,39465,4
+42260,val,Jeans,39387,4
+42264,val,Jeans,43421,4
+42269,test,Casual Shoes,6802,2
+42320,val,Sarees,42319,4
+42323,test,Sarees,53037,4
+42603,test,Pendant,43470,4
+42621,val,Earrings,59529,2
+42622,val,Earrings,46050,4
+42623,val,Earrings,31722,2
+42624,val,Earrings,47090,4
+42628,val,Earrings,46050,2
+42629,val,Earrings,46048,2
+42689,test,Flats,33134,0
+42692,val,Flats,56925,0
+42694,val,Flats,4548,2
+42700,test,Flats,7595,4
+42705,val,Flats,35806,2
+42718,val,Flats,33537,0
+42720,val,Flats,13645,2
+42724,val,Flats,13553,2
+42727,val,Flats,5621,2
+42733,val,Flats,46622,2
+42737,val,Flats,45412,2
+42844,val,Handbags,21940,4
+42864,test,Clutches,33396,4
+42896,val,Belts,2494,4
+42906,val,Belts,36638,4
+42942,val,Belts,33458,2
+42985,test,Sports Shoes,22104,2
+42988,test,Sports Shoes,5697,2
+42989,test,Sports Shoes,6415,4
+42996,val,Sports Shoes,6647,4
+43000,val,Sports Shoes,4552,4
+43006,test,Sandals,29268,2
+43009,test,Flip Flops,53876,4
+43033,val,Shirts,19014,2
+43034,val,Shirts,11040,2
+43070,test,Caps,19206,2
+43074,val,Capris,15642,4
+43078,test,Capris,2301,4
+43211,test,Watches,49890,4
+43220,test,Casual Shoes,24192,4
+43222,val,Casual Shoes,10639,4
+43231,test,Sports Shoes,9323,2
+43237,test,Casual Shoes,2499,2
+43297,val,Casual Shoes,1727,2
+43352,val,Sports Shoes,6673,2
+43356,val,Sports Shoes,3574,2
+43359,val,Sports Shoes,9210,2
+43367,val,Flats,14376,0
+43369,test,Flip Flops,13543,2
+43373,test,Sports Shoes,1542,4
+43374,test,Sports Shoes,43371,2
+43375,test,Flip Flops,43381,2
+43383,test,Flip Flops,2636,2
+43411,test,Flats,44206,2
+43472,val,Night suits,43148,2
+43474,val,Casual Shoes,22827,2
+43484,val,Shirts,37727,4
+43490,val,Tshirts,9309,2
+43497,val,Tshirts,2837,4
+43548,val,Sandals,4640,2
+43556,test,Socks,9364,4
+43558,test,Socks,9371,4
+43581,val,Shirts,41304,0
+43587,test,Shirts,41303,0
+43590,val,Tshirts,40132,4
+43769,test,Earrings,8752,2
+43780,val,Earrings,43794,4
+43787,val,Earrings,8752,0
+43788,val,Earrings,58849,0
+43789,val,Earrings,39043,2
+43802,val,Earrings,43798,2
+43815,test,Earrings,43814,4
+43816,val,Earrings,43776,0
+43817,val,Earrings,43776,2
+43825,test,Earrings,43827,2
+43828,val,Earrings,43826,2
+43844,test,Earrings,43869,0
+43848,test,Earrings,43849,2
+43855,val,Earrings,48665,0
+43857,val,Earrings,35309,2
+43858,val,Earrings,31722,2
+43859,test,Earrings,43765,2
+43860,val,Earrings,48652,4
+43864,val,Earrings,31714,4
+43879,val,Casual Shoes,7366,2
+43882,test,Flats,5910,4
+43927,test,Heels,22309,4
+43934,test,Heels,12713,4
+43940,test,Heels,43939,2
+43947,val,Heels,9138,4
+43949,test,Heels,26533,4
+43950,test,Flats,13037,2
+43951,val,Heels,13476,4
+43952,val,Heels,45410,4
+43959,val,Sandals,45383,4
+44189,val,Flip Flops,22260,0
+44192,val,Flip Flops,22260,0
+44196,val,Flip Flops,26676,0
+44200,val,Flip Flops,45409,0
+44203,val,Flip Flops,41938,0
+44232,val,Sports Shoes,44501,2
+44234,test,Sports Shoes,2803,2
+44235,val,Sports Shoes,13121,2
+44240,test,Flip Flops,43008,2
+44270,val,Wallets,52797,2
+44272,val,Wallets,25085,2
+44273,val,Wallets,36101,2
+44304,test,Shorts,39793,4
+44396,val,Sports Shoes,6502,4
+44397,test,Sports Shoes,6126,4
+44398,val,Casual Shoes,13387,2
+44401,val,Sports Shoes,5896,2
+44403,val,Sports Shoes,36227,2
+44411,val,Casual Shoes,10152,0
+44415,val,Casual Shoes,43229,2
+44418,val,Casual Shoes,2640,2
+44419,val,Formal Shoes,14488,0
+44421,val,Casual Shoes,2370,2
+44424,test,Casual Shoes,47603,4
+44428,val,Formal Shoes,20678,0
+44429,val,Formal Shoes,59342,0
+44448,test,Sandals,9043,2
+44460,val,Casual Shoes,13044,0
+44500,test,Casual Shoes,14409,4
+44502,test,Casual Shoes,25575,4
+44510,val,Casual Shoes,9815,4
+44517,val,Flip Flops,59146,2
+44550,val,Sandals,17817,4
+44567,test,Sandals,6163,4
+44596,test,Belts,44594,2
+44616,test,Flip Flops,8077,2
+44623,test,Caps,6163,4
+44624,test,Caps,59584,2
+44627,test,Shorts,2191,4
+44657,val,Casual Shoes,5870,4
+44705,test,Tops,24950,4
+44710,val,Flip Flops,12983,4
+44717,val,Flip Flops,44739,2
+44722,test,Flip Flops,32817,2
+44723,val,Flip Flops,53449,0
+44724,test,Flip Flops,40756,0
+44726,test,Flip Flops,35472,2
+44735,test,Flip Flops,47453,2
+44743,val,Casual Shoes,3259,4
+44747,test,Casual Shoes,21728,4
+44758,test,Casual Shoes,2504,2
+44760,val,Casual Shoes,25479,2
+44765,test,Casual Shoes,22703,4
+44770,val,Casual Shoes,5479,4
+44780,val,Casual Shoes,1727,0
+44781,val,Casual Shoes,1727,0
+44783,val,Sports Shoes,4509,2
+44817,val,Casual Shoes,9216,2
+44833,test,Tshirts,44900,4
+44836,val,Tshirts,30320,4
+44851,test,Tshirts,44831,4
+44892,val,Tshirts,44891,0
+44934,val,Casual Shoes,8298,2
+44939,test,Formal Shoes,2379,0
+44940,test,Formal Shoes,12514,2
+44941,test,Formal Shoes,4486,4
+44943,val,Formal Shoes,7869,2
+45011,val,Watches,45010,0
+45024,test,Watches,45026,4
+45049,val,Flip Flops,23834,2
+45100,val,Bra,57334,2
+45118,val,Watches,45119,2
+45189,test,Watches,49877,4
+45195,val,Watches,56206,0
+45197,test,Watches,39057,4
+45207,test,Watches,52951,4
+45209,val,Watches,46049,4
+45211,val,Watches,45212,4
+45226,val,Watches,46574,4
+45304,val,Belts,41247,2
+45307,val,Belts,27820,4
+45312,val,Belts,14822,4
+45313,val,Belts,27811,2
+45315,val,Belts,44592,4
+45318,val,Belts,42960,2
+45320,test,Heels,45319,2
+45327,val,Heels,50156,4
+45333,test,Heels,2879,4
+45339,test,Heels,17746,4
+45345,val,Heels,45331,4
+45347,test,Heels,26708,4
+45353,test,Heels,5480,2
+45355,test,Heels,45359,0
+45363,test,Heels,13540,2
+45364,test,Heels,35784,2
+45367,val,Heels,4631,2
+45371,val,Heels,45366,0
+45377,val,Heels,15523,2
+45380,val,Flats,7364,4
+45384,test,Flats,39621,2
+45398,test,Flats,18671,4
+45399,val,Flats,43889,2
+45407,val,Flats,35785,0
+45418,test,Flats,16998,2
+45422,val,Flats,47598,2
+45424,test,Flats,20947,2
+45426,val,Flats,6180,0
+45499,val,Capris,45500,0
+45577,val,Sandals,35422,0
+45579,val,Sandals,7746,2
+45580,val,Sandals,57507,4
+45581,test,Sandals,12980,2
+45582,val,Casual Shoes,8247,2
+45585,test,Formal Shoes,9216,2
+45587,test,Formal Shoes,10147,2
+45589,test,Formal Shoes,9043,2
+45595,test,Formal Shoes,10147,2
+45597,test,Formal Shoes,7881,0
+45600,val,Casual Shoes,7382,2
+45602,test,Formal Shoes,15266,0
+45604,test,Formal Shoes,4183,0
+45606,test,Formal Shoes,2376,2
+45608,test,Formal Shoes,45576,2
+45610,test,Formal Shoes,45584,0
+45613,test,Formal Shoes,24710,2
+45615,val,Formal Shoes,7881,2
+45617,test,Formal Shoes,44435,0
+45623,val,Casual Shoes,12425,2
+45625,val,Casual Shoes,22197,2
+45637,val,Briefs,45653,4
+45657,val,Briefs,45656,0
+45664,val,Innerwear Vests,30313,4
+45783,test,Heels,27076,0
+45786,test,Flats,17679,4
+45789,test,Flats,10760,2
+45797,val,Heels,11502,2
+45799,val,Flats,11493,2
+45802,val,Heels,45385,0
+45804,val,Heels,13473,4
+45809,val,Heels,56941,2
+45825,val,Heels,20898,2
+45843,test,Kurtas,28959,4
+45886,val,Watches,45887,4
+45918,val,Watches,59403,4
+45924,val,Watches,45923,2
+45987,test,Sarees,45986,4
+45991,test,Sarees,59606,4
+46017,test,Kurtas,50346,4
+46074,val,Belts,27830,0
+46076,val,Flats,8752,4
+46083,test,Sports Shoes,5936,2
+46086,val,Sports Shoes,3637,2
+46092,test,Sports Shoes,13065,4
+46094,test,Sandals,9696,2
+46098,val,Casual Shoes,39280,4
+46101,test,Flip Flops,11851,2
+46106,val,Flip Flops,6163,2
+46107,test,Flip Flops,6163,2
+46108,val,Flip Flops,24632,2
+46118,test,Casual Shoes,29241,2
+46145,test,Necklace and Chains,46129,2
+46289,val,Sandals,2809,4
+46290,val,Sports Shoes,4561,4
+46328,test,Sports Shoes,2824,4
+46331,test,Casual Shoes,8249,2
+46332,test,Casual Shoes,8214,2
+46334,val,Sports Shoes,1594,2
+46335,test,Sports Shoes,13355,2
+46500,test,Watches,25619,2
+46576,test,Watches,19300,4
+46577,test,Watches,49880,4
+46581,test,Heels,53459,2
+46583,val,Flats,49601,0
+46587,val,Heels,24474,2
+46589,test,Heels,35403,2
+46590,test,Heels,36467,4
+46591,test,Heels,15861,4
+46603,val,Heels,13553,2
+46609,val,Heels,3583,2
+46610,val,Heels,47580,2
+46617,test,Heels,6117,2
+46737,test,Watches,59284,4
+46743,test,Track Pants,46749,0
+46745,test,Track Pants,46749,4
+46817,test,Flats,18541,0
+46818,val,Heels,56956,2
+46826,test,Heels,21030,2
+46827,test,Heels,14448,2
+46836,val,Flip Flops,27081,2
+46841,val,Casual Shoes,35384,4
+46845,test,Sandals,35360,0
+46860,val,Sandals,8752,2
+46905,val,Jeans,32406,4
+46958,test,Flip Flops,22254,2
+46963,val,Flip Flops,46861,2
+47010,val,Kurtas,52441,4
+47012,val,Kurtas,42565,4
+47092,val,Casual Shoes,9001,2
+47096,val,Sandals,15563,2
+47114,val,Flip Flops,46861,0
+47117,val,Sandals,47118,0
+47121,test,Casual Shoes,47120,0
+47123,val,Casual Shoes,11852,4
+47133,val,Handbags,34768,4
+47168,test,Sports Shoes,59008,0
+47169,val,Sandals,50755,2
+47171,val,Sandals,5700,4
+47172,val,Sandals,5616,2
+47174,val,Sandals,7319,2
+47175,val,Sandals,4274,2
+47176,val,Sandals,53137,2
+47177,val,Sandals,7966,2
+47178,val,Sandals,47528,2
+47179,val,Sandals,6503,2
+47182,val,Casual Shoes,5896,2
+47206,test,Formal Shoes,11923,2
+47224,val,Sandals,4571,2
+47230,val,Sandals,47229,0
+47237,test,Casual Shoes,47236,0
+47239,val,Casual Shoes,11843,4
+47255,test,Briefs,15790,4
+47261,val,Briefs,47258,4
+47265,test,Briefs,50618,4
+47267,test,Briefs,50483,4
+47287,val,Clutches,20480,4
+47291,val,Wallets,33626,4
+47310,val,Wallets,17118,4
+47370,val,Wallets,33398,4
+47371,test,Wallets,47406,4
+47387,test,Wallets,35323,4
+47447,val,Flats,53454,2
+47448,val,Flats,32837,2
+47451,val,Flats,10616,2
+47463,test,Flats,44942,2
+47474,test,Flip Flops,19035,2
+47475,test,Flats,44729,2
+47476,val,Flats,18210,2
+47477,test,Flats,10618,2
+47488,test,Casual Shoes,46962,2
+47531,test,Flats,47530,0
+47533,test,Flats,47532,2
+47536,test,Flats,13027,4
+47538,test,Flats,47537,0
+47544,test,Flats,32851,0
+47546,val,Heels,32815,2
+47547,val,Heels,32817,0
+47548,val,Heels,56997,0
+47551,val,Heels,25404,4
+47554,val,Heels,6180,4
+47555,val,Heels,11495,4
+47556,test,Heels,45823,0
+47559,test,Heels,47087,2
+47560,test,Flats,13025,2
+47565,test,Flats,13025,2
+47567,test,Heels,47570,2
+47568,test,Heels,47570,2
+47569,test,Heels,47570,2
+47572,val,Heels,42728,0
+47573,test,Heels,50151,0
+47581,test,Flats,45385,0
+47584,val,Flats,32817,0
+47585,test,Flats,19022,2
+47588,val,Flats,19022,2
+47591,test,Heels,20762,0
+47595,test,Heels,6141,2
+47597,test,Heels,3141,2
+47599,test,Flats,30695,2
+47600,test,Flats,22914,2
+47609,test,Heels,44208,2
+47613,val,Heels,22273,2
+47614,val,Heels,56923,4
+47615,test,Heels,26175,2
+47620,test,Heels,11914,0
+47623,test,Heels,47216,4
+47624,test,Heels,26175,4
+47630,test,Flats,3255,2
+47635,val,Heels,47639,4
+47928,val,Handbags,47927,2
+47965,test,Watches,29422,4
+48031,test,Watches,37949,4
+48042,test,Watches,32297,4
+48125,test,Belts,18024,2
+48144,test,Wallets,47303,4
+48145,test,Wallets,47303,4
+48147,test,Wallets,48148,0
+48157,test,Wallets,48165,0
+48168,test,Wallets,51899,4
+48194,test,Sunglasses,48193,0
+48207,test,Sunglasses,48206,2
+48208,test,Sunglasses,58552,0
+48210,test,Sunglasses,8682,2
+48211,test,Sunglasses,49665,0
+48213,test,Sunglasses,8694,2
+48216,test,Sunglasses,48215,2
+48217,test,Sunglasses,8663,2
+48219,test,Sunglasses,16109,2
+48231,test,Sunglasses,16102,2
+48233,val,Sunglasses,28157,0
+48237,test,Sunglasses,50212,0
+48244,test,Tshirts,10662,4
+48251,test,Tshirts,35339,4
+48326,val,Clutches,48357,4
+48329,test,Handbags,48327,0
+48359,val,Clutches,16749,4
+48372,val,Shirts,37750,4
+48384,test,Jeans,48397,4
+48416,test,Tshirts,16432,4
+48435,val,Tshirts,11384,4
+48436,test,Tshirts,21725,4
+48437,test,Tshirts,22475,4
+48440,test,Tshirts,44634,2
+48445,val,Tshirts,28701,4
+48506,test,Tops,4618,4
+48526,val,Flip Flops,13643,2
+48527,val,Flip Flops,2238,4
+48528,test,Flip Flops,20762,0
+48549,val,Belts,18017,2
+48594,val,Earrings,48626,2
+48656,val,Earrings,35330,4
+48716,val,Earrings,59550,2
+48776,test,Pendant,59514,4
+48782,test,Pendant,45923,2
+48786,test,Pendant,59508,4
+48787,test,Pendant,59508,4
+48792,test,Pendant,15573,2
+48804,test,Pendant,8690,4
+48805,test,Pendant,10108,4
+48843,test,Pendant,24986,4
+48844,test,Pendant,46474,4
+48902,test,Pendant,45144,2
+48921,test,Ring,48972,4
+48922,test,Ring,48972,4
+48925,test,Ring,48972,4
+48927,test,Ring,42590,4
+48935,test,Ring,46475,2
+48936,test,Ring,4959,4
+48939,test,Ring,48970,4
+48942,test,Ring,59460,2
+48975,test,Ring,48972,0
+48980,test,Ring,59469,2
+48981,test,Ring,48972,4
+48983,test,Ring,34099,4
+48991,test,Ring,46464,4
+48992,test,Ring,48970,4
+48993,test,Ring,25302,2
+48994,test,Ring,48970,4
+49006,test,Ring,56203,4
+49014,test,Ring,49025,2
+49017,test,Ring,48970,2
+49019,test,Ring,48970,4
+49020,test,Ring,48970,4
+49023,val,Ring,48972,0
+49024,test,Ring,48970,2
+49026,test,Ring,49025,4
+49029,test,Ring,49025,4
+49035,test,Ring,48972,2
+49039,test,Ring,48972,4
+49040,test,Ring,31716,4
+49049,test,Ring,56209,4
+49050,test,Ring,56203,4
+49052,test,Ring,59456,4
+49056,test,Ring,37628,4
+49070,test,Casual Shoes,4183,2
+49234,val,Caps,56205,4
+49267,val,Socks,49305,4
+49353,val,Casual Shoes,11839,4
+49354,test,Casual Shoes,13545,2
+49364,val,Casual Shoes,7401,2
+49372,val,Casual Shoes,9216,2
+49406,test,Casual Shoes,24185,0
+49408,test,Casual Shoes,24185,0
+49460,val,Casual Shoes,5050,4
+49461,test,Casual Shoes,17674,2
+49468,val,Casual Shoes,5896,2
+49473,val,Casual Shoes,45594,0
+49475,test,Casual Shoes,6744,2
+49484,test,Casual Shoes,4731,4
+49493,val,Casual Shoes,4742,4
+49494,test,Casual Shoes,12429,4
+49495,test,Casual Shoes,14554,2
+49497,test,Casual Shoes,15248,2
+49498,val,Casual Shoes,7407,4
+49501,test,Casual Shoes,19309,0
+49504,val,Casual Shoes,11843,4
+49505,val,Casual Shoes,9043,2
+49509,val,Casual Shoes,13918,2
+49525,test,Clutches,16739,2
+49548,val,Clutches,49547,0
+49549,val,Clutches,35145,4
+49553,val,Handbags,49552,4
+49577,test,Flats,7401,4
+49581,test,Heels,2897,2
+49584,test,Heels,2901,4
+49588,test,Heels,2628,0
+49592,test,Heels,13475,2
+49595,val,Heels,14456,2
+49596,test,Heels,34455,2
+49597,val,Heels,39571,4
+49599,test,Heels,49605,0
+49602,val,Heels,20901,4
+49606,test,Heels,17710,2
+49610,val,Heels,56965,2
+49617,test,Heels,49605,0
+49618,val,Heels,14376,2
+49624,val,Heels,32841,2
+49652,test,Tops,46256,4
+49681,test,Ties,36361,2
+49687,val,Ties,58902,0
+49689,test,Ties,35080,2
+49692,test,Ties,49704,0
+49693,val,Ties,35084,0
+49697,test,Ties,36352,0
+49701,test,Ties,35084,0
+49705,val,Ties,49716,0
+49707,val,Ties,35084,0
+49711,val,Ties,49704,0
+49715,test,Ties,35084,0
+49721,val,Ties,35084,0
+49722,test,Ties,35084,0
+49728,test,Ties,49731,0
+49730,val,Ties,35084,0
+49733,test,Ties,35084,0
+49735,test,Ties,49713,0
+49738,val,Ties,49720,0
+49741,val,Ties,58902,0
+49745,test,Ties,12391,2
+49746,val,Ties,36362,0
+49764,val,Leggings,49762,4
+49775,val,Kurtas,49765,2
+49776,test,Kurtas,46242,4
+49811,val,Flip Flops,25484,0
+49812,val,Flip Flops,42691,0
+49816,val,Flip Flops,42691,0
+49818,val,Flip Flops,13645,0
+49824,val,Flip Flops,45392,0
+49828,val,Flip Flops,41734,2
+49830,val,Flip Flops,47557,2
+49832,val,Flip Flops,25484,2
+49833,val,Flip Flops,22260,0
+49864,val,Watches,49863,4
+49865,test,Watches,53039,4
+49866,test,Watches,31886,4
+49871,val,Watches,49893,4
+49876,val,Watches,43156,4
+49916,val,Sarees,49919,4
+49922,test,Sarees,31886,4
+49996,val,Briefs,19360,4
+50157,val,Heels,50156,2
+50158,val,Heels,20773,4
+50161,val,Heels,57304,2
+50162,val,Heels,17710,0
+50164,val,Heels,42990,2
+50170,val,Heels,14426,0
+50175,test,Flats,10633,0
+50206,test,Sunglasses,16962,2
+50215,val,Belts,37706,4
+50219,val,Belts,50220,0
+50223,val,Belts,38417,4
+50228,val,Belts,12520,2
+50229,val,Belts,50222,0
+50231,test,Sunglasses,17227,0
+50277,test,Formal Shoes,3574,2
+50278,test,Formal Shoes,6503,2
+50279,test,Casual Shoes,9704,2
+50281,test,Ties,50280,2
+50282,test,Ties,35086,4
+50303,test,Ties,36362,0
+50304,test,Ties,12391,2
+50305,val,Ties,35087,0
+50308,test,Ties,35084,0
+50309,val,Ties,40245,0
+50312,val,Ties,49716,0
+50315,test,Ties,35088,0
+50317,test,Ties,40245,0
+50319,val,Ties,36352,0
+50320,test,Ties,49720,0
+50347,val,Kurtas,57046,4
+50441,test,Briefs,47259,4
+50448,val,Briefs,50581,2
+50456,test,Briefs,28055,2
+50462,test,Briefs,50442,2
+50484,test,Briefs,50506,4
+50540,test,Briefs,50590,4
+50571,val,Trunk,50569,0
+50607,val,Briefs,50609,0
+50674,val,Trunk,50569,0
+50732,val,Sandals,42027,2
+50733,test,Sandals,2803,4
+50735,test,Sandals,44512,2
+50741,val,Casual Shoes,31985,2
+50742,val,Casual Shoes,8238,0
+50743,val,Casual Shoes,4565,2
+50748,val,Casual Shoes,50756,0
+50749,val,Casual Shoes,3545,2
+50750,val,Casual Shoes,4340,2
+50754,val,Casual Shoes,3488,2
+50757,val,Sandals,39268,0
+50758,val,Sandals,11918,4
+50760,val,Sandals,4021,2
+50762,val,Sandals,11875,2
+50765,test,Sandals,12816,2
+50817,test,Wallets,36110,4
+50819,test,Wallets,36101,2
+50820,test,Wallets,27785,4
+50822,test,Wallets,27760,4
+50823,test,Wallets,52799,4
+50827,val,Wallets,36910,2
+50830,test,Belts,9017,4
+50831,test,Belts,27810,0
+50869,val,Sarees,50853,4
+50873,test,Sarees,50853,4
+50875,val,Sarees,50874,4
+50877,test,Sarees,50859,4
+50881,val,Sarees,50874,2
+50883,test,Sarees,50852,2
+50886,val,Sarees,31877,4
+50891,val,Sarees,45988,4
+50903,val,Sarees,50852,4
+50906,val,Sarees,52979,4
+50907,val,Sarees,42319,4
+51168,val,Socks,51166,2
+51170,val,Socks,18590,4
+51171,val,Socks,17401,2
+51178,val,Socks,32471,2
+51182,val,Socks,17401,2
+51215,val,Flip Flops,24120,2
+51252,val,Belts,2505,2
+51254,test,Belts,17058,4
+51255,val,Belts,42954,4
+51257,test,Belts,41242,0
+51258,test,Belts,38420,4
+51259,val,Belts,51267,2
+51260,test,Belts,42960,4
+51261,test,Belts,27812,2
+51263,val,Belts,27810,0
+51294,test,Sunglasses,16949,2
+51349,test,Casual Shoes,23091,2
+51374,test,Casual Shoes,40757,2
+51376,test,Casual Shoes,17699,4
+51444,val,Shirts,51434,4
+51449,test,Tops,12772,4
+51549,test,Watches,56319,4
+51554,val,Watches,29529,2
+51556,val,Watches,51555,4
+51662,test,Sunglasses,8690,2
+51665,test,Sunglasses,49668,2
+51667,test,Sunglasses,28181,2
+51669,test,Sunglasses,51712,2
+51670,val,Sunglasses,16962,2
+51671,val,Sunglasses,21290,0
+51673,val,Sunglasses,28335,0
+51674,test,Sunglasses,28184,0
+51676,val,Sunglasses,8622,2
+51681,test,Sunglasses,28402,2
+51682,test,Sunglasses,8670,2
+51684,val,Sunglasses,21342,0
+51685,val,Sunglasses,23723,0
+51687,test,Sunglasses,8666,2
+51688,test,Sunglasses,23699,2
+51689,val,Sunglasses,16950,4
+51690,val,Sunglasses,51693,0
+51692,val,Sunglasses,58551,0
+51703,test,Sunglasses,17587,0
+51705,val,Sunglasses,8681,0
+51708,test,Sunglasses,16086,2
+51710,val,Sunglasses,51712,2
+51714,val,Sunglasses,28187,2
+51725,val,Sunglasses,16962,0
+51731,test,Sunglasses,49674,0
+51734,val,Sunglasses,28399,0
+51750,val,Heels,32817,0
+51754,test,Casual Shoes,34853,2
+51755,val,Casual Shoes,3574,2
+51759,val,Heels,20755,2
+51762,test,Heels,41471,2
+51763,val,Flats,6443,4
+51764,val,Belts,25100,4
+51843,val,Wallets,36101,2
+51844,test,Nightdress,52100,4
+51870,val,Tshirts,1990,4
+51884,test,Wallets,58240,2
+51888,test,Wallets,33620,4
+52058,val,Tshirts,5212,4
+52075,val,Tshirts,53766,4
+52356,val,Nightdress,52384,4
+52399,test,Nightdress,52375,4
+52418,test,Nightdress,52419,0
+52424,test,Nightdress,11230,4
+52431,val,Nightdress,52369,4
+52450,test,Nightdress,57998,4
+52464,test,Nightdress,53048,4
+52560,test,Clutches,47344,4
+52564,test,Clutches,35909,4
+52577,val,Clutches,54411,4
+52794,val,Wallets,38362,4
+52796,val,Wallets,38299,0
+52800,val,Wallets,51772,0
+52802,val,Wallets,41270,2
+52804,val,Wallets,19513,4
+52806,val,Wallets,51772,2
+52808,val,Wallets,51772,0
+52810,val,Wallets,38362,4
+52814,val,Wallets,25085,4
+52825,test,Earrings,58109,4
+52827,test,Earrings,43772,2
+52828,test,Earrings,8752,4
+52831,test,Earrings,17980,4
+52836,val,Earrings,58141,4
+52846,test,Earrings,58028,4
+52850,val,Earrings,59523,0
+52851,test,Earrings,8752,2
+52852,test,Earrings,46049,2
+52859,test,Earrings,58121,2
+52878,test,Sarees,59665,4
+52903,val,Sarees,49925,4
+52904,val,Sarees,52901,4
+52914,val,Sarees,52969,4
+52937,val,Sarees,52929,2
+52946,test,Sarees,59660,2
+52950,val,Sarees,53041,4
+52962,val,Sarees,49926,4
+52963,val,Sarees,52938,2
+52964,val,Sarees,49919,4
+52965,val,Sarees,52938,4
+52968,val,Sarees,52901,2
+52983,val,Sarees,34992,4
+52991,test,Sarees,52960,2
+53043,val,Sarees,52981,4
+53051,test,Sarees,52981,2
+53061,val,Handbags,53062,0
+53071,test,Clutches,33395,4
+53095,val,Earrings,35329,4
+53098,val,Earrings,58049,0
+53127,val,Flats,57304,0
+53128,test,Heels,51757,4
+53131,val,Heels,19051,2
+53133,val,Heels,1731,4
+53136,test,Heels,41474,0
+53141,test,Heels,42696,2
+53145,test,Heels,53146,4
+53148,test,Heels,54130,2
+53303,val,Tshirts,34415,4
+53319,test,Tshirts,10884,4
+53378,val,Flip Flops,20947,2
+53420,test,Kurtas,50330,4
+53430,test,Kurtas,53829,4
+53434,val,Tshirts,32435,4
+53436,val,Sports Shoes,4172,2
+53437,val,Sports Shoes,5037,2
+53439,val,Flip Flops,53442,2
+53441,val,Sports Shoes,4044,2
+53448,val,Flip Flops,49823,0
+53455,test,Flats,53456,0
+53457,test,Heels,4274,4
+53611,val,Watches,30052,4
+53616,test,Watches,53615,4
+53726,test,Flip Flops,32837,2
+53731,val,Casual Shoes,9132,2
+53734,test,Casual Shoes,23890,0
+53735,test,Casual Shoes,5700,0
+53752,val,Shorts,53753,4
+53757,test,Sports Shoes,7715,2
+53764,val,Tshirts,19705,2
+53775,val,Tshirts,53115,4
+53784,val,Shirts,49979,4
+53788,test,Tshirts,44866,2
+53818,test,Kurtis,53819,4
+53840,test,Kurtas,53835,4
+53842,test,Kurtas,50351,2
+53870,val,Heels,39205,2
+53875,test,Flip Flops,10309,4
+53878,test,Flip Flops,10309,2
+53879,test,Flip Flops,10083,2
+53880,test,Flip Flops,32184,4
+53884,val,Handbags,30505,4
+54068,val,Casual Shoes,2809,2
+54070,val,Sports Shoes,5324,2
+54077,test,Flip Flops,33859,2
+54078,val,Sports Shoes,13545,0
+54086,val,Kurtis,57055,4
+54107,test,Flats,17746,4
+54115,val,Heels,20266,4
+54126,val,Heels,59033,4
+54131,val,Heels,13150,2
+54141,val,Heels,47571,2
+54142,test,Heels,13479,2
+54144,val,Heels,5928,2
+54171,test,Necklace and Chains,4943,2
+54175,val,Necklace and Chains,45290,2
+54186,val,Briefs,28104,4
+54330,test,Briefs,57382,2
+54332,test,Briefs,24447,0
+54346,test,Socks,17405,0
+54390,test,Wallets,54405,4
+54400,val,Wallets,54401,0
+54402,test,Wallets,36650,4
+54480,test,Briefs,54477,0
+54500,val,Handbags,54507,2
+54515,val,Sports Shoes,3307,4
+54520,test,Casual Shoes,7219,4
+54526,val,Sports Shoes,10093,4
+54527,val,Casual Shoes,41844,0
+54528,test,Casual Shoes,2639,4
+54529,val,Casual Shoes,5724,2
+54530,test,Casual Shoes,5938,2
+54533,test,Sports Shoes,2820,0
+54534,val,Sports Shoes,39675,2
+54536,test,Sports Shoes,35685,0
+54537,test,Sports Shoes,10783,4
+54568,test,Kurtas,40627,4
+54584,test,Kurtas,54566,4
+54668,val,Watches,59223,4
+54681,test,Kurtas,24377,4
+54719,val,Kurtas,44845,4
+54730,test,Casual Shoes,4183,2
+54732,val,Casual Shoes,7775,2
+54740,test,Casual Shoes,12824,2
+54741,val,Casual Shoes,37250,0
+54767,test,Kurtas,52373,4
+54900,test,Tshirts,58765,0
+54931,val,Tshirts,5280,4
+54990,test,Dresses,34586,4
+55612,val,Formal Shoes,5677,4
+55613,test,Casual Shoes,12489,2
+55615,val,Casual Shoes,12425,2
+55616,val,Casual Shoes,6393,2
+55617,test,Casual Shoes,5700,2
+55618,val,Casual Shoes,47225,0
+55620,test,Casual Shoes,57494,0
+55622,test,Formal Shoes,5700,2
+55623,val,Casual Shoes,5700,2
+55625,test,Formal Shoes,35055,0
+55626,val,Casual Shoes,2633,4
+55627,test,Casual Shoes,2633,4
+55628,val,Casual Shoes,13972,2
+55629,test,Casual Shoes,21728,0
+55634,test,Heels,38761,2
+55635,test,Heels,15492,2
+55637,test,Heels,2894,2
+55648,val,Flats,40306,2
+55651,val,Heels,41865,4
+55783,test,Casual Shoes,22093,2
+55784,test,Casual Shoes,10171,2
+56231,val,Night suits,56223,4
+56238,test,Night suits,13247,4
+56240,val,Night suits,56221,4
+56243,test,Night suits,56222,4
+56296,val,Briefs,56305,4
+56404,test,Flats,45800,2
+56413,val,Sandals,4571,4
+56414,val,Sandals,47173,2
+56647,val,Kurtis,11415,4
+56654,test,Casual Shoes,31973,0
+56655,val,Casual Shoes,2500,4
+56656,test,Casual Shoes,10275,2
+56659,test,Casual Shoes,33703,0
+56661,test,Casual Shoes,28315,0
+56664,test,Casual Shoes,9762,0
+56705,val,Kurtas,22767,4
+56722,val,Casual Shoes,19309,0
+56769,val,Shirts,34350,4
+56819,test,Shirts,52052,4
+56862,val,Heels,53869,2
+56866,val,Heels,14376,0
+56867,val,Flats,15892,2
+56868,test,Flats,15542,4
+56870,test,Casual Shoes,17697,0
+56928,val,Heels,11894,2
+56930,val,Flats,10618,2
+56931,val,Heels,41865,4
+56936,val,Heels,56935,2
+56940,val,Heels,14363,4
+56948,val,Heels,56947,2
+56955,val,Heels,56970,4
+56962,val,Heels,11941,2
+56969,val,Heels,7595,4
+56989,val,Heels,22275,4
+56992,val,Flats,14376,0
+56993,test,Flats,11950,2
+57009,val,Flats,33086,2
+57014,val,Flats,41691,2
+57026,test,Briefs,28130,2
+57134,val,Tops,44703,4
+57143,test,Tshirts,11459,4
+57158,test,Tshirts,40655,4
+57175,val,Tops,3683,4
+57176,val,Tops,8785,4
+57201,val,Tunics,57055,4
+57241,val,Handbags,57240,2
+57252,val,Handbags,57253,0
+57295,val,Shirts,14916,4
+57297,test,Shirts,45534,4
+57342,val,Bra,30536,4
+57353,val,Bra,57328,2
+57470,test,Casual Shoes,6415,2
+57475,test,Sandals,32807,4
+57478,val,Casual Shoes,7376,2
+57482,test,Casual Shoes,6502,2
+57499,val,Formal Shoes,5697,2
+57501,test,Sandals,47198,4
+57502,val,Sandals,47617,4
+57509,test,Casual Shoes,17706,0
+57510,test,Casual Shoes,2375,4
+57511,test,Casual Shoes,21571,2
+57512,test,Casual Shoes,17706,2
+57513,test,Casual Shoes,47229,2
+57514,test,Casual Shoes,11949,2
+57515,val,Formal Shoes,9696,2
+57516,test,Formal Shoes,3497,2
+57517,test,Casual Shoes,6393,2
+57519,test,Casual Shoes,13547,2
+57520,test,Casual Shoes,2642,4
+57521,test,Casual Shoes,7376,2
+57522,val,Casual Shoes,7376,2
+57524,test,Casual Shoes,3255,2
+57525,test,Casual Shoes,14448,2
+57526,test,Casual Shoes,47227,0
+57527,test,Casual Shoes,45378,0
+57528,val,Casual Shoes,15050,0
+57529,test,Casual Shoes,7376,2
+57530,test,Casual Shoes,47645,2
+57532,val,Formal Shoes,4022,2
+57533,test,Formal Shoes,4022,2
+57534,val,Belts,24621,4
+57838,test,Handbags,57835,0
+57854,val,Heels,19051,4
+57855,val,Heels,13027,4
+57857,val,Heels,14378,2
+57858,val,Heels,45795,2
+57899,val,Leggings,52133,0
+57906,val,Socks,57917,0
+57934,test,Sandals,7330,2
+57936,test,Casual Shoes,3564,2
+57939,test,Casual Shoes,39248,0
+57940,val,Sandals,47532,4
+57941,test,Casual Shoes,12515,2
+57942,test,Casual Shoes,4640,2
+57943,test,Casual Shoes,5684,2
+57945,test,Sandals,44716,0
+57946,test,Casual Shoes,5689,2
+57948,test,Casual Shoes,50730,2
+58017,val,Earrings,58076,4
+58044,test,Earrings,35309,2
+58052,val,Earrings,43837,2
+58060,test,Earrings,48591,2
+58071,val,Earrings,43826,2
+58116,val,Pendant,46475,2
+58118,val,Pendant,46475,2
+58123,val,Earrings,8752,4
+58160,val,Wallets,17118,2
+58161,test,Wallets,38679,4
+58163,val,Wallets,48135,2
+58181,val,Handbags,48165,2
+58189,val,Handbags,58188,4
+58195,val,Handbags,54182,4
+58200,val,Sports Shoes,3238,2
+58232,test,Flip Flops,5530,2
+58254,test,Clutches,58253,4
+58314,test,Socks,51149,4
+58315,test,Socks,51174,4
+58322,test,Socks,51149,4
+58328,val,Flip Flops,47215,4
+58334,test,Flip Flops,51876,2
+58336,val,Flip Flops,51876,4
+58337,val,Flip Flops,3623,4
+58340,val,Flip Flops,58339,0
+58349,test,Tshirts,53762,4
+58351,test,Tshirts,34387,4
+58375,test,Tshirts,53762,4
+58459,test,Tshirts,8330,4
+58463,val,Belts,42941,0
+58465,val,Belts,25112,2
+58468,val,Belts,25109,2
+58471,test,Wallets,37463,4
+58476,test,Wallets,51772,2
+58477,test,Wallets,43384,4
+58478,test,Wallets,27768,2
+58480,test,Wallets,36910,4
+58484,test,Wallets,36117,2
+58511,val,Shirts,6272,4
+58516,val,Tops,42103,4
+58517,test,Tops,39724,4
+58518,test,Tops,42561,4
+58534,val,Sunglasses,28375,2
+58536,val,Sunglasses,21338,0
+58537,val,Sunglasses,8620,2
+58538,val,Sunglasses,28195,2
+58539,val,Sunglasses,51663,4
+58540,val,Sunglasses,28157,2
+58541,val,Sunglasses,21290,0
+58542,val,Sunglasses,30671,0
+58543,val,Sunglasses,21283,2
+58555,test,Formal Shoes,50773,0
+58566,test,Tshirts,23189,2
+58605,test,Earrings,48612,0
+58607,test,Earrings,31714,2
+58608,test,Earrings,4437,4
+58610,test,Earrings,48602,2
+58612,val,Earrings,58611,0
+58618,test,Earrings,48701,4
+58619,test,Earrings,48591,0
+58620,test,Earrings,58611,4
+58640,val,Socks,29117,2
+58723,test,Tshirts,14919,4
+58816,val,Casual Shoes,14387,2
+58819,val,Casual Shoes,5928,4
+58837,test,Cufflinks,39058,2
+58838,test,Cufflinks,58863,0
+58841,test,Cufflinks,58849,2
+58842,test,Cufflinks,58836,0
+58843,test,Cufflinks,39058,0
+58846,test,Cufflinks,58836,0
+58847,test,Cufflinks,16094,2
+58852,test,Cufflinks,14148,2
+58853,test,Cufflinks,14161,2
+58856,test,Cufflinks,14161,2
+58857,test,Cufflinks,39058,0
+58858,test,Cufflinks,14161,2
+58859,test,Cufflinks,59568,0
+58873,val,Ties,35084,0
+58874,val,Ties,35084,0
+58876,val,Ties,40245,0
+58877,test,Ties,40245,0
+58879,test,Ties,35084,0
+58880,test,Ties,35087,2
+58881,val,Ties,35084,0
+58882,val,Ties,40245,0
+58883,val,Ties,35084,0
+58884,val,Ties,36354,4
+58885,test,Ties,40245,0
+58887,test,Ties,35087,4
+58888,val,Ties,36342,2
+58890,test,Ties,58902,0
+58894,val,Ties,40245,0
+58895,val,Ties,58900,0
+58898,test,Ties,49731,4
+58903,test,Ties,35084,0
+58907,test,Ties,58902,0
+58910,test,Ties,50311,0
+58913,test,Ties,49719,0
+58922,val,Accessory Gift Set,58920,4
+59019,test,Flats,5599,4
+59020,test,Heels,20271,2
+59022,test,Flats,41734,2
+59023,test,Heels,4658,4
+59029,test,Heels,59028,2
+59031,test,Heels,20773,4
+59036,val,Flats,47453,0
+59039,val,Flats,47453,0
+59040,val,Flats,45423,2
+59046,val,Heels,47220,4
+59048,test,Heels,19046,4
+59051,val,Flats,6393,4
+59053,val,Heels,2541,2
+59073,test,Bra,54325,4
+59116,val,Jackets,13800,4
+59118,test,Jackets,59115,4
+59120,val,Jackets,17628,2
+59142,val,Heels,11914,2
+59145,val,Heels,11932,4
+59149,val,Formal Shoes,2391,2
+59161,test,Formal Shoes,40688,0
+59166,test,Formal Shoes,4486,2
+59167,val,Formal Shoes,6490,2
+59172,val,Formal Shoes,11922,2
+59174,val,Formal Shoes,16156,2
+59175,val,Formal Shoes,59173,2
+59181,val,Formal Shoes,2375,4
+59295,test,Shirts,59294,0
+59323,test,Sandals,14478,2
+59324,test,Sandals,6134,2
+59338,test,Casual Shoes,18541,0
+59363,test,Kurtas,58660,4
+59372,test,Kurtas,59371,4
+59373,val,Kurtas,52350,4
+59378,test,Kurtas,59355,4
+59396,test,Casual Shoes,3660,2
+59442,val,Shirts,14633,4
+59474,val,Ring,31725,2
+59484,val,Ring,59460,2
+59532,val,Earrings,59544,0
+59567,val,Cufflinks,29140,2
+59574,val,Cufflinks,24645,2
+59579,test,Cufflinks,7625,2
+59585,val,Cufflinks,58835,0
+59586,val,Cufflinks,24645,2
+59587,val,Cufflinks,59568,0
+59593,val,Sarees,50896,4
+59597,val,Sarees,59660,2
+59601,test,Sarees,59660,2
+59612,test,Sarees,52969,4
+59616,val,Sarees,52978,4
+59619,val,Sarees,52901,4
+59621,test,Sarees,52981,2
+59622,test,Sarees,59592,2
+59625,val,Sarees,59660,4
+59631,test,Sarees,53055,4
+59633,test,Sarees,50882,4
+59635,test,Sarees,59646,4
+59652,test,Sarees,59592,4
+59655,val,Sarees,59592,2
+59661,val,Sarees,59592,2
+59676,val,Heels,2628,2
+59682,test,Briefs,59686,4
+59708,val,Briefs,59709,4
+59943,test,Casual Shoes,39894,2
+59944,test,Casual Shoes,45622,2
+59985,test,Dresses,52411,4
