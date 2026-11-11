@@ -1,0 +1,77 @@
+{
+  "architecture": "timm.create_model('efficientnet_b0', pretrained=False, num_classes=0) -> Dropout(0.2) -> one nn.Linear(feature_dim, n_classes) per head",
+  "backbone_prefix": "backbone.",
+  "backbone_create": {
+    "model_name": "efficientnet_b0",
+    "num_classes": 0
+  },
+  "head_keys": {
+    "articleType": {
+      "weight": "heads.articleType.weight",
+      "bias": "heads.articleType.bias"
+    },
+    "baseColour": {
+      "weight": "heads.baseColour.weight",
+      "bias": "heads.baseColour.bias"
+    },
+    "gender": {
+      "weight": "heads.gender.weight",
+      "bias": "heads.gender.bias"
+    },
+    "usage": {
+      "weight": "heads.usage.weight",
+      "bias": "heads.usage.bias"
+    }
+  },
+  "head_shapes": {
+    "articleType": [
+      49,
+      1280
+    ],
+    "baseColour": [
+      18,
+      1280
+    ],
+    "gender": [
+      5,
+      1280
+    ],
+    "usage": [
+      4,
+      1280
+    ]
+  },
+  "state_dict_keys": 366,
+  "backbone": "efficientnet_b0",
+  "head_sizes": {
+    "articleType": 49,
+    "baseColour": 18,
+    "gender": 5,
+    "usage": 4
+  },
+  "heads": [
+    "articleType",
+    "baseColour",
+    "gender",
+    "usage"
+  ],
+  "feature_dim": 1280,
+  "dropout": 0.2,
+  "input_size": 224,
+  "resize_before": 256,
+  "pad_colour": "white",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "label_maps": "label_maps.json",
+  "best_epoch": 15,
+  "val_score": 0.7960293891100381,
+  "load": "LensNet(backbone, head_sizes, pretrained=False).load_state_dict(torch.load('best.pt'))"
+}
