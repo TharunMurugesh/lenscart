@@ -19,3 +19,8 @@ venv/
 
 # node
 node_modules/
+
+# training outputs (large)
+runs/
+*.pt
+*.npy
