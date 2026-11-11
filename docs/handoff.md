@@ -1,4 +1,4 @@
-STATUS: waiting for the next Sara
+STATUS: training done 2026-11-12
 
 # LensCart: training handoff
 
