@@ -40,6 +40,11 @@ def prompts(head: str) -> list:
     return [f"a photo of {c.lower()} wear" for c in names]
 
 
+def as_tensor(out):
+    """transformers >= 5 returns an output object; the projected embedding is pooler_output."""
+    return out.pooler_output if hasattr(out, "pooler_output") else out
+
+
 @torch.no_grad()
 def embed_images(model, proc, ids, device, batch=128) -> np.ndarray:
     out = []
@@ -51,7 +56,7 @@ def embed_images(model, proc, ids, device, batch=128) -> np.ndarray:
         x = proc(images=imgs, return_tensors="pt")["pixel_values"].to(device)
         with torch.autocast(device_type=device.type, dtype=torch.float16,
                             enabled=device.type == "cuda"):
-            f = model.get_image_features(pixel_values=x)
+            f = as_tensor(model.get_image_features(pixel_values=x))
         out.append(torch.nn.functional.normalize(f.float(), dim=-1).cpu())
     return torch.cat(out).numpy().astype(np.float32)
 
@@ -113,7 +118,7 @@ def main() -> None:
             p = prompts(h)
             used[h] = p
             t = proc(text=p, return_tensors="pt", padding=True).to(device)
-            tf = torch.nn.functional.normalize(model.get_text_features(**t).float(), dim=-1)
+            tf = torch.nn.functional.normalize(as_tensor(model.get_text_features(**t)).float(), dim=-1)
             preds[h] = (torch.from_numpy(Xva).to(device) @ tf.T).argmax(1).cpu().numpy()
     vd = {"run": "V-d", "model": f"FashionCLIP zero-shot ({MODEL_ID})", **score(Yva, preds),
           "train_seconds": 0, "prompts": used}
