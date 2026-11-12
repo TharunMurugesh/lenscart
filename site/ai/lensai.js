@@ -84,11 +84,14 @@
     return m;
   }
 
-  // Calm colour ramp: transparent -> amber -> deep orange (red is reserved for "wrong" in the UI).
+  // Strong, readable ramp: yellow -> orange -> deep orange-brown (red is reserved for "wrong" in the UI).
   function ramp(t) {
-    return [255, Math.round(220 - 140 * t), Math.round(120 - 110 * t), Math.round(200 * t)];
+    if (t < 0.5) { const k = t / 0.5; return [255, Math.round(230 - 90 * k), Math.round(60 - 50 * k)]; }
+    const k = (t - 0.5) / 0.5;
+    return [Math.round(255 - 35 * k), Math.round(140 - 90 * k), Math.round(10)];
   }
 
+  // Ignored areas are dimmed and desaturated; the evidence glows on top of them.
   function heatCanvas(base, heat) {
     const c = document.createElement("canvas");
     c.width = c.height = SIZE;
@@ -96,10 +99,20 @@
     ctx.drawImage(base, 0, 0);
     const over = ctx.getImageData(0, 0, SIZE, SIZE), d = over.data;
     for (let i = 0; i < heat.length; i++) {
-      const [r, g, b, a] = ramp(heat[i]), al = a / 255;
-      d[i * 4] = d[i * 4] * (1 - al) + r * al;
-      d[i * 4 + 1] = d[i * 4 + 1] * (1 - al) + g * al;
-      d[i * 4 + 2] = d[i * 4 + 2] * (1 - al) + b * al;
+      const t = heat[i];
+      const r0 = d[i * 4], g0 = d[i * 4 + 1], b0 = d[i * 4 + 2];
+      const grey = 0.3 * r0 + 0.59 * g0 + 0.11 * b0;
+      // ignored areas: desaturate and fade towards white (white backgrounds stay white)
+      const sat = Math.min(1, t * 1.5), veil = 0.6 * (1 - Math.min(1, t * 1.6));
+      const r1 = (grey + (r0 - grey) * sat) * (1 - veil) + 255 * veil;
+      const g1 = (grey + (g0 - grey) * sat) * (1 - veil) + 255 * veil;
+      const b1 = (grey + (b0 - grey) * sat) * (1 - veil) + 255 * veil;
+      // colour only the real evidence: nothing below 35% of the peak, up to 80% opacity at the peak
+      const k = Math.max(0, (t - 0.35) / 0.65);
+      const [hr, hg, hb] = ramp(k), al = 0.8 * Math.pow(k, 0.7);
+      d[i * 4] = r1 * (1 - al) + hr * al;
+      d[i * 4 + 1] = g1 * (1 - al) + hg * al;
+      d[i * 4 + 2] = b1 * (1 - al) + hb * al;
     }
     ctx.putImageData(over, 0, 0);
     return c;
