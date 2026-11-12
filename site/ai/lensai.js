@@ -149,13 +149,20 @@
     if (catalog) return catalog;
     if (catalogLoading) return catalogLoading;
     catalogLoading = (async () => {
-      const info = await (await fetch(BASE + "catalog_ids.json")).json();
-      const half = new Uint16Array(await (await fetch(BASE + "catalog_emb.bin")).arrayBuffer());
+      const r1 = await fetch(BASE + "catalog_ids.json");
+      if (!r1.ok) throw new Error("catalog_ids.json: HTTP " + r1.status);
+      const info = await r1.json();
+      const r2 = await fetch(BASE + "catalog_emb.bin");
+      if (!r2.ok) throw new Error("catalog_emb.bin: HTTP " + r2.status);
+      const buf = await r2.arrayBuffer();
+      if (buf.byteLength !== info.ids.length * info.dim * 2) throw new Error("catalog_emb.bin has the wrong size");
+      const half = new Uint16Array(buf);
       const data = new Float32Array(half.length);
       for (let i = 0; i < half.length; i++) data[i] = halfToFloat(half[i]);
       catalog = { ids: info.ids, dim: info.dim, data };
       return catalog;
     })();
+    catalogLoading.catch(() => { catalogLoading = null; }); // allow a retry after a failed load
     return catalogLoading;
   }
 
