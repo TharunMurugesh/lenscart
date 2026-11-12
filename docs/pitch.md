@@ -46,9 +46,9 @@ listing work.
 | 2:10 | Vinay | **Live: product #10768** | **The moment.** "The dataset labels this Flip Flops. Our model says Sandals, 100%. Look at it: it's a sandal. The model caught an error in the catalogue." |
 | 2:40 | Vinay → Tharun | **Live: Admin → Add product** | Pick a photo, the 4 fields fill themselves. "Sellers check and save." Hand over. |
 | 3:00 | Tharun | **Live: Our AI model page** | Tiles: "90.4% type, 93.1% gender, 92.4% usage on 4,824 photos it never saw. Colour is hardest at 70.7%." Press **Next random image** and **Run live** twice. |
-| 3:45 | Tharun | Slides 5 + 8 | Data cleaning, no leakage, near-duplicates removed. "Every design choice was tested on validation, never test." |
+| 3:45 | Tharun | Slides 5, 6, 8, 10 | CV techniques (slide 5), data cleaning with no leakage (6), validation vs test agree (8), every design choice tested on validation (10). |
 | 4:30 | Vinay | **Live: Admin dashboard** | Revenue, orders, order value, customers, 30 days. "Seeded demo orders; new orders appear live." |
-| 5:00 | Vinay | Slide 10 | Limits (say them yourselves), next steps, GitHub, AI-tools disclosure. |
+| 5:00 | Vinay | Slide 12 | Limits (say them yourselves), next steps, GitHub, AI-tools disclosure. |
 | 5:30 | Both | | "Questions?" |
 
 Phase 2 is the same demo on **www.web-a2z.com**: home → search by photo → product #10768 →
@@ -65,7 +65,7 @@ Keep 3 photos in a folder on the desktop, already tested:
 from product photos. A worn, top-down or cluttered photo confuses it (it guessed "Watches 27%" on
 worn sneakers on grass). If a judge offers their own photo, say: *"Sure. It works best with one
 item on a plain background, since it learned from catalogue photos."* If it struggles, that
-**is** the answer to "what are the limits" (slide 10). Never argue with the screen.
+**is** the answer to "what are the limits" (slide 12). Never argue with the screen.
 
 **Don't use** product photos where the heat sits on the background (e.g. some jackets). Test
 your 3 photos and look at the heat maps first.
@@ -77,8 +77,8 @@ your 3 photos and look at the heat maps first.
    store and tags the store's own catalogue.
 2. **"Did you train it, or use a pre-trained model?"** Both, on purpose. EfficientNet-B0 starts
    from ImageNet (general shapes and textures), and we fine-tuned it on 28,270 fashion photos
-   with 4 heads. Slide 8: fine-tuning took the score from 0.715 to 0.778.
-3. **"How do you know 90% is real?"** The test set was locked and used once. The split is grouped
+   with 4 heads. Slide 10: fine-tuning took the score from 0.715 to 0.778.
+3. **"How do you know 90% is real?"** Validation and test agree within ~1.5 points (slide 8). The test set was locked and used once. The split is grouped
    by product name, and 2,468 near-duplicate photos were removed from test. The 95% interval is
    89.5–91.1%.
 4. **"Why macro F1?"** Classes are very unbalanced (T-shirts 7,070, cufflinks 106). Accuracy
@@ -106,7 +106,7 @@ your 3 photos and look at the heat maps first.
 13. **"Was this built today?"** Answer truthfully, matching what the coordinators said this
     morning. The model was trained on a public dataset; the store, the in-browser AI and the
     integration are our work. Rule 2: Claude was used for coding assistance, disclosed in the
-    footer and on slide 10.
+    footer and on slide 12.
 
 ## Don'ts
 
