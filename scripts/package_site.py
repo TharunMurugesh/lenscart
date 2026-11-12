@@ -4,7 +4,7 @@ Builds:
   dist/lenscart_site.zip  everything in site/ that the site needs, under a top-level lenscart/ folder
   dist/lenscart_db.sql    schema + seed in one file, for a phpMyAdmin import on the host
 
-Left out: site/CREDENTIALS.local.txt (demo passwords), site/README.md, test pages (ai/test.html),
+Left out: site/CREDENTIALS.local.txt (demo passwords), test pages (ai/test.html),
 sql/ (the seed holds password hashes; import dist/lenscart_db.sql instead), Python/Git leftovers.
 Test-mode images in img/test/ ARE included (model.php uses them).
 

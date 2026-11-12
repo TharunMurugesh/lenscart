@@ -91,7 +91,7 @@ def main() -> None:
 
     # near-duplicates: a val/test image is dropped if a train image with the SAME articleType
     # and baseColour is within MAX_DIST. pHash alone (grayscale, 64-bit) matched different
-    # products that share a silhouette on a white background (see results/notes.md).
+    # products that share a silhouette on a white background.
     key = split["articleType"].astype(str) + "|" + split["baseColour"].fillna("").astype(str)
     split["key"] = key
     tr = split[split["split"] == "train"]

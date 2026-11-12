@@ -1,4 +1,4 @@
-"""Export the hand-back files for Vinay (handoff section 9) from runs/<name>/best.pt.
+"""Export the trained model and catalogue embeddings from runs/<name>/best.pt.
 
 Writes to models/ (git-ignored except model_config.json):
   best.pt               CPU state_dict only (torch.save(model.cpu().state_dict()))

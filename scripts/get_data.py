@@ -30,7 +30,7 @@ ZIP_NAME = "fashion-product-images-dataset.zip"
 
 def download() -> Path:
     if not os.environ.get("KAGGLE_API_TOKEN"):
-        sys.exit("KAGGLE_API_TOKEN is not set in this shell. Get it from Vinay privately.")
+        sys.exit("KAGGLE_API_TOKEN is not set in this shell. Set it using Kaggle's API instructions; do not commit it.")
     DATA.mkdir(parents=True, exist_ok=True)
     zip_path = DATA / ZIP_NAME
     if zip_path.exists():

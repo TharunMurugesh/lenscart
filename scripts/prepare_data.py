@@ -7,9 +7,8 @@ Writes: prepared/split.csv          one row per kept product, with labels and sp
         prepared/table2_counts.csv  paper Table II (image counts at each cleaning step)
         prepared/class_counts.csv   per-class counts in train/val/test for every head
         prepared/fig1_article_types.png  paper Fig. 1 (class distribution)
-        prepared/report.md          plain-language summary of every decision and number
 
-Decisions (approved by Vinay, 2026-11-11):
+Decisions:
   1. Keep masterCategory Apparel, Footwear, Accessories only.
   2. Keep articleType classes with >= 100 images (after step 1). Rarer rows are dropped.
   3. Colour head: colours with >= 300 images, "Multi" excluded. Other colours -> label masked.
