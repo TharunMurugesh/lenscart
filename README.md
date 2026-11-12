@@ -59,6 +59,10 @@ The repository includes the trained checkpoint, browser model, catalogue vectors
 | `scripts/` | Training, evaluation, model export, and catalogue build scripts |
 | `prepared/`, `results/` | Dataset split, label maps, metrics, and figures |
 
+## TELOR model on Hugging Face
+
+LensCart uses the TELOR multi-task fashion image model for clothing attribute predictions and visual similarity features. The published model repository includes model documentation, PyTorch weights, an ONNX export, inference code, and label maps. See [TELOR on Hugging Face](https://huggingface.co/tharunsm/telor) for the model card, reported evaluation results, limitations, and usage instructions. Reported metrics are author-provided and have not been independently verified.
+
 ## Model artifacts
 
 The PHP application does not run model inference on the server. `site/ai/lensnet.onnx` runs in the browser with ONNX Runtime Web; `models/best.pt` is the PyTorch checkpoint. The model has four classification heads and returns a 1,280-dimensional image embedding used for visual similarity. `scripts/export_onnx.py` exports the browser model and checks its outputs against PyTorch.
