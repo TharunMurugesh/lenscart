@@ -74,8 +74,8 @@ admin_nav($p ? 'products' : 'add');
       <b><?= $p ? 'Replace photo (optional)' : 'Add the product photo' ?></b>
       <span>The AI fills in type, colour, gender and occasion from it.</span>
     </label>
-    <img id="preview" class="preview" alt="Product photo" <?= $d['image'] ? 'src="../' . e($d['image']) . '"' : 'hidden' ?>>
     <div id="ai-note" class="notice" hidden></div>
+    <img id="preview" class="preview" alt="Product photo" <?= $d['image'] ? 'src="../' . e($d['image']) . '"' : 'hidden' ?>>
   </div>
   <div class="card form">
     <label>Name<input name="name" required minlength="3" maxlength="200" value="<?= e($d['name']) ?>"></label>
