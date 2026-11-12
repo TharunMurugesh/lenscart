@@ -17,7 +17,8 @@ server.
    (Or import the two files in phpMyAdmin, schema first.)
 3. Put this folder under `C:\xampp\htdocs\lenscart` (a copy or a junction) and open
    http://localhost/lenscart/
-4. Product images live in `img/products/` and are not in git. Rebuild them with
+4. The sample product, test, and model images and the generated model report are included in this
+   repository. To rebuild the product images and seed data, run
    `.venv\Scripts\python scripts\build_site_data.py` (needs `data/resized/`).
 
 ## Web host

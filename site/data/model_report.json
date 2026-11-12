@@ -1,0 +1,6263 @@
+{
+ "source": "results/ and prepared/ from the training run on 2026-11-12 (scripts/train.py, evaluate.py)",
+ "classes": {
+  "articleType": 49,
+  "baseColour": 18,
+  "gender": 5,
+  "usage": 4
+ },
+ "data_steps": [
+  {
+   "step": "All records in styles.csv",
+   "images": 44446
+  },
+  {
+   "step": "With an image entry",
+   "images": 44446
+  },
+  {
+   "step": "Unique product ids",
+   "images": 44446
+  },
+  {
+   "step": "Apparel, Footwear, Accessories only",
+   "images": 41911
+  },
+  {
+   "step": "Article types with >= 100 images",
+   "images": 40410
+  },
+  {
+   "step": "  train",
+   "images": 28272
+  },
+  {
+   "step": "  val",
+   "images": 6051
+  },
+  {
+   "step": "  test",
+   "images": 6087
+  }
+ ],
+ "dedup": {
+  "dropped": 2468,
+  "by_split": {
+   "test": 1262,
+   "val": 1206
+  },
+  "missing_images": 4,
+  "max_hamming": 4
+ },
+ "final_counts": {
+  "train": 28270,
+  "val": 4844,
+  "test": 4824
+ },
+ "labels_table": [
+  {
+   "column": "articleType",
+   "distinct_values_raw": 143.0,
+   "role": "Head",
+   "use_in_final_model": "108 types after category filter; 49 with >= 100 images kept, rarer rows dropped"
+  },
+  {
+   "column": "baseColour",
+   "distinct_values_raw": 47.0,
+   "role": "Head",
+   "use_in_final_model": "18 colours with >= 300 images, Multi excluded; 2479 labels masked"
+  },
+  {
+   "column": "gender",
+   "distinct_values_raw": 5.0,
+   "role": "Head",
+   "use_in_final_model": "all 5 values; 0 labels masked"
+  },
+  {
+   "column": "usage",
+   "distinct_values_raw": 9.0,
+   "role": "Head",
+   "use_in_final_model": "Casual, Sports, Ethnic, Formal; 126 labels masked"
+  },
+  {
+   "column": "masterCategory",
+   "distinct_values_raw": 7.0,
+   "role": "Filter",
+   "use_in_final_model": "kept Apparel, Footwear, Accessories"
+  },
+  {
+   "column": "subCategory",
+   "distinct_values_raw": 45.0,
+   "role": "Not used",
+   "use_in_final_model": "kept for analysis only"
+  },
+  {
+   "column": "season",
+   "distinct_values_raw": 4.0,
+   "role": "Excluded",
+   "use_in_final_model": "not visible in an image"
+  },
+  {
+   "column": "year",
+   "distinct_values_raw": 13.0,
+   "role": "Excluded",
+   "use_in_final_model": "not visible in an image"
+  },
+  {
+   "column": "productDisplayName",
+   "distinct_values_raw": null,
+   "role": "Grouping only",
+   "use_in_final_model": "groups duplicate listings in the split; never a model input"
+  }
+ ],
+ "training": {
+  "epochs": 18,
+  "best_val_score": 0.7960293891100381,
+  "seconds": 1231.7
+ },
+ "test_metrics": [
+  {
+   "head": "articleType",
+   "n": 4824,
+   "accuracy": 0.9036069652,
+   "macro_precision": 0.8558581631,
+   "macro_recall": 0.8677649248,
+   "macro_f1": 0.8594679545,
+   "weighted_f1": 0.903248552,
+   "top3_accuracy": 0.9861111111
+  },
+  {
+   "head": "baseColour",
+   "n": 4523,
+   "accuracy": 0.7066106566,
+   "macro_precision": 0.6439513089,
+   "macro_recall": 0.64317368,
+   "macro_f1": 0.6395730225,
+   "weighted_f1": 0.7079083655,
+   "top3_accuracy": 0.923059916
+  },
+  {
+   "head": "gender",
+   "n": 4824,
+   "accuracy": 0.9309701493,
+   "macro_precision": 0.7956686142,
+   "macro_recall": 0.8460550204,
+   "macro_f1": 0.8175207018,
+   "weighted_f1": 0.9323880125,
+   "top3_accuracy": null
+  },
+  {
+   "head": "usage",
+   "n": 4813,
+   "accuracy": 0.923748182,
+   "macro_precision": 0.8454532303,
+   "macro_recall": 0.8746347283,
+   "macro_f1": 0.8590329069,
+   "weighted_f1": 0.9241779346,
+   "top3_accuracy": null
+  }
+ ],
+ "test_ci": [
+  {
+   "head": "articleType",
+   "metric": "accuracy",
+   "value": 0.9036069652,
+   "ci95_low": 0.8953099088,
+   "ci95_high": 0.9114894279,
+   "resamples": 1000
+  },
+  {
+   "head": "articleType",
+   "metric": "macro_f1",
+   "value": 0.8594679545,
+   "ci95_low": 0.8436093171,
+   "ci95_high": 0.8709270728,
+   "resamples": 1000
+  },
+  {
+   "head": "baseColour",
+   "metric": "accuracy",
+   "value": 0.7066106566,
+   "ci95_low": 0.6937873093,
+   "ci95_high": 0.720539465,
+   "resamples": 1000
+  },
+  {
+   "head": "baseColour",
+   "metric": "macro_f1",
+   "value": 0.6395730225,
+   "ci95_low": 0.620731126,
+   "ci95_high": 0.6582573997,
+   "resamples": 1000
+  },
+  {
+   "head": "gender",
+   "metric": "accuracy",
+   "value": 0.9309701493,
+   "ci95_low": 0.9237147595,
+   "ci95_high": 0.9380182421,
+   "resamples": 1000
+  },
+  {
+   "head": "gender",
+   "metric": "macro_f1",
+   "value": 0.8175207018,
+   "ci95_low": 0.7917336163,
+   "ci95_high": 0.8410883605,
+   "resamples": 1000
+  },
+  {
+   "head": "usage",
+   "metric": "accuracy",
+   "value": 0.923748182,
+   "ci95_low": 0.9158528984,
+   "ci95_high": 0.931435695,
+   "resamples": 1000
+  },
+  {
+   "head": "usage",
+   "metric": "macro_f1",
+   "value": 0.8590329069,
+   "ci95_low": 0.8448813851,
+   "ci95_high": 0.8733128952,
+   "resamples": 1000
+  }
+ ],
+ "top_confusions": [
+  {
+   "true": "Tshirts",
+   "predicted": "Tops",
+   "count": 36
+  },
+  {
+   "true": "Tops",
+   "predicted": "Tshirts",
+   "count": 28
+  },
+  {
+   "true": "Sports Shoes",
+   "predicted": "Casual Shoes",
+   "count": 25
+  },
+  {
+   "true": "Flats",
+   "predicted": "Heels",
+   "count": 24
+  },
+  {
+   "true": "Tshirts",
+   "predicted": "Sweatshirts",
+   "count": 15
+  },
+  {
+   "true": "Heels",
+   "predicted": "Flats",
+   "count": 11
+  },
+  {
+   "true": "Kurtas",
+   "predicted": "Kurtis",
+   "count": 10
+  },
+  {
+   "true": "Tops",
+   "predicted": "Tunics",
+   "count": 10
+  },
+  {
+   "true": "Pendant",
+   "predicted": "Necklace and Chains",
+   "count": 9
+  },
+  {
+   "true": "Sandals",
+   "predicted": "Flip Flops",
+   "count": 9
+  }
+ ],
+ "audit": [
+  {
+   "group_by": "gender",
+   "group": "Boys",
+   "n": 119,
+   "accuracy": 0.9327731092,
+   "macro_f1": 0.57036268
+  },
+  {
+   "group_by": "gender",
+   "group": "Girls",
+   "n": 72,
+   "accuracy": 0.7638888889,
+   "macro_f1": 0.5255477855
+  },
+  {
+   "group_by": "gender",
+   "group": "Men",
+   "n": 2285,
+   "accuracy": 0.9479212254,
+   "macro_f1": 0.7939370978
+  },
+  {
+   "group_by": "gender",
+   "group": "Unisex",
+   "n": 224,
+   "accuracy": 0.9508928571,
+   "macro_f1": 0.8696472663
+  },
+  {
+   "group_by": "gender",
+   "group": "Women",
+   "n": 2124,
+   "accuracy": 0.8540489642,
+   "macro_f1": 0.7946340384
+  },
+  {
+   "group_by": "masterCategory",
+   "group": "Accessories",
+   "n": 1310,
+   "accuracy": 0.9564885496,
+   "macro_f1": 0.6356984651
+  },
+  {
+   "group_by": "masterCategory",
+   "group": "Apparel",
+   "n": 2879,
+   "accuracy": 0.8968391803,
+   "macro_f1": 0.7006809082
+  },
+  {
+   "group_by": "masterCategory",
+   "group": "Footwear",
+   "n": 635,
+   "accuracy": 0.8251968504,
+   "macro_f1": 0.6064197803
+  }
+ ],
+ "ablation": [
+  {
+   "run": "IV-a",
+   "change": "Frozen backbone only (Stage A, 6 epochs)",
+   "status": "done",
+   "val_macro_f1_articleType": 0.818144493,
+   "val_macro_f1_baseColour": 0.5072033412,
+   "val_macro_f1_gender": 0.731497566,
+   "val_macro_f1_usage": 0.8023795085,
+   "val_macro_f1_mean": 0.7148062272,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 195.4
+  },
+  {
+   "run": "IV-b",
+   "change": "Full settings (short schedule)",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8347020011,
+   "val_macro_f1_baseColour": 0.6416690079,
+   "val_macro_f1_gender": 0.7957496559,
+   "val_macro_f1_usage": 0.8405144916,
+   "val_macro_f1_mean": 0.7781587891,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 415.9
+  },
+  {
+   "run": "IV-c",
+   "change": "No class weights",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8374543698,
+   "val_macro_f1_baseColour": 0.6387774903,
+   "val_macro_f1_gender": 0.7804165699,
+   "val_macro_f1_usage": 0.8349443341,
+   "val_macro_f1_mean": 0.772898191,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 395.3
+  },
+  {
+   "run": "IV-d",
+   "change": "No augmentation",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8467016237,
+   "val_macro_f1_baseColour": 0.6330280605,
+   "val_macro_f1_gender": 0.795733656,
+   "val_macro_f1_usage": 0.8465377771,
+   "val_macro_f1_mean": 0.7805002793,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 389.5
+  },
+  {
+   "run": "IV-e",
+   "change": "Background replaced by real photos (p=0.5)",
+   "status": "not run",
+   "val_macro_f1_articleType": null,
+   "val_macro_f1_baseColour": null,
+   "val_macro_f1_gender": null,
+   "val_macro_f1_usage": null,
+   "val_macro_f1_mean": null,
+   "best_epoch": null,
+   "epochs_run": null,
+   "batch": null,
+   "train_seconds": null
+  }
+ ],
+ "backbones": [
+  {
+   "run": "V-a",
+   "model": "EfficientNet-B0 (= IV-b)",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8347020011,
+   "val_macro_f1_baseColour": 0.6416690079,
+   "val_macro_f1_gender": 0.7957496559,
+   "val_macro_f1_usage": 0.8405144916,
+   "val_macro_f1_mean": 0.7781587891,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 415.9
+  },
+  {
+   "run": "V-b",
+   "model": "ResNet50",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8020016739,
+   "val_macro_f1_baseColour": 0.6103788975,
+   "val_macro_f1_gender": 0.7564780139,
+   "val_macro_f1_usage": 0.8076503128,
+   "val_macro_f1_mean": 0.7441272245,
+   "best_epoch": 6.0,
+   "epochs_run": 6.0,
+   "batch": 64.0,
+   "train_seconds": 614.8
+  },
+  {
+   "run": "V-c",
+   "model": "FashionCLIP linear probe",
+   "status": "done",
+   "val_macro_f1_articleType": 0.8498904885,
+   "val_macro_f1_baseColour": 0.6361545005,
+   "val_macro_f1_gender": 0.7630665293,
+   "val_macro_f1_usage": 0.8337044758,
+   "val_macro_f1_mean": 0.7707039985,
+   "best_epoch": null,
+   "epochs_run": null,
+   "batch": null,
+   "train_seconds": 8.0
+  },
+  {
+   "run": "V-d",
+   "model": "FashionCLIP zero-shot (M6)",
+   "status": "done",
+   "val_macro_f1_articleType": 0.7161815824,
+   "val_macro_f1_baseColour": 0.5943682285,
+   "val_macro_f1_gender": 0.4760315744,
+   "val_macro_f1_usage": 0.517331939,
+   "val_macro_f1_mean": 0.5759783311,
+   "best_epoch": null,
+   "epochs_run": null,
+   "batch": null,
+   "train_seconds": 0.0
+  }
+ ],
+ "retrieval": [
+  {
+   "model": "EfficientNet-B0 best.pt (before triplet fine-tuning)",
+   "queries": 4824,
+   "gallery": 28270,
+   "p@1_type": 0.8822553897,
+   "p@1_type_colour": 0.4713930348,
+   "p@5_type": 0.8572139303,
+   "p@5_type_colour": 0.4432006633,
+   "p@10_type": 0.84473466,
+   "p@10_type_colour": 0.4246268657
+  }
+ ],
+ "latency": [
+  {
+   "run": "iv_b",
+   "backbone": "efficientnet_b0",
+   "ms_per_image": 15.68,
+   "images": 50,
+   "batch": 1,
+   "params_millions": 4.1,
+   "cpu": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+   "torch_threads": 16
+  },
+  {
+   "run": "v_b",
+   "backbone": "resnet50",
+   "ms_per_image": 36.48,
+   "images": 50,
+   "batch": 1,
+   "params_millions": 23.66,
+   "cpu": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+   "torch_threads": 16
+  }
+ ],
+ "test_sample": [
+  {
+   "id": 37677,
+   "image": "img/test/37677.jpg",
+   "articleType": {
+    "true": "Backpacks",
+    "pred": "Backpacks",
+    "conf": 0.8844
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.6455
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Unisex",
+    "conf": 0.965
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9932
+   }
+  },
+  {
+   "id": 12660,
+   "image": "img/test/12660.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9994
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "White",
+    "conf": 0.3245
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 6142,
+   "image": "img/test/6142.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Flats",
+    "conf": 0.6581
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9008
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Women",
+    "conf": 0.9481
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 12779,
+   "image": "img/test/12779.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.8745
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Maroon",
+    "conf": 0.9038
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 31920,
+   "image": "img/test/31920.jpg",
+   "articleType": {
+    "true": "Clutches",
+    "pred": "Clutches",
+    "conf": 0.9871
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.9938
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9979
+   }
+  },
+  {
+   "id": 10507,
+   "image": "img/test/10507.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9119
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.9744
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.999
+   }
+  },
+  {
+   "id": 13731,
+   "image": "img/test/13731.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Pink",
+    "conf": 0.9162
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9995
+   }
+  },
+  {
+   "id": 30345,
+   "image": "img/test/30345.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "White",
+    "conf": 0.5687
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 1615,
+   "image": "img/test/1615.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.995
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.8889
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9893
+   }
+  },
+  {
+   "id": 53706,
+   "image": "img/test/53706.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9273
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9993
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 34721,
+   "image": "img/test/34721.jpg",
+   "articleType": {
+    "true": "Trousers",
+    "pred": "Jeans",
+    "conf": 0.5923
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9959
+   },
+   "gender": {
+    "true": "Girls",
+    "pred": "Girls",
+    "conf": 0.7042
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9934
+   }
+  },
+  {
+   "id": 21380,
+   "image": "img/test/21380.jpg",
+   "articleType": {
+    "true": "Track Pants",
+    "pred": "Track Pants",
+    "conf": 0.9981
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9968
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9973
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.7549
+   }
+  },
+  {
+   "id": 46744,
+   "image": "img/test/46744.jpg",
+   "articleType": {
+    "true": "Capris",
+    "pred": "Capris",
+    "conf": 0.9779
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9971
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.8218
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.8434
+   }
+  },
+  {
+   "id": 40407,
+   "image": "img/test/40407.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9291
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.968
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 53782,
+   "image": "img/test/53782.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Black",
+    "conf": 0.71
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.8488
+   }
+  },
+  {
+   "id": 9533,
+   "image": "img/test/9533.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9992
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9994
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9954
+   }
+  },
+  {
+   "id": 24589,
+   "image": "img/test/24589.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9975
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Beige",
+    "conf": 0.4386
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 13498,
+   "image": "img/test/13498.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.999
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9731
+   }
+  },
+  {
+   "id": 19177,
+   "image": "img/test/19177.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.9313
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9843
+   }
+  },
+  {
+   "id": 13241,
+   "image": "img/test/13241.jpg",
+   "articleType": {
+    "true": "Jackets",
+    "pred": "Tops",
+    "conf": 0.976
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9998
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Girls",
+    "conf": 0.906
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 9767,
+   "image": "img/test/9767.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9981
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.8243
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9747
+   }
+  },
+  {
+   "id": 53665,
+   "image": "img/test/53665.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 0.9952
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 0.8989
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 18256,
+   "image": "img/test/18256.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9875
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Cream",
+    "conf": 0.6621
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 31867,
+   "image": "img/test/31867.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Gold",
+    "pred": "Silver",
+    "conf": 0.5285
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9994
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9961
+   }
+  },
+  {
+   "id": 28943,
+   "image": "img/test/28943.jpg",
+   "articleType": {
+    "true": "Leggings",
+    "pred": "Leggings",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9766
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.995
+   }
+  },
+  {
+   "id": 53548,
+   "image": "img/test/53548.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 0.9993
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.9987
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9983
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 45989,
+   "image": "img/test/45989.jpg",
+   "articleType": {
+    "true": "Sarees",
+    "pred": "Sarees",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Brown",
+    "conf": 0.4032
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9984
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 46557,
+   "image": "img/test/46557.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Black",
+    "conf": 0.9437
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9928
+   },
+   "usage": {
+    "true": null,
+    "pred": "Casual",
+    "conf": 0.9711
+   }
+  },
+  {
+   "id": 53818,
+   "image": "img/test/53818.jpg",
+   "articleType": {
+    "true": "Kurtis",
+    "pred": "Kurtis",
+    "conf": 0.7783
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.6028
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9994
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 1866,
+   "image": "img/test/1866.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9984
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Brown",
+    "conf": 0.9752
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 40232,
+   "image": "img/test/40232.jpg",
+   "articleType": {
+    "true": "Belts",
+    "pred": "Belts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.901
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9951
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9985
+   }
+  },
+  {
+   "id": 12008,
+   "image": "img/test/12008.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "White",
+    "conf": 0.3687
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 59612,
+   "image": "img/test/59612.jpg",
+   "articleType": {
+    "true": "Sarees",
+    "pred": "Sarees",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Red",
+    "conf": 0.7221
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 11180,
+   "image": "img/test/11180.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "White",
+    "conf": 0.8067
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 59719,
+   "image": "img/test/59719.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 0.9989
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9823
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 17251,
+   "image": "img/test/17251.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.999
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.8902
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.8106
+   }
+  },
+  {
+   "id": 27970,
+   "image": "img/test/27970.jpg",
+   "articleType": {
+    "true": "Innerwear Vests",
+    "pred": "Innerwear Vests",
+    "conf": 0.573
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9976
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9989
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.852
+   }
+  },
+  {
+   "id": 28585,
+   "image": "img/test/28585.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9094
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Unisex",
+    "conf": 0.9414
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.9449
+   }
+  },
+  {
+   "id": 39602,
+   "image": "img/test/39602.jpg",
+   "articleType": {
+    "true": "Heels",
+    "pred": "Heels",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Gold",
+    "pred": "Beige",
+    "conf": 0.7513
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 51051,
+   "image": "img/test/51051.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Beige",
+    "conf": 0.8783
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 24885,
+   "image": "img/test/24885.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.8815
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Blue",
+    "conf": 0.7114
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9789
+   }
+  },
+  {
+   "id": 34552,
+   "image": "img/test/34552.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 0.9992
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.759
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.994
+   }
+  },
+  {
+   "id": 42394,
+   "image": "img/test/42394.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.7383
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.9979
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.969
+   }
+  },
+  {
+   "id": 56297,
+   "image": "img/test/56297.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 0.9921
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.953
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9981
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 59695,
+   "image": "img/test/59695.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "White",
+    "conf": 0.3109
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 31474,
+   "image": "img/test/31474.jpg",
+   "articleType": {
+    "true": "Trousers",
+    "pred": "Trousers",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Olive",
+    "conf": 0.9409
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Women",
+    "conf": 0.8277
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Formal",
+    "conf": 0.9264
+   }
+  },
+  {
+   "id": 3268,
+   "image": "img/test/3268.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9839
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 39012,
+   "image": "img/test/39012.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9966
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.633
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9879
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9993
+   }
+  },
+  {
+   "id": 2689,
+   "image": "img/test/2689.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9892
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.9993
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9826
+   }
+  },
+  {
+   "id": 19727,
+   "image": "img/test/19727.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.648
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9987
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9994
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9197
+   }
+  },
+  {
+   "id": 10466,
+   "image": "img/test/10466.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9987
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.8207
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 17853,
+   "image": "img/test/17853.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.4665
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 54077,
+   "image": "img/test/54077.jpg",
+   "articleType": {
+    "true": "Flip Flops",
+    "pred": "Flip Flops",
+    "conf": 0.7642
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Yellow",
+    "conf": 0.9631
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 26172,
+   "image": "img/test/26172.jpg",
+   "articleType": {
+    "true": "Flats",
+    "pred": "Heels",
+    "conf": 0.9087
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.9282
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9991
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9993
+   }
+  },
+  {
+   "id": 53857,
+   "image": "img/test/53857.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.8909
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 54149,
+   "image": "img/test/54149.jpg",
+   "articleType": {
+    "true": "Necklace and Chains",
+    "pred": "Pendant",
+    "conf": 0.7838
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Brown",
+    "conf": 0.9927
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Ethnic",
+    "conf": 0.5916
+   }
+  },
+  {
+   "id": 9035,
+   "image": "img/test/9035.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9125
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9868
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9965
+   }
+  },
+  {
+   "id": 44587,
+   "image": "img/test/44587.jpg",
+   "articleType": {
+    "true": "Jeans",
+    "pred": "Jeans",
+    "conf": 0.9926
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9628
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9993
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 48036,
+   "image": "img/test/48036.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9945
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 30149,
+   "image": "img/test/30149.jpg",
+   "articleType": {
+    "true": "Belts",
+    "pred": "Belts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Olive",
+    "pred": "Black",
+    "conf": 0.5821
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9881
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9983
+   }
+  },
+  {
+   "id": 37415,
+   "image": "img/test/37415.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Red",
+    "conf": 0.8452
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9996
+   }
+  },
+  {
+   "id": 44348,
+   "image": "img/test/44348.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9984
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Black",
+    "conf": 0.3992
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Formal",
+    "conf": 0.9863
+   }
+  },
+  {
+   "id": 52224,
+   "image": "img/test/52224.jpg",
+   "articleType": {
+    "true": "Necklace and Chains",
+    "pred": "Necklace and Chains",
+    "conf": 0.9809
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "White",
+    "conf": 0.9912
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 54918,
+   "image": "img/test/54918.jpg",
+   "articleType": {
+    "true": "Shorts",
+    "pred": "Trousers",
+    "conf": 0.976
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Olive",
+    "conf": 0.3995
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9668
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9951
+   }
+  },
+  {
+   "id": 29262,
+   "image": "img/test/29262.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.996
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9832
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9798
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9983
+   }
+  },
+  {
+   "id": 47424,
+   "image": "img/test/47424.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 0.999
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.9998
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9848
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 44242,
+   "image": "img/test/44242.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 0.9942
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9944
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 1934,
+   "image": "img/test/1934.jpg",
+   "articleType": {
+    "true": "Backpacks",
+    "pred": "Backpacks",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Black",
+    "conf": 0.9809
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Unisex",
+    "conf": 0.9984
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Casual",
+    "conf": 0.8499
+   }
+  },
+  {
+   "id": 30136,
+   "image": "img/test/30136.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.8172
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 30501,
+   "image": "img/test/30501.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 0.9947
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Pink",
+    "conf": 0.7655
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9981
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9983
+   }
+  },
+  {
+   "id": 35506,
+   "image": "img/test/35506.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.9969
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9867
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.851
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 57983,
+   "image": "img/test/57983.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.4421
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "White",
+    "conf": 0.516
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 48781,
+   "image": "img/test/48781.jpg",
+   "articleType": {
+    "true": "Pendant",
+    "pred": "Pendant",
+    "conf": 0.5998
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.9998
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9974
+   }
+  },
+  {
+   "id": 37083,
+   "image": "img/test/37083.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Olive",
+    "pred": "Olive",
+    "conf": 0.9903
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9677
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 29147,
+   "image": "img/test/29147.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9998
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9985
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9965
+   }
+  },
+  {
+   "id": 27946,
+   "image": "img/test/27946.jpg",
+   "articleType": {
+    "true": "Trunk",
+    "pred": "Trunk",
+    "conf": 0.9977
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Navy Blue",
+    "conf": 0.4183
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 43499,
+   "image": "img/test/43499.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Navy Blue",
+    "conf": 0.5397
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9381
+   }
+  },
+  {
+   "id": 41976,
+   "image": "img/test/41976.jpg",
+   "articleType": {
+    "true": "Capris",
+    "pred": "Shorts",
+    "conf": 0.9987
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9949
+   },
+   "gender": {
+    "true": "Girls",
+    "pred": "Men",
+    "conf": 0.3993
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 13310,
+   "image": "img/test/13310.jpg",
+   "articleType": {
+    "true": "Dresses",
+    "pred": "Dresses",
+    "conf": 0.4685
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9794
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9297
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.928
+   }
+  },
+  {
+   "id": 16210,
+   "image": "img/test/16210.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9934
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9637
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 17426,
+   "image": "img/test/17426.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.7188
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9929
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9991
+   }
+  },
+  {
+   "id": 48449,
+   "image": "img/test/48449.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9848
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Grey",
+    "conf": 0.4842
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 5216,
+   "image": "img/test/5216.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9167
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Boys",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 51808,
+   "image": "img/test/51808.jpg",
+   "articleType": {
+    "true": "Nightdress",
+    "pred": "Dresses",
+    "conf": 0.4194
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9515
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 11912,
+   "image": "img/test/11912.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.9911
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Brown",
+    "conf": 0.8665
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9908
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Formal",
+    "conf": 0.6111
+   }
+  },
+  {
+   "id": 57896,
+   "image": "img/test/57896.jpg",
+   "articleType": {
+    "true": "Shorts",
+    "pred": "Shorts",
+    "conf": 0.9841
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "White",
+    "conf": 0.912
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.891
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9992
+   }
+  },
+  {
+   "id": 51506,
+   "image": "img/test/51506.jpg",
+   "articleType": {
+    "true": "Jeans",
+    "pred": "Jeans",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.5861
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9961
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 3690,
+   "image": "img/test/3690.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9879
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.5902
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9959
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9991
+   }
+  },
+  {
+   "id": 8405,
+   "image": "img/test/8405.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9827
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9855
+   }
+  },
+  {
+   "id": 13562,
+   "image": "img/test/13562.jpg",
+   "articleType": {
+    "true": "Heels",
+    "pred": "Flats",
+    "conf": 0.8624
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.997
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9797
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 7547,
+   "image": "img/test/7547.jpg",
+   "articleType": {
+    "true": "Track Pants",
+    "pred": "Track Pants",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Navy Blue",
+    "conf": 0.5313
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9989
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.997
+   }
+  },
+  {
+   "id": 29740,
+   "image": "img/test/29740.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Pink",
+    "conf": 0.6449
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 44983,
+   "image": "img/test/44983.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "White",
+    "conf": 0.6942
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9974
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 58349,
+   "image": "img/test/58349.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.963
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 49652,
+   "image": "img/test/49652.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9699
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9878
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9996
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 6985,
+   "image": "img/test/6985.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.974
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.8531
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9465
+   }
+  },
+  {
+   "id": 5104,
+   "image": "img/test/5104.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Flip Flops",
+    "conf": 0.9561
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.8357
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9954
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9987
+   }
+  },
+  {
+   "id": 2326,
+   "image": "img/test/2326.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9947
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9805
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.7496
+   }
+  },
+  {
+   "id": 5661,
+   "image": "img/test/5661.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9578
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9413
+   }
+  },
+  {
+   "id": 33142,
+   "image": "img/test/33142.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9534
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Boys",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 27506,
+   "image": "img/test/27506.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9959
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9976
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9988
+   }
+  },
+  {
+   "id": 50996,
+   "image": "img/test/50996.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 0.9986
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Navy Blue",
+    "conf": 0.4881
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9992
+   }
+  },
+  {
+   "id": 52399,
+   "image": "img/test/52399.jpg",
+   "articleType": {
+    "true": "Nightdress",
+    "pred": "Nightdress",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Orange",
+    "pred": "Pink",
+    "conf": 0.8955
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9955
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 8584,
+   "image": "img/test/8584.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Navy Blue",
+    "conf": 0.3252
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 54869,
+   "image": "img/test/54869.jpg",
+   "articleType": {
+    "true": "Necklace and Chains",
+    "pred": "Necklace and Chains",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Gold",
+    "pred": "Gold",
+    "conf": 0.9633
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9991
+   }
+  },
+  {
+   "id": 21138,
+   "image": "img/test/21138.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.5137
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.7092
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9133
+   }
+  },
+  {
+   "id": 11761,
+   "image": "img/test/11761.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Sweaters",
+    "conf": 0.3377
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9999
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9673
+   }
+  },
+  {
+   "id": 40766,
+   "image": "img/test/40766.jpg",
+   "articleType": {
+    "true": "Caps",
+    "pred": "Caps",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Blue",
+    "conf": 0.7358
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Unisex",
+    "conf": 0.7791
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.6837
+   }
+  },
+  {
+   "id": 3516,
+   "image": "img/test/3516.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9678
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9875
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9976
+   }
+  },
+  {
+   "id": 16786,
+   "image": "img/test/16786.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9652
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Unisex",
+    "conf": 0.9048
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.7934
+   }
+  },
+  {
+   "id": 44856,
+   "image": "img/test/44856.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9955
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9991
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9884
+   }
+  },
+  {
+   "id": 46240,
+   "image": "img/test/46240.jpg",
+   "articleType": {
+    "true": "Tunics",
+    "pred": "Kurtis",
+    "conf": 0.7233
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9966
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Ethnic",
+    "conf": 0.9996
+   }
+  },
+  {
+   "id": 16704,
+   "image": "img/test/16704.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.872
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9439
+   }
+  },
+  {
+   "id": 29565,
+   "image": "img/test/29565.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9953
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.9972
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9964
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9981
+   }
+  },
+  {
+   "id": 6347,
+   "image": "img/test/6347.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.5573
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Men",
+    "conf": 0.7142
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 23665,
+   "image": "img/test/23665.jpg",
+   "articleType": {
+    "true": "Jeans",
+    "pred": "Jeans",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9964
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9991
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 8086,
+   "image": "img/test/8086.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.9536
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.5353
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.7459
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9986
+   }
+  },
+  {
+   "id": 28702,
+   "image": "img/test/28702.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.999
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "White",
+    "conf": 0.808
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 4621,
+   "image": "img/test/4621.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tshirts",
+    "conf": 0.8346
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.864
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9886
+   }
+  },
+  {
+   "id": 33542,
+   "image": "img/test/33542.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Shirts",
+    "conf": 0.9658
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 0.9927
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9981
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9971
+   }
+  },
+  {
+   "id": 23307,
+   "image": "img/test/23307.jpg",
+   "articleType": {
+    "true": "Tunics",
+    "pred": "Kurtas",
+    "conf": 0.9992
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Blue",
+    "conf": 0.4313
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Ethnic",
+    "conf": 0.9977
+   }
+  },
+  {
+   "id": 11981,
+   "image": "img/test/11981.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9929
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9224
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.984
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9962
+   }
+  },
+  {
+   "id": 28543,
+   "image": "img/test/28543.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9589
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9972
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.7979
+   }
+  },
+  {
+   "id": 58487,
+   "image": "img/test/58487.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.999
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9891
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9955
+   }
+  },
+  {
+   "id": 2184,
+   "image": "img/test/2184.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9983
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Navy Blue",
+    "conf": 0.9041
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.97
+   }
+  },
+  {
+   "id": 48836,
+   "image": "img/test/48836.jpg",
+   "articleType": {
+    "true": "Pendant",
+    "pred": "Pendant",
+    "conf": 0.997
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.9961
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9985
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9989
+   }
+  },
+  {
+   "id": 49009,
+   "image": "img/test/49009.jpg",
+   "articleType": {
+    "true": "Ring",
+    "pred": "Ring",
+    "conf": 0.9975
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 1.0
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 4390,
+   "image": "img/test/4390.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.4774
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 35244,
+   "image": "img/test/35244.jpg",
+   "articleType": {
+    "true": "Socks",
+    "pred": "Socks",
+    "conf": 0.9947
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9952
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Women",
+    "conf": 0.7242
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 41833,
+   "image": "img/test/41833.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9361
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Navy Blue",
+    "conf": 0.6459
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9759
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.966
+   }
+  },
+  {
+   "id": 47253,
+   "image": "img/test/47253.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.5331
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 33096,
+   "image": "img/test/33096.jpg",
+   "articleType": {
+    "true": "Heels",
+    "pred": "Heels",
+    "conf": 0.7716
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9782
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9848
+   }
+  },
+  {
+   "id": 32260,
+   "image": "img/test/32260.jpg",
+   "articleType": {
+    "true": "Kurtis",
+    "pred": "Kurtas",
+    "conf": 0.9898
+   },
+   "baseColour": {
+    "true": "Beige",
+    "pred": "Beige",
+    "conf": 0.8297
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9992
+   }
+  },
+  {
+   "id": 17849,
+   "image": "img/test/17849.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.8823
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9766
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 7214,
+   "image": "img/test/7214.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.6978
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9952
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9958
+   }
+  },
+  {
+   "id": 20600,
+   "image": "img/test/20600.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.5711
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 22094,
+   "image": "img/test/22094.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9884
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 1.0
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9869
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9688
+   }
+  },
+  {
+   "id": 5355,
+   "image": "img/test/5355.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.8349
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Brown",
+    "conf": 0.7952
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9573
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9665
+   }
+  },
+  {
+   "id": 20815,
+   "image": "img/test/20815.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9649
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9239
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.5746
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.999
+   }
+  },
+  {
+   "id": 11032,
+   "image": "img/test/11032.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.4732
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Red",
+    "conf": 0.5692
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9993
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9971
+   }
+  },
+  {
+   "id": 47274,
+   "image": "img/test/47274.jpg",
+   "articleType": {
+    "true": "Briefs",
+    "pred": "Briefs",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Grey",
+    "conf": 0.5316
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 12414,
+   "image": "img/test/12414.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Brown",
+    "conf": 0.8174
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9893
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9939
+   }
+  },
+  {
+   "id": 9266,
+   "image": "img/test/9266.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9982
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Blue",
+    "conf": 0.6642
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.997
+   }
+  },
+  {
+   "id": 15080,
+   "image": "img/test/15080.jpg",
+   "articleType": {
+    "true": "Kurtis",
+    "pred": "Tops",
+    "conf": 0.5941
+   },
+   "baseColour": {
+    "true": "Orange",
+    "pred": "Orange",
+    "conf": 0.9965
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Casual",
+    "conf": 0.9395
+   }
+  },
+  {
+   "id": 58479,
+   "image": "img/test/58479.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.9994
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9817
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9958
+   }
+  },
+  {
+   "id": 16908,
+   "image": "img/test/16908.jpg",
+   "articleType": {
+    "true": "Sweatshirts",
+    "pred": "Jackets",
+    "conf": 0.8393
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9907
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9773
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9492
+   }
+  },
+  {
+   "id": 4472,
+   "image": "img/test/4472.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9988
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.8478
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.7791
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 37889,
+   "image": "img/test/37889.jpg",
+   "articleType": {
+    "true": "Socks",
+    "pred": "Socks",
+    "conf": 0.5912
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Red",
+    "conf": 0.7465
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Unisex",
+    "conf": 0.5652
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.4547
+   }
+  },
+  {
+   "id": 38558,
+   "image": "img/test/38558.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Black",
+    "conf": 0.4751
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9313
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9308
+   }
+  },
+  {
+   "id": 3889,
+   "image": "img/test/3889.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9917
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 4103,
+   "image": "img/test/4103.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Olive",
+    "conf": 0.9843
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9912
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9916
+   }
+  },
+  {
+   "id": 13417,
+   "image": "img/test/13417.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.6709
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9737
+   }
+  },
+  {
+   "id": 47393,
+   "image": "img/test/47393.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Grey",
+    "conf": 0.4352
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 51844,
+   "image": "img/test/51844.jpg",
+   "articleType": {
+    "true": "Nightdress",
+    "pred": "Nightdress",
+    "conf": 0.9572
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Grey",
+    "conf": 0.575
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 59082,
+   "image": "img/test/59082.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Maroon",
+    "conf": 0.8789
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9995
+   }
+  },
+  {
+   "id": 33872,
+   "image": "img/test/33872.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9726
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 4464,
+   "image": "img/test/4464.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9361
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Boys",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 13744,
+   "image": "img/test/13744.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.8165
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9941
+   }
+  },
+  {
+   "id": 31363,
+   "image": "img/test/31363.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9956
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 44397,
+   "image": "img/test/44397.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9094
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.7034
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.7122
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9868
+   }
+  },
+  {
+   "id": 10801,
+   "image": "img/test/10801.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9931
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.5898
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9675
+   }
+  },
+  {
+   "id": 19475,
+   "image": "img/test/19475.jpg",
+   "articleType": {
+    "true": "Sweatshirts",
+    "pred": "Sweatshirts",
+    "conf": 0.9991
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.4047
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.8541
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9939
+   }
+  },
+  {
+   "id": 43668,
+   "image": "img/test/43668.jpg",
+   "articleType": {
+    "true": "Tunics",
+    "pred": "Dresses",
+    "conf": 0.6825
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.9659
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 3078,
+   "image": "img/test/3078.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9808
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9953
+   }
+  },
+  {
+   "id": 4401,
+   "image": "img/test/4401.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.8835
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 22019,
+   "image": "img/test/22019.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9635
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Beige",
+    "conf": 0.9714
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 12054,
+   "image": "img/test/12054.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9993
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9965
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 8549,
+   "image": "img/test/8549.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Orange",
+    "pred": "Orange",
+    "conf": 0.9543
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9994
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9918
+   }
+  },
+  {
+   "id": 52341,
+   "image": "img/test/52341.jpg",
+   "articleType": {
+    "true": "Nightdress",
+    "pred": "Nightdress",
+    "conf": 0.9645
+   },
+   "baseColour": {
+    "true": "Orange",
+    "pred": "Red",
+    "conf": 0.993
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 6479,
+   "image": "img/test/6479.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Blue",
+    "conf": 0.9907
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.9808
+   }
+  },
+  {
+   "id": 48382,
+   "image": "img/test/48382.jpg",
+   "articleType": {
+    "true": "Jeans",
+    "pred": "Jeans",
+    "conf": 0.6907
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.7679
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9966
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9996
+   }
+  },
+  {
+   "id": 9590,
+   "image": "img/test/9590.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9188
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9939
+   }
+  },
+  {
+   "id": 6748,
+   "image": "img/test/6748.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.9776
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.8198
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.7101
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9881
+   }
+  },
+  {
+   "id": 14301,
+   "image": "img/test/14301.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.994
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.6704
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 48837,
+   "image": "img/test/48837.jpg",
+   "articleType": {
+    "true": "Pendant",
+    "pred": "Pendant",
+    "conf": 0.9974
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.9991
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 7810,
+   "image": "img/test/7810.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Sports Shoes",
+    "conf": 0.626
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.6997
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9628
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.8755
+   }
+  },
+  {
+   "id": 31071,
+   "image": "img/test/31071.jpg",
+   "articleType": {
+    "true": "Dupatta",
+    "pred": "Dupatta",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Maroon",
+    "conf": 0.2638
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9821
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 23540,
+   "image": "img/test/23540.jpg",
+   "articleType": {
+    "true": "Sweatshirts",
+    "pred": "Sweatshirts",
+    "conf": 0.9842
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.998
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9706
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.7801
+   }
+  },
+  {
+   "id": 12810,
+   "image": "img/test/12810.jpg",
+   "articleType": {
+    "true": "Track Pants",
+    "pred": "Track Pants",
+    "conf": 0.9856
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Grey",
+    "conf": 0.5112
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9948
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9016
+   }
+  },
+  {
+   "id": 5381,
+   "image": "img/test/5381.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Scarves",
+    "conf": 0.3548
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Brown",
+    "conf": 0.8499
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9634
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Casual",
+    "conf": 0.9787
+   }
+  },
+  {
+   "id": 31158,
+   "image": "img/test/31158.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 0.9994
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Boys",
+    "conf": 0.9523
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 32626,
+   "image": "img/test/32626.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9965
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.7044
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9688
+   }
+  },
+  {
+   "id": 16363,
+   "image": "img/test/16363.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Green",
+    "conf": 0.7578
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9927
+   }
+  },
+  {
+   "id": 43566,
+   "image": "img/test/43566.jpg",
+   "articleType": {
+    "true": "Backpacks",
+    "pred": "Backpacks",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9504
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Unisex",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 16026,
+   "image": "img/test/16026.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.7784
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 3875,
+   "image": "img/test/3875.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9912
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 48866,
+   "image": "img/test/48866.jpg",
+   "articleType": {
+    "true": "Pendant",
+    "pred": "Pendant",
+    "conf": 0.9842
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.9995
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 10593,
+   "image": "img/test/10593.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 0.9989
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Pink",
+    "conf": 0.6315
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9986
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9984
+   }
+  },
+  {
+   "id": 44906,
+   "image": "img/test/44906.jpg",
+   "articleType": {
+    "true": "Shorts",
+    "pred": "Shorts",
+    "conf": 0.7799
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9745
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9917
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9896
+   }
+  },
+  {
+   "id": 34025,
+   "image": "img/test/34025.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.7738
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.6342
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Girls",
+    "conf": 0.5539
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 29672,
+   "image": "img/test/29672.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Green",
+    "conf": 0.7518
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9991
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.945
+   }
+  },
+  {
+   "id": 9033,
+   "image": "img/test/9033.jpg",
+   "articleType": {
+    "true": "Casual Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9984
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.983
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9992
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 51847,
+   "image": "img/test/51847.jpg",
+   "articleType": {
+    "true": "Bra",
+    "pred": "Bra",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.7723
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 8090,
+   "image": "img/test/8090.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.878
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Black",
+    "conf": 0.8448
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9718
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9067
+   }
+  },
+  {
+   "id": 11863,
+   "image": "img/test/11863.jpg",
+   "articleType": {
+    "true": "Flip Flops",
+    "pred": "Flip Flops",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9049
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Unisex",
+    "conf": 0.7589
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 9361,
+   "image": "img/test/9361.jpg",
+   "articleType": {
+    "true": "Socks",
+    "pred": "Socks",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9949
+   },
+   "gender": {
+    "true": "Unisex",
+    "pred": "Men",
+    "conf": 0.5493
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.5736
+   }
+  },
+  {
+   "id": 28758,
+   "image": "img/test/28758.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9688
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9319
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9987
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 48157,
+   "image": "img/test/48157.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": null,
+    "pred": "Pink",
+    "conf": 0.7922
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9987
+   }
+  },
+  {
+   "id": 40979,
+   "image": "img/test/40979.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 0.9996
+   },
+   "gender": {
+    "true": "Boys",
+    "pred": "Boys",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.997
+   }
+  },
+  {
+   "id": 14299,
+   "image": "img/test/14299.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9888
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Cream",
+    "conf": 0.5622
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9997
+   }
+  },
+  {
+   "id": 24161,
+   "image": "img/test/24161.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9996
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.9563
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9987
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 3330,
+   "image": "img/test/3330.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.8664
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Red",
+    "conf": 0.9997
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9965
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Sports",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 3882,
+   "image": "img/test/3882.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9746
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 4153,
+   "image": "img/test/4153.jpg",
+   "articleType": {
+    "true": "Sports Shoes",
+    "pred": "Casual Shoes",
+    "conf": 0.9213
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9267
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9416
+   },
+   "usage": {
+    "true": "Sports",
+    "pred": "Casual",
+    "conf": 0.7603
+   }
+  },
+  {
+   "id": 45295,
+   "image": "img/test/45295.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 0.9998
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.6622
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9952
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 20027,
+   "image": "img/test/20027.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9987
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.5837
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9978
+   }
+  },
+  {
+   "id": 43948,
+   "image": "img/test/43948.jpg",
+   "articleType": {
+    "true": "Heels",
+    "pred": "Heels",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Gold",
+    "pred": "Gold",
+    "conf": 0.8323
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9999
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 39217,
+   "image": "img/test/39217.jpg",
+   "articleType": {
+    "true": "Dresses",
+    "pred": "Dresses",
+    "conf": 0.9991
+   },
+   "baseColour": {
+    "true": "Red",
+    "pred": "Brown",
+    "conf": 0.5842
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9989
+   }
+  },
+  {
+   "id": 1670,
+   "image": "img/test/1670.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.858
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.8829
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.6272
+   }
+  },
+  {
+   "id": 44274,
+   "image": "img/test/44274.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9947
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9631
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9984
+   }
+  },
+  {
+   "id": 48993,
+   "image": "img/test/48993.jpg",
+   "articleType": {
+    "true": "Ring",
+    "pred": "Ring",
+    "conf": 0.9817
+   },
+   "baseColour": {
+    "true": "Silver",
+    "pred": "Silver",
+    "conf": 0.957
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.8359
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 27373,
+   "image": "img/test/27373.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9955
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.9958
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9994
+   }
+  },
+  {
+   "id": 40554,
+   "image": "img/test/40554.jpg",
+   "articleType": {
+    "true": "Watches",
+    "pred": "Watches",
+    "conf": 0.9982
+   },
+   "baseColour": {
+    "true": "Maroon",
+    "pred": "Maroon",
+    "conf": 0.7584
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.967
+   }
+  },
+  {
+   "id": 38841,
+   "image": "img/test/38841.jpg",
+   "articleType": {
+    "true": "Dresses",
+    "pred": "Dresses",
+    "conf": 0.9817
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Black",
+    "conf": 0.8103
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9952
+   }
+  },
+  {
+   "id": 57838,
+   "image": "img/test/57838.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Wallets",
+    "conf": 0.78
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Olive",
+    "conf": 0.9415
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9995
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9992
+   }
+  },
+  {
+   "id": 12005,
+   "image": "img/test/12005.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.5095
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9998
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9534
+   }
+  },
+  {
+   "id": 39158,
+   "image": "img/test/39158.jpg",
+   "articleType": {
+    "true": "Kurtis",
+    "pred": "Kurtis",
+    "conf": 0.6742
+   },
+   "baseColour": {
+    "true": "Purple",
+    "pred": "Purple",
+    "conf": 0.5092
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 9879,
+   "image": "img/test/9879.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Blue",
+    "pred": "Blue",
+    "conf": 0.5543
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.8227
+   }
+  },
+  {
+   "id": 2557,
+   "image": "img/test/2557.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9219
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9704
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9985
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Sports",
+    "conf": 0.7741
+   }
+  },
+  {
+   "id": 59311,
+   "image": "img/test/59311.jpg",
+   "articleType": {
+    "true": "Sandals",
+    "pred": "Sandals",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.997
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9738
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9974
+   }
+  },
+  {
+   "id": 53079,
+   "image": "img/test/53079.jpg",
+   "articleType": {
+    "true": "Clutches",
+    "pred": "Clutches",
+    "conf": 0.991
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.9236
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9895
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9939
+   }
+  },
+  {
+   "id": 12253,
+   "image": "img/test/12253.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.8592
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Formal",
+    "pred": "Formal",
+    "conf": 0.9993
+   }
+  },
+  {
+   "id": 34375,
+   "image": "img/test/34375.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9995
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Orange",
+    "conf": 0.9981
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9987
+   }
+  },
+  {
+   "id": 14945,
+   "image": "img/test/14945.jpg",
+   "articleType": {
+    "true": "Tshirts",
+    "pred": "Tshirts",
+    "conf": 0.9768
+   },
+   "baseColour": {
+    "true": "Navy Blue",
+    "pred": "Navy Blue",
+    "conf": 0.5466
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 1885,
+   "image": "img/test/1885.jpg",
+   "articleType": {
+    "true": "Shorts",
+    "pred": "Shorts",
+    "conf": 0.9687
+   },
+   "baseColour": {
+    "true": "Grey",
+    "pred": "Grey",
+    "conf": 0.9989
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9852
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9982
+   }
+  },
+  {
+   "id": 34575,
+   "image": "img/test/34575.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9533
+   },
+   "baseColour": {
+    "true": "Cream",
+    "pred": "Cream",
+    "conf": 0.4365
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9996
+   }
+  },
+  {
+   "id": 46590,
+   "image": "img/test/46590.jpg",
+   "articleType": {
+    "true": "Heels",
+    "pred": "Heels",
+    "conf": 0.936
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Brown",
+    "conf": 0.5394
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9925
+   }
+  },
+  {
+   "id": 58485,
+   "image": "img/test/58485.jpg",
+   "articleType": {
+    "true": "Wallets",
+    "pred": "Wallets",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Brown",
+    "pred": "Brown",
+    "conf": 0.9994
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9522
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 49761,
+   "image": "img/test/49761.jpg",
+   "articleType": {
+    "true": "Leggings",
+    "pred": "Leggings",
+    "conf": 0.9999
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.5712
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9983
+   }
+  },
+  {
+   "id": 44678,
+   "image": "img/test/44678.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9631
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.8498
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 34118,
+   "image": "img/test/34118.jpg",
+   "articleType": {
+    "true": "Shorts",
+    "pred": "Shorts",
+    "conf": 0.5982
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.6371
+   },
+   "gender": {
+    "true": "Girls",
+    "pred": "Men",
+    "conf": 0.9963
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9987
+   }
+  },
+  {
+   "id": 40161,
+   "image": "img/test/40161.jpg",
+   "articleType": {
+    "true": "Capris",
+    "pred": "Shorts",
+    "conf": 0.9987
+   },
+   "baseColour": {
+    "true": "White",
+    "pred": "White",
+    "conf": 0.9949
+   },
+   "gender": {
+    "true": "Girls",
+    "pred": "Men",
+    "conf": 0.3993
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9998
+   }
+  },
+  {
+   "id": 20779,
+   "image": "img/test/20779.jpg",
+   "articleType": {
+    "true": "Flats",
+    "pred": "Heels",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Gold",
+    "pred": "Beige",
+    "conf": 0.9675
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 11618,
+   "image": "img/test/11618.jpg",
+   "articleType": {
+    "true": "Kurtas",
+    "pred": "Kurtas",
+    "conf": 0.9866
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 0.99
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9962
+   },
+   "usage": {
+    "true": "Ethnic",
+    "pred": "Ethnic",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 8125,
+   "image": "img/test/8125.jpg",
+   "articleType": {
+    "true": "Belts",
+    "pred": "Belts",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Black",
+    "pred": "Black",
+    "conf": 0.9437
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9427
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.998
+   }
+  },
+  {
+   "id": 31293,
+   "image": "img/test/31293.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9969
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9999
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9999
+   }
+  },
+  {
+   "id": 53672,
+   "image": "img/test/53672.jpg",
+   "articleType": {
+    "true": "Handbags",
+    "pred": "Handbags",
+    "conf": 1.0
+   },
+   "baseColour": {
+    "true": "Yellow",
+    "pred": "Yellow",
+    "conf": 1.0
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 1.0
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 6882,
+   "image": "img/test/6882.jpg",
+   "articleType": {
+    "true": "Jackets",
+    "pred": "Jackets",
+    "conf": 0.8837
+   },
+   "baseColour": {
+    "true": "Cream",
+    "pred": "Beige",
+    "conf": 0.7404
+   },
+   "gender": {
+    "true": "Women",
+    "pred": "Women",
+    "conf": 0.9996
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9989
+   }
+  },
+  {
+   "id": 41299,
+   "image": "img/test/41299.jpg",
+   "articleType": {
+    "true": "Tops",
+    "pred": "Tops",
+    "conf": 0.9737
+   },
+   "baseColour": {
+    "true": "Pink",
+    "pred": "Pink",
+    "conf": 0.9873
+   },
+   "gender": {
+    "true": "Girls",
+    "pred": "Girls",
+    "conf": 0.997
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 1.0
+   }
+  },
+  {
+   "id": 13389,
+   "image": "img/test/13389.jpg",
+   "articleType": {
+    "true": "Shirts",
+    "pred": "Shirts",
+    "conf": 0.9997
+   },
+   "baseColour": {
+    "true": "Green",
+    "pred": "Green",
+    "conf": 0.9812
+   },
+   "gender": {
+    "true": "Men",
+    "pred": "Men",
+    "conf": 0.9992
+   },
+   "usage": {
+    "true": "Casual",
+    "pred": "Casual",
+    "conf": 0.9996
+   }
+  }
+ ]
+}
