@@ -134,5 +134,46 @@
     return res;
   }
 
-  window.LensAI = { load, analyze, labels: () => meta && meta.labels };
+  // ---------------------------------------------------------------- visual similarity
+  // catalog_emb.bin: float16 rows (one per product, L2-normalised), order = catalog_ids.json
+  let catalog = null, catalogLoading = null;
+
+  function halfToFloat(h) {
+    const s = h & 0x8000 ? -1 : 1, e = (h >> 10) & 0x1f, f = h & 0x3ff;
+    if (e === 0) return s * Math.pow(2, -14) * (f / 1024);
+    if (e === 31) return f ? NaN : s * Infinity;
+    return s * Math.pow(2, e - 15) * (1 + f / 1024);
+  }
+
+  async function loadCatalog() {
+    if (catalog) return catalog;
+    if (catalogLoading) return catalogLoading;
+    catalogLoading = (async () => {
+      const info = await (await fetch(BASE + "catalog_ids.json")).json();
+      const half = new Uint16Array(await (await fetch(BASE + "catalog_emb.bin")).arrayBuffer());
+      const data = new Float32Array(half.length);
+      for (let i = 0; i < half.length; i++) data[i] = halfToFloat(half[i]);
+      catalog = { ids: info.ids, dim: info.dim, data };
+      return catalog;
+    })();
+    return catalogLoading;
+  }
+
+  /** Products that LOOK most like the analysed photo: cosine similarity of the model's embeddings.
+   *  Returns [{id, score}] best first; score is in -1..1 (1 = identical look). */
+  async function similar(embedding, k = 24) {
+    const c = await loadCatalog(), d = c.dim;
+    let n = 0;
+    for (let j = 0; j < d; j++) n += embedding[j] * embedding[j];
+    n = Math.sqrt(n) || 1;
+    const scores = new Array(c.ids.length);
+    for (let i = 0; i < c.ids.length; i++) {
+      let s = 0, off = i * d;
+      for (let j = 0; j < d; j++) s += c.data[off + j] * embedding[j];
+      scores[i] = { id: c.ids[i], score: s / n };
+    }
+    return scores.sort((a, b) => b.score - a.score).slice(0, k);
+  }
+
+  window.LensAI = { load, analyze, similar, loadCatalog, labels: () => meta && meta.labels };
 })();

@@ -40,3 +40,4 @@ models/best/
 
 # packaged upload (scripts/package_site.py)
 dist/
+site/ai/catalog_emb.bin
