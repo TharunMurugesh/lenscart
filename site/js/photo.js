@@ -60,22 +60,54 @@
     }
   }
 
+  /** Primary: visual similarity (model embedding vs catalogue embeddings, in the browser).
+   *  Fallback: rank by the four predicted tags (api/match.php) if the catalogue files cannot load. */
   async function loadMatches(r) {
     const tags = {};
     for (const h of Object.keys(NAMES)) tags[h] = r[h][0].label;
-    const res = await fetch("api/match.php?" + new URLSearchParams(tags));
-    if (!res.ok) throw new Error("store search failed");
-    const { typeInStore, items } = await res.json();
-    $("#match-basis").textContent = typeInStore
-      ? `Ranked by matching ${tags.baseColour} ${tags.articleType} for ${tags.gender}, ${tags.usage}.`
-      : `No matching items in our store: we don't sell ${tags.articleType}. Showing items that match on colour (${tags.baseColour}), gender (${tags.gender}) and occasion (${tags.usage}) instead.`;
-    $("#matches").innerHTML = items.length ? items.map((p) => `
+    const tagRes = await fetch("api/match.php?" + new URLSearchParams(tags));
+    if (!tagRes.ok) throw new Error("store search failed");
+    const { typeInStore, items: tagItems } = await tagRes.json();
+
+    let items = null;
+    try {
+      if (r.stub || !r.embedding) throw new Error("no embedding");
+      const near = await LensAI.similar(r.embedding, 24);
+      const res = await fetch("api/products.php?ids=" + near.map((n) => n.id).join(","));
+      if (!res.ok) throw new Error("product lookup failed");
+      items = await res.json();
+      if (!items.length) throw new Error("no products");
+    } catch (e) {
+      console.warn("visual similarity unavailable, using tag match:", e);
+      items = null;
+    }
+
+    const visual = items !== null;
+    const read = `${tags.baseColour} ${tags.articleType} for ${tags.gender}, ${tags.usage}`;
+    $("#matches-title").textContent = visual ? "Visually similar in our store" : "Matching items in our store";
+    $("#match-basis").textContent = !typeInStore
+      ? `No matching items in our store: we don't sell ${tags.articleType}. ` + (visual
+          ? "Showing the items that look most like your photo instead."
+          : `Showing items that match on colour (${tags.baseColour}), gender (${tags.gender}) and occasion (${tags.usage}) instead.`)
+      : visual
+        ? `Ranked by how alike they look to the model (its 1,280-number fingerprint of each photo). The model read your photo as ${read}.`
+        : `Ranked by matching ${read}.`;
+    if (!visual) items = tagItems;
+
+    // low confidence on the type usually means the photo is unlike our catalogue photos (worn, top-down, cluttered)
+    $("#match-hint").hidden = r.articleType[0].p >= 0.4;
+    $("#match-hint-p").textContent = Math.round(r.articleType[0].p * 100) + "%";
+    // raw similarity scores are not shown: cosine values of these embeddings are low even for close matches
+    // and read as "weak" to a visitor; the ORDER is what matters
+    $("#matches").innerHTML = items.length ? items.map((p) => {
+      return `
       <a class="pcard" href="product.php?id=${p.id}">
         <img loading="lazy" src="${esc(p.image)}" alt="${esc(p.name)}">
         <div class="pc-body"><div class="pc-name">${esc(p.name)}</div>
         <div class="pc-meta">${esc(p.articleType)} · ${esc(p.baseColour || "")}</div>
         <div class="pc-foot"><b>${esc(p.price)}</b>${p.inStock ? "" : '<span class="tag muted">Out of stock</span>'}</div></div>
-      </a>`).join("") : '<p class="empty">No matching items in the store.</p>';
+      </a>`;
+    }).join("") : '<p class="empty">No matching items in the store.</p>';
     $("#matches-block").hidden = false;
   }
 

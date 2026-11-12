@@ -25,7 +25,8 @@ EXCLUDE_SUFFIX = {".pyc", ".bak", ".tmp", ".log"}
 # a file is required if the site cannot work without it: fail loudly when one is missing
 REQUIRED = ["index.php", "inc/db.php", "inc/config.php", "ai/lensai.js", "ai/lensnet.onnx", "ai/lensnet_meta.json",
             "ai/vendor/ort.min.js", "ai/vendor/ort-wasm-simd-threaded.wasm", "ai/vendor/ort-wasm-simd-threaded.mjs",
-            "vendor/chart.umd.min.js", "data/model_report.json", "sql/schema.sql", "sql/seed.sql"]
+            "vendor/chart.umd.min.js", "data/model_report.json", "sql/schema.sql", "sql/seed.sql",
+            "ai/catalog_emb.bin", "ai/catalog_ids.json", "data/similar.json"]
 REQUIRED_DIRS = {"img/products": 1500, "img/test": 1, "img/model": 1}
 
 

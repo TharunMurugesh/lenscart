@@ -13,7 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $u = current_user();
 if ($u) view_record((int) $u['id'], (int) $p['id']);
-$similar = products_similar($p, 8);
+/* Similar items: visually nearest products (data/similar.json, made by scripts/build_catalog_embeddings.py
+ * from the model's embeddings). Products without an embedding (added in the admin) fall back to tag rules. */
+function visually_similar(int $id, int $limit): array {
+    static $map = null;
+    if ($map === null) {
+        $f = __DIR__ . '/data/similar.json';
+        $map = is_file($f) ? (json_decode((string) file_get_contents($f), true) ?: []) : [];
+    }
+    $ids = array_values(array_filter(array_map('intval', $map[(string) $id] ?? []), fn($x) => $x !== $id));
+    if (!$ids) return [];
+    $found = products_by_ids(array_slice($ids, 0, $limit + 4));
+    $out = [];
+    foreach ($ids as $x) { if (isset($found[$x])) $out[] = $found[$x]; if (count($out) >= $limit) break; }
+    return $out;
+}
+$similar = visually_similar((int) $p['id'], 8);
+$similarVisual = (bool) $similar;
+if (!$similar) $similar = products_similar($p, 8);
 $together = products_bought_together((int) $p['id'], 8);
 page_header($p['name']);
 ?>
@@ -58,7 +75,7 @@ page_header($p['name']);
 
 <section class="block">
   <h2><?= icon('shirt') ?>Similar items</h2>
-  <p class="sub">Same type, closest in colour, gender and occasion.</p>
+  <p class="sub"><?= $similarVisual ? 'The items that look most alike to our model (its visual fingerprint of each photo).' : 'Same type, closest in colour, gender and occasion.' ?></p>
   <?php product_grid($similar, 'No similar items yet.'); ?>
 </section>
 <section class="block">

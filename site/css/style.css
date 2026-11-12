@@ -172,3 +172,4 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent-soft
   .table .hide-sm { display: none; }
 }
 @media (max-width: 600px) { .hero-pics { display: none; } }
+#match-hint { margin-bottom: 12px; }

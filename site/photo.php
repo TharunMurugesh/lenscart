@@ -33,8 +33,9 @@ page_header('Search by photo', 'photo');
 <div id="err" class="flash bad" hidden></div>
 
 <section class="block" id="matches-block" hidden>
-  <h2><?= icon('shirt') ?>Matching items in our store</h2>
+  <h2><?= icon('shirt') ?><span id="matches-title">Matching items in our store</span></h2>
   <p class="sub" id="match-basis"></p>
+  <div id="match-hint" class="notice" hidden><?= icon('info') ?><span>The model is not sure what this item is (<b id="match-hint-p"></b> for its best guess), so these matches may be off. It learned from product photos: try the item on its own, seen from the side or front, on a plain background.</span></div>
   <div id="matches" class="grid"></div>
 </section>
 
