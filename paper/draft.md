@@ -10,8 +10,17 @@ Presidency University, Bengaluru, India
 > from our own result files; every `[needs check]` marker is a citation detail to verify against
 > the source before submission.
 
-**Abstract.** [pending: written last, from results/test_metrics.csv, test_ci.csv and the
-real-world set.]
+**Abstract.** We present a multi-task computer-vision model that reads a single product image
+and predicts four attributes at once: article type (49 classes), base colour (18), gender (5) and
+usage (4), together with Grad-CAM heat maps showing where the model looked for each answer. An
+ImageNet-pretrained EfficientNet-B0 with one linear head per attribute is fine-tuned on 28,270
+images of the Fashion Product Images dataset, using a split grouped by product name and a
+label-aware near-duplicate filter on validation and test. On 4,824 held-out test images the
+model reaches macro F1 of 0.860 (95% CI 0.844–0.871) for article type, 0.640 (0.621–0.658) for
+colour, 0.818 (0.792–0.841) for gender and 0.859 (0.845–0.873) for usage, with 98.6% top-3
+article-type accuracy, while running at 15.7 ms per image on a laptop CPU. It outperforms a
+fine-tuned ResNet50 and a FashionCLIP linear probe under the same validation protocol, and
+FashionCLIP zero-shot prompts by 0.20 in mean macro F1. [pending: real-world set result.]
 
 **Keywords.** computer vision, multi-task learning, fashion attributes, explainability, Grad-CAM,
 zero-shot learning, class imbalance
@@ -72,12 +81,13 @@ image counts at each stage of cleaning and the resulting split.
 | Train | 28,272 |
 | Validation | 6,051 |
 | Test | 6,087 |
-| Validation and test after near-duplicate removal | [pending: results/notes.md] |
+| Missing image files (removed) | 4 |
+| Validation after near-duplicate removal | 4,844 |
+| Test after near-duplicate removal | 4,824 |
 
 Fig. 1 shows the number of images per kept article type (prepared/fig1_article_types.png). The
 largest kept type is T-shirts with 7,070 images and the smallest is cufflinks with 106, an
-imbalance ratio of about 67 to 1. Fig. 2 shows sample images per class [pending: generated from
-the resized images].
+imbalance ratio of about 67 to 1. Fig. 2 shows one training image per article type (prepared/fig2_samples.png).
 
 ## II. Literature Review
 
@@ -155,9 +165,15 @@ The split is made before any training statistic is computed. Images are divided 
 (70 percent), validation (15 percent) and test (15 percent) sets, stratified by article type,
 with a fixed random seed of 42. Listings that share a product display name are grouped so that
 the same product never appears in both training and test; this was checked. Near-duplicate images
-are then detected with a perceptual hash: any validation or test image within a Hamming distance
-of 4 of a training image is removed from validation or test (the training set is not changed)
-[pending: count removed, from results/notes.md]. Class weights are computed from the training
+are then detected with a 64-bit perceptual hash. A validation or test image is removed if a
+training image with the same article type and base colour lies within a Hamming distance of 4
+(the training set is not changed); 2,468 images were removed (1,206 validation, 1,262 test).
+The label condition was added after inspection: with the hash alone, 4,764 images matched, but
+only 26 percent of those matches shared the training image's colour and 66 percent its article
+type, because catalogue photographs of different products with similar silhouettes on a white
+background produce near-identical grayscale hashes. The hash-only rule would also have removed
+every test image of three classes. Four images listed in the metadata had no image file and
+were dropped. Class weights are computed from the training
 split only. The test set is evaluated once, after all model selection has been done on the
 validation set.
 
@@ -186,8 +202,8 @@ backbone is frozen and only the heads are trained for 3 epochs at learning rate 
 the whole backbone is unfrozen, with learning rate 1e-4 for the backbone and 1e-3 for the heads,
 cosine decay, up to 15 epochs, and early stopping with patience 3. The validation score used to
 choose the best epoch is the mean of the four heads' macro F1 on the validation set. Mixed
-precision is used on the GPU and the seed is fixed at 42 throughout. Hardware: [pending: from
-results/notes.md].
+precision is used on the GPU and the seed is fixed at 42 throughout. Hardware: a laptop NVIDIA
+GeForce RTX 4050 GPU with 6 GB of memory; training the final model took 1,232 seconds.
 
 ### E. Pipeline Components
 
@@ -223,8 +239,8 @@ near neighbours are interpreted.
 text embeddings (for example, from the current colour to a requested colour), and the nearest
 catalogue products to the shifted vector are returned.
 
-**M10, similarity-trained embeddings** [pending: included only if built; otherwise moved to future
-work].
+**M10, similarity-trained embeddings.** Not built in this work (see Section V); retrieval is
+evaluated with the classifier's pooled features only (Table VI).
 
 ### F. Evaluation
 
@@ -244,11 +260,119 @@ Grad-CAM per head with garment-focus score, (5) M7 colour palette, (6) M5 zero-s
 
 ## IV. Results
 
-[pending: training and evaluation.]
+All numbers in this section come from single runs with seed 42. Model selection used the
+validation set only; the test set was evaluated once, after all selection was complete.
+
+### A. Training
+
+The final model ran all 18 epochs (3 frozen, 15 fine-tuning); early stopping did not trigger.
+The best validation score (mean macro F1 over the four heads) was 0.796 at epoch 15, which is
+the model evaluated below (Fig. 4, results/curves.png).
+
+### B. Test Performance
+
+**TABLE III. TEST RESULTS OF THE FINAL MODEL (4,824 IMAGES; MASKED LABELS SKIPPED)**
+
+| Head | n | Accuracy | Macro P | Macro R | Macro F1 (95% CI) | Weighted F1 | Top-3 acc. |
+|---|---|---|---|---|---|---|---|
+| Article type | 4,824 | 0.904 | 0.856 | 0.868 | 0.860 (0.844–0.871) | 0.903 | 0.986 |
+| Base colour | 4,523 | 0.707 | 0.644 | 0.643 | 0.640 (0.621–0.658) | 0.708 | 0.923 |
+| Gender | 4,824 | 0.931 | 0.796 | 0.846 | 0.818 (0.792–0.841) | 0.932 | – |
+| Usage | 4,813 | 0.924 | 0.846 | 0.875 | 0.859 (0.845–0.873) | 0.924 | – |
+
+Confidence intervals are the 2.5th and 97.5th percentiles over 1,000 bootstrap resamples of the
+test predictions. Validation results for the same model are within 0.02 of the test results on
+every head (results/val_metrics.csv), so model selection did not overfit the validation set.
+
+Colour is the hardest attribute. Most errors are between neighbouring shades, and the correct
+colour is among the top three answers for 92.3 percent of test images. The gap between gender
+accuracy (0.931) and macro F1 (0.818) reflects the small Boys, Girls and Unisex classes. The
+article types with the lowest test F1 are Tunics (0.31), Flats (0.38) and Kurtis (0.51). The most
+frequent confusions are visually close pairs: T-shirts and tops (36 and 28 test images in the two
+directions), sports and casual shoes (25), flats and heels (24) and kurtas and kurtis (10)
+(results/top_confusions.csv, Fig. 5).
+
+### C. Ablation and Backbone Comparison
+
+Tables IV and V use a shorter schedule (2 frozen epochs plus up to 4 fine-tuning epochs) and
+report validation macro F1, never test.
+
+**TABLE IV. ABLATION (EFFICIENTNET-B0, VALIDATION MACRO F1)**
+
+| Run | Change | Type | Colour | Gender | Usage | Mean |
+|---|---|---|---|---|---|---|
+| IV-a | Frozen backbone only | 0.818 | 0.507 | 0.732 | 0.802 | 0.715 |
+| IV-b | Full settings | 0.835 | 0.642 | 0.796 | 0.841 | 0.778 |
+| IV-c | No class weights | 0.838 | 0.639 | 0.780 | 0.835 | 0.773 |
+| IV-d | No augmentation | 0.847 | 0.633 | 0.796 | 0.847 | 0.781 |
+
+Fine-tuning the backbone gives the largest gain (+0.063 mean macro F1 over the frozen backbone),
+mostly in colour (+0.135). Class weighting adds 0.005. Augmentation did not help within six
+epochs (−0.002); its effect may need the full schedule, which we did not test.
+
+**TABLE V. BACKBONES AND FASHIONCLIP (VALIDATION MACRO F1)**
+
+| Run | Model | Type | Colour | Gender | Usage | Mean | CPU ms/image |
+|---|---|---|---|---|---|---|---|
+| V-a | EfficientNet-B0 (fine-tuned) | 0.835 | 0.642 | 0.796 | 0.841 | 0.778 | 15.7 |
+| V-b | ResNet50 (fine-tuned) | 0.802 | 0.610 | 0.757 | 0.808 | 0.744 | 36.5 |
+| V-c | FashionCLIP linear probe | 0.850 | 0.636 | 0.763 | 0.834 | 0.771 | – |
+| V-d | FashionCLIP zero-shot (M6) | 0.716 | 0.594 | 0.476 | 0.517 | 0.576 | – |
+
+CPU time is the forward pass at batch size 1, averaged over 50 images on a laptop Intel CPU.
+EfficientNet-B0 is both more accurate and 2.3 times faster than ResNet50, with 4.1 M instead of
+23.7 M parameters. A logistic-regression probe on frozen FashionCLIP features is competitive for
+article type (0.850) but weaker for gender and usage. Zero-shot prompts without any training
+reach 0.576 mean macro F1, 0.20 below the trained model; this is the gap that task-specific
+training closes (M6).
+
+### D. Retrieval with Pooled Features
+
+**TABLE VI. RETRIEVAL PRECISION (4,824 TEST QUERIES, 28,270 TRAINING IMAGES AS GALLERY)**
+
+| Embedding | P@1 type | P@5 type | P@10 type | P@1 type+colour | P@5 type+colour | P@10 type+colour |
+|---|---|---|---|---|---|---|
+| EfficientNet-B0 pooled features | 0.882 | 0.857 | 0.845 | 0.471 | 0.443 | 0.425 |
+
+Nearest neighbours by cosine similarity usually share the article type but match the colour less
+than half the time, consistent with colour being the weakest head.
+
+### E. Audit
+
+**TABLE VII. ARTICLE-TYPE RESULTS BY GROUP (TEST)**
+
+| Group | n | Accuracy | Macro F1 |
+|---|---|---|---|
+| Gender: Men | 2,285 | 0.948 | 0.794 |
+| Gender: Women | 2,124 | 0.854 | 0.795 |
+| Gender: Unisex | 224 | 0.951 | 0.870 |
+| Gender: Boys | 119 | 0.933 | 0.570 |
+| Gender: Girls | 72 | 0.764 | 0.526 |
+| Category: Accessories | 1,310 | 0.957 | 0.636 |
+| Category: Apparel | 2,879 | 0.897 | 0.701 |
+| Category: Footwear | 635 | 0.825 | 0.606 |
+
+Accuracy is lowest for images labelled Girls (0.764) and for footwear (0.825). Macro F1 within
+small groups averages over few images per class and is less stable than accuracy.
+
+### F. Real-World Photographs
+
+[pending: real-world set.]
 
 ## V. Conclusion and Future Scope
 
-[pending.]
+A single EfficientNet-B0 with four linear heads, fine-tuned on catalogue images, predicts article
+type, colour, gender and usage with test macro F1 between 0.64 and 0.86, explains each answer with
+a heat map, and runs in about 16 ms per image on a laptop CPU. Under the same validation protocol
+it is more accurate than a fine-tuned ResNet50 and a FashionCLIP linear probe, and 0.20 above
+zero-shot prompting. Careful splitting mattered: grouping by product name and a label-aware
+near-duplicate filter keep the test set honest without removing whole classes.
+
+The main limitations are colour, where neighbouring shades are confused, the small child and
+unisex classes, and the domain gap between white-background catalogue images and real
+photographs. Future work: training with background replacement for robustness to real scenes,
+similarity-trained embeddings (triplet loss) for better same-colour retrieval, longer schedules
+for the ablations, and colour labels defined on a perceptual colour space.
 
 ## References
 
