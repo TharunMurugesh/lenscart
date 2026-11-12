@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LensAI test</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #f7f7f5; color: #222; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .card { background: #fff; border: 1px solid #e3e3e0; border-radius: 8px; padding: 10px; }
+  canvas, img { width: 224px; height: 224px; display: block; }
+  h3 { margin: 4px 0 8px; font-size: 14px; }
+  ol { margin: 0; padding-left: 18px; font-size: 13px; }
+  #status { margin: 8px 0; font-size: 13px; color: #555; }
+</style>
+</head>
+<body>
+<h2>LensAI in-browser test</h2>
+<input type="file" id="file" accept="image/*">
+<div id="status">Loading model…</div>
+<div class="row" id="out"></div>
+<script src="vendor/ort.min.js"></script>
+<script src="lensai.js"></script>
+<script>
+  const status = document.getElementById("status"), out = document.getElementById("out");
+  LensAI.load().then(() => status.textContent = "Model loaded. Choose an image.")
+               .catch((e) => status.textContent = "Model failed to load: " + e);
+  document.getElementById("file").addEventListener("change", (ev) => {
+    const f = ev.target.files[0]; if (!f) return;
+    const img = new Image();
+    img.onload = async () => {
+      status.textContent = "Analysing…";
+      const r = await LensAI.analyze(img);
+      status.textContent = `Done in ${r.ms.toFixed(0)} ms`;
+      out.innerHTML = "";
+      const first = document.createElement("div"); first.className = "card";
+      first.innerHTML = "<h3>Input (224×224)</h3>"; first.appendChild(r.input); out.appendChild(first);
+      for (const h of ["articleType", "baseColour", "gender", "usage"]) {
+        const c = document.createElement("div"); c.className = "card";
+        c.innerHTML = `<h3>${h} · focus ${(r.focus[h] * 100).toFixed(0)}%</h3>`;
+        c.appendChild(r.heatmaps[h]);
+        c.insertAdjacentHTML("beforeend", "<ol>" + r[h].map(x => `<li>${x.label} ${(x.p * 100).toFixed(1)}%</li>`).join("") + "</ol>");
+        out.appendChild(c);
+      }
+    };
+    img.src = URL.createObjectURL(f);
+  });
+</script>
+</body>
+</html>

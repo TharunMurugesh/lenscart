@@ -29,3 +29,6 @@ real_world/images/
 real_world/*.jpg
 real_world/*.jpeg
 real_world/*.png
+
+# exported model (built from models/best.pt by scripts/export_onnx.py)
+site/ai/lensnet.onnx
