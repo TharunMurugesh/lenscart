@@ -32,3 +32,6 @@ real_world/*.png
 
 # exported model (built from models/best.pt by scripts/export_onnx.py)
 site/ai/lensnet.onnx
+
+# shop images (copied by scripts/build_site_data.py, uploads, model images)
+site/img/
