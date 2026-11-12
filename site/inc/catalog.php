@@ -63,7 +63,12 @@ function dept_count(array $d): int {
 function dept_covers(): array {
     $out = [];
     foreach (departments() as $slug => $d) {
-        $out[$slug] = q_val("SELECT image FROM products WHERE {$d['where']} ORDER BY stock DESC, id LIMIT 1") ?: null;
+        // several candidates per department, so no two tiles show the same photo
+        $cands = q_all("SELECT image FROM products WHERE {$d['where']} ORDER BY stock DESC, id LIMIT 10");
+        $out[$slug] = null;
+        foreach ($cands as $c) {
+            if (!in_array($c['image'], $out, true)) { $out[$slug] = $c['image']; break; }
+        }
     }
     return $out;
 }
