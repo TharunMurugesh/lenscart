@@ -36,3 +36,4 @@ site/ai/lensnet.onnx
 # shop images (copied by scripts/build_site_data.py, uploads, model images)
 site/img/
 site/CREDENTIALS.local.txt
+models/best/
