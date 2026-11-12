@@ -28,12 +28,8 @@ and set the four values in `inc/config.php`. `img/products/` must be writable fo
 
 ## Demo logins
 
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@lenscart.local | LensCart@2026 |
-| Customer | aarav.sharma@example.com (any seeded customer) | demo1234 |
-
-Change the admin password before leaving the site online.
+Admin: `admin@lenscart.local`. The password is generated when the seed is built and saved to
+`CREDENTIALS.local.txt` (not in git). Ask the team for it.
 
 ## Data
 
