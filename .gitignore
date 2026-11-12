@@ -37,3 +37,6 @@ site/ai/lensnet.onnx
 site/img/
 site/CREDENTIALS.local.txt
 models/best/
+
+# packaged upload (scripts/package_site.py)
+dist/
