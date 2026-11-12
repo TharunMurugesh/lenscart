@@ -64,8 +64,10 @@
     for (const h of Object.keys(NAMES)) tags[h] = r[h][0].label;
     const res = await fetch("api/match.php?" + new URLSearchParams(tags));
     if (!res.ok) throw new Error("store search failed");
-    const items = await res.json();
-    $("#match-basis").textContent = `Ranked by matching ${tags.baseColour} ${tags.articleType} for ${tags.gender}, ${tags.usage}.`;
+    const { typeInStore, items } = await res.json();
+    $("#match-basis").textContent = typeInStore
+      ? `Ranked by matching ${tags.baseColour} ${tags.articleType} for ${tags.gender}, ${tags.usage}.`
+      : `No matching items in our store: we don't sell ${tags.articleType}. Showing items that match on colour (${tags.baseColour}), gender (${tags.gender}) and occasion (${tags.usage}) instead.`;
     $("#matches").innerHTML = items.length ? items.map((p) => `
       <a class="pcard" href="product.php?id=${p.id}">
         <img loading="lazy" src="${esc(p.image)}" alt="${esc(p.name)}">

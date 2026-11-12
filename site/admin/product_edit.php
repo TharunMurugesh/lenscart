@@ -6,6 +6,7 @@ require __DIR__ . '/_nav.php';
 require_admin();
 
 const MASTER = ['Apparel', 'Footwear', 'Accessories'];
+$SHOP_TYPES = array_values(array_diff(LABELS['articleType'], SHOP_HIDDEN_TYPES));
 $id = (int) ($_GET['id'] ?? 0);
 $p = $id ? product_get($id) : null;
 if ($id && !$p) redirect('admin/products.php');
@@ -20,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (mb_strlen($d['name']) < 3 || mb_strlen($d['name']) > 200) $errs[] = 'Name must be 3 to 200 characters.';
     foreach (['articleType', 'baseColour', 'gender', 'usage'] as $k) {
-        if (!in_array($d[$k], LABELS[$k], true)) $errs[] = "Choose a valid $k.";
+        $allowed = $k === 'articleType' ? $SHOP_TYPES : LABELS[$k];
+        if (!in_array($d[$k], $allowed, true)) $errs[] = "Choose a valid $k.";
     }
     if (!in_array($d['masterCategory'], MASTER, true)) $errs[] = 'Choose a valid category.';
     if (!is_numeric($d['price']) || $d['price'] <= 0 || $d['price'] > 1000000) $errs[] = 'Price must be a positive number.';
@@ -78,7 +80,7 @@ admin_nav($p ? 'products' : 'add');
   <div class="card form">
     <label>Name<input name="name" required minlength="3" maxlength="200" value="<?= e($d['name']) ?>"></label>
     <div class="two">
-      <?php select_field('articleType', 'Type', LABELS['articleType'], (string) $d['articleType']); ?>
+      <?php select_field('articleType', 'Type', $SHOP_TYPES, (string) $d['articleType']); ?>
       <?php select_field('baseColour', 'Colour', LABELS['baseColour'], (string) $d['baseColour']); ?>
       <?php select_field('gender', 'Gender', LABELS['gender'], (string) $d['gender']); ?>
       <?php select_field('usage', 'Occasion', LABELS['usage'], (string) $d['usage']); ?>
@@ -112,9 +114,10 @@ admin_nav($p ? 'products' : 'add');
     try { r = await LensAI.analyze(img); } catch (e) { r = await LensAIStub.analyze(img); }
     const filled = [];
     for (const h of ["articleType", "baseColour", "gender", "usage"]) {
-      const sel = document.getElementById("f-" + h);
-      sel.value = r[h][0].label;
-      filled.push(`${r[h][0].label} (${Math.round(r[h][0].p * 100)}%)`);
+      const sel = document.getElementById("f-" + h), label = r[h][0].label;
+      const sold = [...sel.options].some((o) => o.value === label);
+      if (sold) sel.value = label;
+      filled.push(`${label} (${Math.round(r[h][0].p * 100)}%)${sold ? "" : " - not sold in this shop, choose manually"}`);
     }
     note.textContent = (r.stub ? "Demo data (model file not loaded): " : "AI filled in: ") + filled.join(", ") + ". Check and correct before saving.";
   });

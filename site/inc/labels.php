@@ -6,3 +6,5 @@ const LABELS = [
     'gender' => ['Boys', 'Girls', 'Men', 'Unisex', 'Women'],
     'usage' => ['Casual', 'Sports', 'Ethnic', 'Formal'],
 ];
+// Types the model knows but the shop does not sell (innerwear).
+const SHOP_HIDDEN_TYPES = ['Bra', 'Briefs', 'Innerwear Vests', 'Trunk'];

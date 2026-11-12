@@ -1,6 +1,8 @@
 """Build the shop's seed data (build tool only; the site itself is PHP).
 
-- Samples 1,500 products from prepared/split.csv, stratified by articleType (all 49 present), seed 42.
+- Samples 1,500 products from prepared/split.csv, stratified by articleType, seed 42. Innerwear
+  (subCategory 'Innerwear': Bra, Briefs, Innerwear Vests, Trunk) is not sold in the shop, so all
+  45 other article types are present. The model still knows all 49.
 - Copies their 256 px images from data/resized/ into site/img/products/ (git-ignored).
 - Writes site/sql/seed.sql: products with SYNTHETIC prices and stock, one admin, demo
   customers, ~60 days of sample orders and product views.
@@ -102,6 +104,8 @@ def write_labels_php():
         names = [n for n, _ in sorted(m.items(), key=lambda kv: kv[1])]
         lines.append(f"    '{head}' => [" + ", ".join("'" + n.replace("'", "\\'") + "'" for n in names) + "],")
     lines.append("];")
+    lines.append("// Types the model knows but the shop does not sell (innerwear).")
+    lines.append("const SHOP_HIDDEN_TYPES = ['Bra', 'Briefs', 'Innerwear Vests', 'Trunk'];")
     (SITE / "inc" / "labels.php").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -109,8 +113,10 @@ def main():
     rng = random.Random(SEED)
     df = pd.read_csv(ROOT / "prepared" / "split.csv")
     df = df[df.id.map(lambda i: (IMG_SRC / f"{i}.jpg").exists())]
+    df = df[df.subCategory != "Innerwear"]  # not sold in the shop
     prods = sample(df, rng)
-    assert prods.articleType.nunique() == 49, prods.articleType.nunique()
+    assert prods.articleType.nunique() == df.articleType.nunique(), prods.articleType.nunique()
+    assert (prods.subCategory != "Innerwear").all()
 
     IMG_DST.mkdir(parents=True, exist_ok=True)
     for i in prods.id:

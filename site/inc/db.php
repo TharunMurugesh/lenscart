@@ -94,6 +94,10 @@ function products_matching_tags(array $t, int $limit = 24): array {
     return $rows;
 }
 
+function products_count_of_type(string $type): int {
+    return (int) q_val('SELECT COUNT(*) FROM products WHERE articleType = ?', [$type]);
+}
+
 /** Same type and gender first, then colour and usage closeness. */
 function products_similar(array $prod, int $limit = 8): array {
     return q_all('SELECT ' . PRODUCT_COLS . ', ((articleType = ?) * 4 + (gender = ?) * 2 + (baseColour = ?) * 2 + (`usage` = ?)) AS score
