@@ -5,6 +5,8 @@ Runs the same ONNX model the browser uses on each product photo, with the same p
   site/ai/catalog_emb.bin     float16, N x 1280, L2-normalised (row order = catalog_ids.json)
   site/ai/catalog_ids.json    product ids in the same order
   site/data/similar.json      {product_id: [12 most similar product ids]}  for product pages
+  site/ai/catalog_meta.json   {product_id: [articleType, masterCategory]}  so photo search can
+                              group the similarity ranking by type without a server call
 
 Products come from the local MySQL `lenscart` database (XAMPP, root, no password).
 Run: python scripts/build_catalog_embeddings.py
@@ -29,6 +31,13 @@ def products() -> list:
                           "SELECT id, image FROM products ORDER BY id"],
                          capture_output=True, text=True, check=True).stdout
     return [(int(a), b) for a, b in (line.split("\t") for line in out.strip().splitlines())]
+
+
+def product_meta() -> dict:
+    out = subprocess.run([str(MYSQL), "-u", "root", "-N", "-B", "lenscart", "-e",
+                          "SELECT id, articleType, masterCategory FROM products ORDER BY id"],
+                         capture_output=True, text=True, check=True).stdout
+    return {a: [b, c] for a, b, c in (line.split("	") for line in out.strip().splitlines())}
 
 
 def preprocess(path: Path, meta: dict) -> np.ndarray:
@@ -56,6 +65,8 @@ def main() -> None:
 
     (SITE / "ai" / "catalog_emb.bin").write_bytes(E.astype(np.float16).tobytes())
     (SITE / "ai" / "catalog_ids.json").write_text(json.dumps({"dim": E.shape[1], "ids": ids}), encoding="utf-8")
+
+    (SITE / "ai" / "catalog_meta.json").write_text(json.dumps(product_meta()), encoding="utf-8")
 
     sims = E @ E.T
     np.fill_diagonal(sims, -1)

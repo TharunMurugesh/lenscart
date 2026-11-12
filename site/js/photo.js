@@ -60,6 +60,24 @@
     }
   }
 
+  // {id: [articleType, masterCategory]} for every catalogue product (made by build_catalog_embeddings.py)
+  let metaCache = null;
+  async function catalogMeta() {
+    if (!metaCache) {
+      const res = await fetch("ai/catalog_meta.json");
+      if (!res.ok) throw new Error("catalog_meta.json " + res.status);
+      metaCache = await res.json();
+    }
+    return metaCache;
+  }
+  const GROUP = { Apparel: "clothing", Footwear: "footwear", Accessories: "accessories" };
+  function tierLine(type, used) {
+    const parts = [type + " first"];
+    if (used[1]) parts.push("then other " + (GROUP[used.master] || "items in the same category"));
+    if (used[2]) parts.push("then other items");
+    return parts.join(", ") + ", each ranked by how alike they look to the model";
+  }
+
   /** Primary: visual similarity (model embedding vs catalogue embeddings, in the browser).
    *  Fallback: rank by the four predicted tags (api/match.php) if the catalogue files cannot load. */
   async function loadMatches(r) {
@@ -69,23 +87,35 @@
     if (!tagRes.ok) throw new Error("store search failed");
     const { typeInStore, items: tagItems } = await tagRes.json();
 
-    // When the model is fairly sure of the type (>= SURE) and we sell it, show that type first
-    // (still in similarity order), then the rest; otherwise pure similarity plus a notice.
+    // When the model is fairly sure of the type (>= SURE) and we sell it, rank the WHOLE catalogue by
+    // similarity and fill the slots in tiers: (1) same articleType, (2) same masterCategory (e.g. other
+    // footwear), (3) anything else; similarity order inside each tier. Otherwise pure similarity + a notice.
     const SURE = 0.5, SHOW = 24;
     const sureType = typeInStore && r.articleType[0].p >= SURE;
-    let items = null;
+    let items = null, used = [];
     try {
       if (r.stub || !r.embedding) throw new Error("no embedding");
-      const near = await LensAI.similar(r.embedding, 48);
-      const res = await fetch("api/products.php?ids=" + near.map((n) => n.id).join(","));
+      let ids;
+      if (sureType) {
+        const meta = await catalogMeta();
+        const near = await LensAI.similar(r.embedding, Object.keys(meta).length);
+        const master = (Object.values(meta).find((v) => v[0] === tags.articleType) || [])[1];
+        const tiers = [[], [], []];
+        for (const n of near) {
+          const v = meta[n.id];
+          tiers[!v ? 2 : v[0] === tags.articleType ? 0 : v[1] === master ? 1 : 2].push(n.id);
+        }
+        ids = tiers.flat().slice(0, SHOW);
+        let left = SHOW;
+        used = tiers.map((t) => { const k = Math.min(t.length, left); left -= k; return k; });
+        used.master = master;
+      } else {
+        ids = (await LensAI.similar(r.embedding, SHOW)).map((n) => n.id);
+      }
+      const res = await fetch("api/products.php?ids=" + ids.join(","));
       if (!res.ok) throw new Error("product lookup failed");
       items = await res.json();
       if (!items.length) throw new Error("no products");
-      if (sureType) {
-        const same = items.filter((p) => p.articleType === tags.articleType);
-        items = same.concat(items.filter((p) => p.articleType !== tags.articleType));
-      }
-      items = items.slice(0, SHOW);
     } catch (e) {
       console.warn("visual similarity unavailable, using tag match:", e);
       items = null;
@@ -99,7 +129,7 @@
           ? "Showing the items that look most like your photo instead."
           : `Showing items that match on colour (${tags.baseColour}), gender (${tags.gender}) and occasion (${tags.usage}) instead.`)
       : visual
-        ? (sureType ? `${tags.articleType} first, then other items, each ranked by how alike they look to the model` : "Ranked by how alike they look to the model")
+        ? (sureType ? tierLine(tags.articleType, used) : "Ranked by how alike they look to the model")
           + ` (its 1,280-number fingerprint of each photo). The model read your photo as ${read}.`
         : `Ranked by matching ${read}.`;
     if (!visual) items = tagItems;
