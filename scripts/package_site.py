@@ -5,7 +5,8 @@ Builds:
   dist/lenscart_db.sql    schema + seed in one file, for a phpMyAdmin import on the host
 
 Left out: site/CREDENTIALS.local.txt (demo passwords), site/README.md, test pages (ai/test.html),
-Python/Git leftovers. Test-mode images in img/test/ ARE included (model.php uses them).
+sql/ (the seed holds password hashes; import dist/lenscart_db.sql instead), Python/Git leftovers.
+Test-mode images in img/test/ ARE included (model.php uses them).
 
 Run:  .venv\\Scripts\\python scripts\\package_site.py
 """
@@ -19,6 +20,7 @@ TOP = "lenscart"
 
 EXCLUDE_FILES = {"CREDENTIALS.local.txt", "README.md", "ai/test.html"}
 EXCLUDE_PARTS = {".git", "__pycache__", ".ipynb_checkpoints"}
+EXCLUDE_DIRS = ("sql/",)  # not served publicly; dist/lenscart_db.sql is the import file
 EXCLUDE_SUFFIX = {".pyc", ".bak", ".tmp", ".log"}
 # a file is required if the site cannot work without it: fail loudly when one is missing
 REQUIRED = ["index.php", "inc/db.php", "inc/config.php", "ai/lensai.js", "ai/lensnet.onnx", "ai/lensnet_meta.json",
@@ -29,7 +31,8 @@ REQUIRED_DIRS = {"img/products": 1500, "img/test": 1, "img/model": 1}
 
 def wanted(rel: str) -> bool:
     p = Path(rel)
-    return (rel not in EXCLUDE_FILES and not (set(p.parts) & EXCLUDE_PARTS) and p.suffix.lower() not in EXCLUDE_SUFFIX)
+    return (rel not in EXCLUDE_FILES and not rel.startswith(EXCLUDE_DIRS)
+            and not (set(p.parts) & EXCLUDE_PARTS) and p.suffix.lower() not in EXCLUDE_SUFFIX)
 
 
 def main():
@@ -56,7 +59,7 @@ def main():
     with zipfile.ZipFile(zpath) as z:
         names = z.namelist()
         assert z.testzip() is None
-    assert not any(n.endswith(("CREDENTIALS.local.txt", "README.md", "test.html")) for n in names)
+    assert not any(n.endswith(("CREDENTIALS.local.txt", "README.md", "test.html", ".sql")) for n in names)
     assert all(n.startswith(TOP + "/") for n in names)
 
     raw = sum(f.stat().st_size for f in files)
