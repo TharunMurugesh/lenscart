@@ -31,6 +31,7 @@
       showErr("Could not read this photo: " + e.message);
     } finally {
       $("#busy").hidden = true;
+      $("#file").value = ""; // so choosing the same photo again runs again
     }
   }
 
