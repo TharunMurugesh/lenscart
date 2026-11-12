@@ -70,10 +70,10 @@ page_header('Our AI model', 'model');
   <div class="m-test">
     <div class="m-test-img"><img id="testImg" alt="Test image"></div>
     <div class="m-test-body">
-      <table class="m-table" id="testTable">
+      <div class="m-scroll"><table class="m-table" id="testTable">
         <thead><tr><th>Question</th><th>Dataset label</th><th>Model (recorded)</th><th>Model (live)</th></tr></thead>
         <tbody></tbody>
-      </table>
+      </table></div>
       <div class="m-actions">
         <button class="m-btn" id="testNext"><?= icon('shuffle') ?>Next random image</button>
         <button class="m-btn ghost" id="testLive"><?= icon('play') ?>Run live</button>

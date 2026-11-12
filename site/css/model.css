@@ -62,7 +62,13 @@
 .m-pill.bad { background: var(--m-bad-soft); color: var(--m-bad); }
 .m-dim { color: var(--m-dim); }
 
-.m-scroll { overflow-x: auto; }
+.m-scroll { overflow-x: auto; max-width: 100%; }
+.m-test-body { min-width: 0; }
+/* grid children must be allowed to shrink below their content width, or tables push the page wider */
+.m-hero > *, .m-cols > *, .m-test > *, .m-tiles > *, .m-heads > * { min-width: 0; }
+.m-sec { overflow-wrap: anywhere; }
+.m-table td, .m-table th { overflow-wrap: normal; }
+@media (max-width: 480px) { #testTable th, #testTable td { padding: 6px 6px; } #testTable td small { display: block; } }
 .m-table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
 .m-table th, .m-table td { padding: 7px 10px; border-bottom: 1px solid var(--m-line); text-align: left; vertical-align: middle; }
 .m-table th { font-size: 12px; font-weight: 600; color: var(--m-dim); text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
@@ -91,3 +97,6 @@
   .m-tile-v { font-size: 24px; }
   .m-sec { padding: 14px; }
 }
+
+/* guard: never let this page scroll sideways (a few px of sub-pixel spill from scrolling rows) */
+html:has(.m-hero), body:has(.m-hero) { overflow-x: clip; }
