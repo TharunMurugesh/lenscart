@@ -1,6 +1,7 @@
 <?php
 /* Header, footer, icons and the product card shared by every page. */
 require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/catalog.php';
 
 /** Inline a Lucide icon from vendor/lucide/<name>.svg (ISC licence). */
 function icon(string $name, string $cls = ''): string {
@@ -26,6 +27,7 @@ function page_header(string $title, string $active = ''): void {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?> · <?= SITE_NAME ?></title>
 <link rel="stylesheet" href="<?= url('css/style.css') ?>">
+<link rel="stylesheet" href="<?= url('css/catalog.css') ?>">
 </head>
 <body>
 <header class="top">
@@ -46,6 +48,11 @@ function page_header(string $title, string $active = ''): void {
     <?php endif; ?>
   </nav>
 </header>
+<nav class="catbar" aria-label="Shop by category">
+  <?php foreach (departments() as $slug => $d): ?>
+    <a href="<?= e(url('category.php?c=' . $slug)) ?>" class="<?= $active === 'cat-' . $slug ? 'on' : '' ?>"><?= e($d['title']) ?></a>
+  <?php endforeach; ?>
+</nav>
 <main class="wrap">
 <?php if ($f = flash()): ?><div class="flash <?= e($f[1]) ?>"><?= icon($f[1] === 'ok' ? 'circle-check' : 'circle-alert') ?><span><?= e($f[0]) ?></span></div><?php endif;
 }
