@@ -69,14 +69,23 @@
     if (!tagRes.ok) throw new Error("store search failed");
     const { typeInStore, items: tagItems } = await tagRes.json();
 
+    // When the model is fairly sure of the type (>= SURE) and we sell it, show that type first
+    // (still in similarity order), then the rest; otherwise pure similarity plus a notice.
+    const SURE = 0.5, SHOW = 24;
+    const sureType = typeInStore && r.articleType[0].p >= SURE;
     let items = null;
     try {
       if (r.stub || !r.embedding) throw new Error("no embedding");
-      const near = await LensAI.similar(r.embedding, 24);
+      const near = await LensAI.similar(r.embedding, 48);
       const res = await fetch("api/products.php?ids=" + near.map((n) => n.id).join(","));
       if (!res.ok) throw new Error("product lookup failed");
       items = await res.json();
       if (!items.length) throw new Error("no products");
+      if (sureType) {
+        const same = items.filter((p) => p.articleType === tags.articleType);
+        items = same.concat(items.filter((p) => p.articleType !== tags.articleType));
+      }
+      items = items.slice(0, SHOW);
     } catch (e) {
       console.warn("visual similarity unavailable, using tag match:", e);
       items = null;
@@ -90,12 +99,13 @@
           ? "Showing the items that look most like your photo instead."
           : `Showing items that match on colour (${tags.baseColour}), gender (${tags.gender}) and occasion (${tags.usage}) instead.`)
       : visual
-        ? `Ranked by how alike they look to the model (its 1,280-number fingerprint of each photo). The model read your photo as ${read}.`
+        ? (sureType ? `${tags.articleType} first, then other items, each ranked by how alike they look to the model` : "Ranked by how alike they look to the model")
+          + ` (its 1,280-number fingerprint of each photo). The model read your photo as ${read}.`
         : `Ranked by matching ${read}.`;
     if (!visual) items = tagItems;
 
     // low confidence on the type usually means the photo is unlike our catalogue photos (worn, top-down, cluttered)
-    $("#match-hint").hidden = r.articleType[0].p >= 0.4;
+    $("#match-hint").hidden = r.articleType[0].p >= SURE;
     $("#match-hint-p").textContent = Math.round(r.articleType[0].p * 100) + "%";
     // raw similarity scores are not shown: cosine values of these embeddings are low even for close matches
     // and read as "weak" to a visitor; the ORDER is what matters
